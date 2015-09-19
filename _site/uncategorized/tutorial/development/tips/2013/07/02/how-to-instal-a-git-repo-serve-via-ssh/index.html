@@ -156,29 +156,26 @@
     </div>
     <div class="content">
       <p>Love Git but don't want to pay GitHub to have a private repo? No problem. Here's the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):</p>
-<p>1. Create a repo<br />
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;br /&gt;
-server <span class="nv">$ </span>mkdir ~/repos/&lt;br /&gt;
-server <span class="nv">$ </span><span class="nb">cd</span> ~/repos/&lt;br /&gt;
-server <span class="nv">$ GIT_DIR</span><span class="o">=</span>project.git git init&lt;br /&gt;
-server <span class="nv">$ </span><span class="nb">cd </span>project.git&lt;br /&gt;
-server <span class="nv">$ </span>git --bare update-server-info&lt;br /&gt;
-server <span class="nv">$ </span>cp hooks/post-update.sample hooks/post-update&lt;br /&gt;</code></pre></div></p>
-<p>2. Clone it on the client side via SSH<br />
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;br /&gt;
-client <span class="nv">$ </span>git clone user@server:~/repos/project.git <span class="c"># Check the [Reference 2]&lt;br /&gt;</span>
-client <span class="nv">$ </span>mkdir project&lt;br /&gt;
-client <span class="nv">$ </span><span class="nb">cd </span>project&lt;br /&gt;
-client <span class="nv">$ </span>git init&lt;br /&gt;
-client <span class="nv">$ </span>git remote add origin user@server:~/repos/project.git/&lt;br /&gt;</code></pre></div></p>
-<p>3. Code &amp; Push<br />
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;br /&gt;
-client <span class="nv">$ </span>touch README&lt;br /&gt;
-client <span class="nv">$ </span>git add README&lt;br /&gt;
-client <span class="nv">$ </span>git commit -m <span class="s2">&quot;Example.&quot;</span>&lt;br /&gt;
-client <span class="nv">$ </span>git push origin master&lt;br /&gt;</code></pre></div></p>
+<p>1. Create a repo
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">server <span class="nv">$ </span>mkdir ~/repos/
+server <span class="nv">$ </span><span class="nb">cd</span> ~/repos/
+server <span class="nv">$ GIT_DIR</span><span class="o">=</span>project.git git init
+server <span class="nv">$ </span><span class="nb">cd </span>project.git
+server <span class="nv">$ </span>git --bare update-server-info
+server <span class="nv">$ </span>cp hooks/post-update.sample hooks/post-update</code></pre></div></p>
+<p>2. Clone it on the client side via SSH
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">client <span class="nv">$ </span>git clone user@server:~/repos/project.git <span class="c"># Check the [Reference 2]</span>
+client <span class="nv">$ </span>mkdir project
+client <span class="nv">$ </span><span class="nb">cd </span>project
+client <span class="nv">$ </span>git init
+client <span class="nv">$ </span>git remote add origin user@server:~/repos/project.git/</code></pre></div></p>
+<p>3. Code &amp; Push
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">client <span class="nv">$ </span>touch README
+client <span class="nv">$ </span>git add README
+client <span class="nv">$ </span>git commit -m <span class="s2">&quot;Example.&quot;</span>
+client <span class="nv">$ </span>git push origin master</code></pre></div></p>
 <p><strong>References</strong>:</p>
-<p>1. How to serve a Git repo via SSH: <a title="How to use git over SSH" href="http://www.mindfuzz.net/?p=250">http://www.mindfuzz.net/?p=250</a><br />
+<p>1. How to serve a Git repo via SSH: <a title="How to use git over SSH" href="http://www.mindfuzz.net/?p=250">http://www.mindfuzz.net/?p=250</a>
 2. How to map SSH identity files to SSH servers &amp; usernames: <a title="Best way to use multiple SSH private keys on one client" href="http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1">http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1</a></p>
 
     </div>

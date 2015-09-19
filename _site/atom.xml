@@ -4,7 +4,7 @@
  <title>SimpleIT</title>
  <link href="http://blog.simpleit.us/atom.xml" rel="self"/>
  <link href="http://blog.simpleit.us"/>
- <updated>2015-09-19T23:28:26+01:00</updated>
+ <updated>2015-09-19T23:29:29+01:00</updated>
  <id>http://blog.simpleit.us</id>
  <author>
    <name>Viet Le</name>
@@ -27,29 +27,26 @@
    <updated>2013-07-02T05:19:15+01:00</updated>
    <id>http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</id>
    <content type="html">&lt;p&gt;Love Git but don&#39;t want to pay GitHub to have a private repo? No problem. Here&#39;s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):&lt;/p&gt;
-&lt;p&gt;1. Create a repo&lt;br /&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/repos/&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/repos/&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ GIT_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;project.git git init&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project.git&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git --bare update-server-info&amp;lt;br /&amp;gt;
-server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cp hooks/post-update.sample hooks/post-update&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;2. Clone it on the client side via SSH&lt;br /&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone user@server:~/repos/project.git &lt;span class=&quot;c&quot;&gt;# Check the [Reference 2]&amp;lt;br /&amp;gt;&lt;/span&gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir project&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin user@server:~/repos/project.git/&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;3. Code &amp;amp; Push&lt;br /&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add README&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Example.&amp;quot;&lt;/span&gt;&amp;lt;br /&amp;gt;
-client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;1. Create a repo
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/repos/
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/repos/
+server &lt;span class=&quot;nv&quot;&gt;$ GIT_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;project.git git init
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project.git
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git --bare update-server-info
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cp hooks/post-update.sample hooks/post-update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;2. Clone it on the client side via SSH
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone user@server:~/repos/project.git &lt;span class=&quot;c&quot;&gt;# Check the [Reference 2]&lt;/span&gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir project
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin user@server:~/repos/project.git/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;3. Code &amp;amp; Push
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add README
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Example.&amp;quot;&lt;/span&gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;1. How to serve a Git repo via SSH: &lt;a title=&quot;How to use git over SSH&quot; href=&quot;http://www.mindfuzz.net/?p=250&quot;&gt;http://www.mindfuzz.net/?p=250&lt;/a&gt;&lt;br /&gt;
+&lt;p&gt;1. How to serve a Git repo via SSH: &lt;a title=&quot;How to use git over SSH&quot; href=&quot;http://www.mindfuzz.net/?p=250&quot;&gt;http://www.mindfuzz.net/?p=250&lt;/a&gt;
 2. How to map SSH identity files to SSH servers &amp;amp; usernames: &lt;a title=&quot;Best way to use multiple SSH private keys on one client&quot; href=&quot;http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&quot;&gt;http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
