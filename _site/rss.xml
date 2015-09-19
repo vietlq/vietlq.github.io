@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-        <title>Jekyll Bootstrap</title>
-        <description>Jekyll Bootstrap - Name Lastname</description>
-        <link>http://username.github.io</link>
-        <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 19 Sep 2015 21:46:19 +0100</lastBuildDate>
-        <pubDate>Sat, 19 Sep 2015 21:46:19 +0100</pubDate>
+        <title>SimpleIT</title>
+        <description>SimpleIT - Viet Le</description>
+        <link>http://blog.simpleit.us</link>
+        <atom:link href="http://blog.simpleit.us/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sat, 19 Sep 2015 22:01:12 +0100</lastBuildDate>
+        <pubDate>Sat, 19 Sep 2015 22:01:12 +0100</pubDate>
         <ttl>60</ttl>
 
 
@@ -14,8 +14,8 @@
                 <title>Hello World!</title>
                 <description>
 </description>
-                <link>http://username.github.io/2015/09/19/hello-world</link>
-                <guid>http://username.github.io/2015/09/19/hello-world</guid>
+                <link>http://blog.simpleit.us/2015/09/19/hello-world</link>
+                <guid>http://blog.simpleit.us/2015/09/19/hello-world</guid>
                 <pubDate>Sat, 19 Sep 2015 00:00:00 +0100</pubDate>
         </item>
 
@@ -50,8 +50,8 @@ client $ git push origin master&lt;br /&gt;
 &lt;p&gt;1. How to serve a Git repo via SSH:&amp;nbsp;&lt;a title=&quot;How to use git over SSH&quot; href=&quot;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&quot;&gt;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&lt;&amp;#47;a&gt;&lt;br /&gt;
 2. How to map SSH identity files to SSH servers &amp;amp; usernames:&amp;nbsp;&lt;a title=&quot;Best way to use multiple SSH private keys on one client&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</link>
-                <guid>http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</guid>
+                <link>http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</link>
+                <guid>http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</guid>
                 <pubDate>Tue, 02 Jul 2013 05:19:15 +0100</pubDate>
         </item>
 
@@ -73,8 +73,8 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
 &lt;&amp;#47;code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Source&lt;&amp;#47;strong&gt;: &lt;a title=&quot;C++ Tip - Get all headers a file depends on&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</link>
-                <guid>http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</guid>
+                <link>http://blog.simpleit.us/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</link>
+                <guid>http://blog.simpleit.us/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</guid>
                 <pubDate>Mon, 17 Jun 2013 17:33:37 +0100</pubDate>
         </item>
 
@@ -91,8 +91,8 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
 &lt;p&gt;Lastly, TDD enforces no optimization. TDD requires you to write simplest possible code to pass all the test cases. Refactor along the way and pass the test cases. Profile when you need performance. That&#39;s not to downplay the importance of throughout &amp;amp; mindful design of algorithms and data structures. One must find a good balance between TDD &amp;amp; efficient implementation that is crafted since the very beginning, not leaving refactoring to the very late stage.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; If the above C++ Set example is oversimplified for you, follow its sibling WordPath&amp;nbsp;&lt;a title=&quot;WordPath Game - Find optimal way to transform a word to another with 1 character being changed per move&quot; href=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</link>
-                <guid>http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</guid>
+                <link>http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</link>
+                <guid>http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</guid>
                 <pubDate>Sat, 08 Jun 2013 21:58:01 +0100</pubDate>
         </item>
 
@@ -118,8 +118,8 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 &lt;p&gt;&lt;a title=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot; href=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a title=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</link>
-                <guid>http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</guid>
+                <link>http://blog.simpleit.us/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</link>
+                <guid>http://blog.simpleit.us/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</guid>
                 <pubDate>Fri, 07 Jun 2013 09:56:38 +0100</pubDate>
         </item>
 
@@ -134,24 +134,24 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 &lt;li&gt;Enable WebSockets for NginX &amp;amp; NodeJS&lt;&amp;#47;li&gt;&lt;br /&gt;
 &lt;&amp;#47;ol&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</link>
-                <guid>http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</guid>
+                <link>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</link>
+                <guid>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</guid>
                 <pubDate>Tue, 28 May 2013 09:47:14 +0100</pubDate>
         </item>
 
         <item>
                 <title>Home</title>
                 <description></description>
-                <link>http://username.github.io/2012/11/12/home</link>
-                <guid>http://username.github.io/2012/11/12/home</guid>
+                <link>http://blog.simpleit.us/2012/11/12/home</link>
+                <guid>http://blog.simpleit.us/2012/11/12/home</guid>
                 <pubDate>Mon, 12 Nov 2012 20:53:15 +0000</pubDate>
         </item>
 
         <item>
                 <title>150</title>
                 <description></description>
-                <link>http://username.github.io/2012/11/12/150</link>
-                <guid>http://username.github.io/2012/11/12/150</guid>
+                <link>http://blog.simpleit.us/2012/11/12/150</link>
+                <guid>http://blog.simpleit.us/2012/11/12/150</guid>
                 <pubDate>Mon, 12 Nov 2012 20:53:15 +0000</pubDate>
         </item>
 
@@ -165,8 +165,8 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 So I prepended my blog config file with 000- and now blog is the default site across simpleit.us&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;2013&amp;#47;05&amp;#47;28&amp;#47;simpleit-blog-is-now-powered-by-nginx-php-fpm&amp;#47;&quot;&gt;powered by NginX&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</link>
-                <guid>http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</guid>
+                <link>http://blog.simpleit.us/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</link>
+                <guid>http://blog.simpleit.us/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</guid>
                 <pubDate>Sun, 14 Oct 2012 01:33:29 +0100</pubDate>
         </item>
 
@@ -588,8 +588,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 &lt;p&gt;Please take a look at []()
 or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://username.github.io/lessons/2011/12/29/jekyll-introduction</guid>
+                <link>http://blog.simpleit.us/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>http://blog.simpleit.us/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>Thu, 29 Dec 2011 00:00:00 +0000</pubDate>
         </item>
 
@@ -612,8 +612,8 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;671&quot; caption=&quot;Tick the option &quot;Show input menu in login window&quot;&quot;]&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
 &lt;p&gt;Lock the dialog to save the change. Now every time you login from locked screen, you will see language input on your top right hand corner. Change input to English and input your password. Let your Mac sleep and wake it up to test. No more hassle ;) !&lt;/p&gt;
 </description>
-                <link>http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</link>
-                <guid>http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</guid>
+                <link>http://blog.simpleit.us/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</link>
+                <guid>http://blog.simpleit.us/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</guid>
                 <pubDate>Sun, 16 Oct 2011 20:30:36 +0100</pubDate>
         </item>
 
@@ -628,8 +628,8 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;p&gt;If you need to read extra on MX records, refer to Google help: &lt;a href=&quot;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&quot;&gt;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&lt;&amp;#47;a&gt;.&lt;/p&gt;
 &lt;p&gt;Overall, Linode provides good service and I&#39;ve been using Linode VPS since Feb 2010. Free DNS with many record types is a good deal. If you are curious then check their site at : &lt;a href=&quot;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&quot;&gt;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&lt;&amp;#47;a&gt; (my referral link).&lt;/p&gt;
 </description>
-                <link>http://username.github.io/development/2011/05/17/migrated-dns-to-linode</link>
-                <guid>http://username.github.io/development/2011/05/17/migrated-dns-to-linode</guid>
+                <link>http://blog.simpleit.us/development/2011/05/17/migrated-dns-to-linode</link>
+                <guid>http://blog.simpleit.us/development/2011/05/17/migrated-dns-to-linode</guid>
                 <pubDate>Tue, 17 May 2011 13:07:15 +0100</pubDate>
         </item>
 
@@ -645,8 +645,8 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;back-for-good-new-features-on-posterous&quot;&gt;Everything about passion&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</link>
-                <guid>http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</guid>
+                <link>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</link>
+                <guid>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</guid>
                 <pubDate>Thu, 24 Jun 2010 18:44:00 +0100</pubDate>
         </item>
 
@@ -670,8 +670,8 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;code&gt;mingw32-make&lt;&amp;#47;code&gt;&lt;/p&gt;
 &lt;p&gt;Wait for 5-10 mins and you have QtNetwork with OpenSSL enabled. Enjoy!&lt;/p&gt;
 </description>
-                <link>http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</link>
-                <guid>http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</guid>
+                <link>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</link>
+                <guid>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</guid>
                 <pubDate>Sun, 30 May 2010 15:13:21 +0100</pubDate>
         </item>
 
@@ -684,8 +684,8 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;p&gt;Now you are ready to play with magic. To appreciate Qt, run QtDemo and also watch some clips &amp;amp; read some stuff:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</link>
-                <guid>http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</guid>
+                <link>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</link>
+                <guid>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</guid>
                 <pubDate>Sun, 30 May 2010 14:53:41 +0100</pubDate>
         </item>
 
@@ -716,8 +716,8 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 &lt;p&gt;References:&lt;/p&gt;
 &lt;p&gt;[1]&lt;/p&gt;
 </description>
-                <link>http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</link>
-                <guid>http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</guid>
+                <link>http://blog.simpleit.us/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</link>
+                <guid>http://blog.simpleit.us/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</guid>
                 <pubDate>Sun, 30 May 2010 14:42:45 +0100</pubDate>
         </item>
 
@@ -729,8 +729,8 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;chrome-wins-safari-by-a-few-tipping-points&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</link>
-                <guid>http://username.github.io/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</guid>
+                <link>http://blog.simpleit.us/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</link>
+                <guid>http://blog.simpleit.us/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</guid>
                 <pubDate>Thu, 18 Mar 2010 10:31:51 +0000</pubDate>
         </item>
 
@@ -743,8 +743,8 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;audi-breaks-the-spell&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/2010/03/17/audi-breaks-the-spell</link>
-                <guid>http://username.github.io/uncategorized/2010/03/17/audi-breaks-the-spell</guid>
+                <link>http://blog.simpleit.us/uncategorized/2010/03/17/audi-breaks-the-spell</link>
+                <guid>http://blog.simpleit.us/uncategorized/2010/03/17/audi-breaks-the-spell</guid>
                 <pubDate>Wed, 17 Mar 2010 20:58:34 +0000</pubDate>
         </item>
 
@@ -756,8 +756,8 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 &lt;p&gt;Photo credits go to May, one of my acquaintances. Yummy!&lt;&amp;#47;p&gt;
 &lt;p style=&quot;font-size: 10px;&quot;&gt;  &lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt;   from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;in-the-kitchen-album-by-may&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;  &lt;&amp;#47;p&gt;  &lt;&amp;#47;div&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/2010/03/16/in-the-kitchen-album-by-may</link>
-                <guid>http://username.github.io/uncategorized/2010/03/16/in-the-kitchen-album-by-may</guid>
+                <link>http://blog.simpleit.us/uncategorized/2010/03/16/in-the-kitchen-album-by-may</link>
+                <guid>http://blog.simpleit.us/uncategorized/2010/03/16/in-the-kitchen-album-by-may</guid>
                 <pubDate>Tue, 16 Mar 2010 20:04:34 +0000</pubDate>
         </item>
 
@@ -783,8 +783,8 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
 </description>
-                <link>http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome</link>
-                <guid>http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome</guid>
+                <link>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</link>
+                <guid>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</guid>
                 <pubDate>Tue, 16 Mar 2010 19:28:30 +0000</pubDate>
         </item>
 
