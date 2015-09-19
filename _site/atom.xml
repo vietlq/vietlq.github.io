@@ -4,7 +4,7 @@
  <title>SimpleIT</title>
  <link href="http://blog.simpleit.us/atom.xml" rel="self"/>
  <link href="http://blog.simpleit.us"/>
- <updated>2015-09-20T00:04:18+01:00</updated>
+ <updated>2015-09-20T00:29:00+01:00</updated>
  <id>http://blog.simpleit.us</id>
  <author>
    <name>Viet Le</name>
@@ -133,7 +133,7 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 &lt;li&gt;Apache loaded files in alphabetical order&lt;/li&gt;&lt;br /&gt;
 &lt;/ol&gt;&lt;br /&gt;
 So I prepended my blog config file with 000- and now blog is the default site across simpleit.us&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;http://blog.simpleit.us/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm/&quot;&gt;powered by NginX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm&quot;&gt;powered by NginX&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
