@@ -5,19 +5,10 @@
         <description>SimpleIT - Viet Le</description>
         <link>http://blog.simpleit.us</link>
         <atom:link href="http://blog.simpleit.us/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 19 Sep 2015 23:36:15 +0100</lastBuildDate>
-        <pubDate>Sat, 19 Sep 2015 23:36:15 +0100</pubDate>
+        <lastBuildDate>Sat, 19 Sep 2015 23:38:15 +0100</lastBuildDate>
+        <pubDate>Sat, 19 Sep 2015 23:38:15 +0100</pubDate>
         <ttl>60</ttl>
 
-
-        <item>
-                <title>Hello World!</title>
-                <description>
-</description>
-                <link>http://blog.simpleit.us/2015/09/19/hello-world</link>
-                <guid>http://blog.simpleit.us/2015/09/19/hello-world</guid>
-                <pubDate>Sat, 19 Sep 2015 00:00:00 +0100</pubDate>
-        </item>
 
         <item>
                 <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
@@ -127,22 +118,6 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
                 <link>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</link>
                 <guid>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</guid>
                 <pubDate>Tue, 28 May 2013 09:47:14 +0100</pubDate>
-        </item>
-
-        <item>
-                <title>Home</title>
-                <description></description>
-                <link>http://blog.simpleit.us/2012/11/12/home</link>
-                <guid>http://blog.simpleit.us/2012/11/12/home</guid>
-                <pubDate>Mon, 12 Nov 2012 20:53:15 +0000</pubDate>
-        </item>
-
-        <item>
-                <title>150</title>
-                <description></description>
-                <link>http://blog.simpleit.us/2012/11/12/150</link>
-                <guid>http://blog.simpleit.us/2012/11/12/150</guid>
-                <pubDate>Mon, 12 Nov 2012 20:53:15 +0000</pubDate>
         </item>
 
         <item>
@@ -775,6 +750,39 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
                 <link>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</guid>
                 <pubDate>Tue, 16 Mar 2010 19:28:30 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Simple &amp; cool effect in OpenGL</title>
+                <description>&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
+&lt;p&gt;http://www.youtube.com/watch?v=IeoR4_5PFdM&lt;/p&gt;
+&lt;p&gt;It&#39;s in Russian but hold on, the effect is deadly simple but beautiful. Just watch and try it yourself.&lt;/p&gt;
+</description>
+                <link>http://blog.simpleit.us/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</link>
+                <guid>http://blog.simpleit.us/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</guid>
+                <pubDate>Mon, 08 Mar 2010 11:14:06 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>NTFS for Mac made easy</title>
+                <description>&lt;p&gt;There are only 2 steps to enabled write option to NTFS partitions on Mac.&lt;/p&gt;
+&lt;p&gt;1. Install MacFUSE: &lt;a title=&quot;http://code.google.com/p/macfuse/&quot; href=&quot;http://code.google.com/p/macfuse/&quot;&gt;http://code.google.com/p/macfuse/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2. Install NTFS-3G: &lt;a title=&quot;http://macntfs-3g.blogspot.com/&quot; href=&quot;http://macntfs-3g.blogspot.com/&quot;&gt;http://macntfs-3g.blogspot.com/&lt;/a&gt; , &lt;a title=&quot;http://sourceforge.net/projects/catacombae/files/&quot; href=&quot;http://sourceforge.net/projects/catacombae/files/&quot;&gt;http://sourceforge.net/projects/catacombae/files/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You will be required to reboot and upon next start-up, you can write to NTFS partitions with ease. Successful installation will similar screenshot (MacFUSE &amp;amp; NTFS-3G at the bottom):&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;attachment_87&quot; align=&quot;aligncenter&quot; width=&quot;300&quot; caption=&quot;Successful installation of MacFUSE and NTFS-3G&quot;]&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-87&quot; title=&quot;Successful installation of MacFUSE and NTFS-3G&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1-300x251.png&quot; alt=&quot;Successful installation of MacFUSE and NTFS-3G&quot; width=&quot;300&quot; height=&quot;251&quot; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+</description>
+                <link>http://blog.simpleit.us/tutorial/mac/2010/03/08/ntfs-for-mac-made-easy</link>
+                <guid>http://blog.simpleit.us/tutorial/mac/2010/03/08/ntfs-for-mac-made-easy</guid>
+                <pubDate>Mon, 08 Mar 2010 11:01:27 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Recovery of 15GB+ of stolen space on Leopard</title>
+                <description>&lt;p&gt;I&#39;ve noticed that my Leopard partition suddenly got fat and GBs were gone somewhere. I decided to find out truth and hope for the way to get back that free space. I checked every single folder under the /. System folders were OK (access to them needs root permissions so clearly no one could dump garbage there). One important folder was suspicious, that was Users. I smelled that my home folder was that fat guy. It turned out right. Diving deeper into each sub-directory of my home folder, I found ~/Library extremely interesting: 15GB+. I was shocked how much garbage was collected in a few days time. It turned out that the Apple Mail was culprit. I downloaded everything it could from my GMail account. It weighed more than 14GB. I deleted that GMail account from Mail and then removed all related folders of that mail account inside ~/Library/Mail. Further, I found that Copernicus (a lousy screen recorder that I removed days before) has collected almost 700MB inside ~/Library/Application Support/Copernicus. I removed it with zero mercy and happy to see more than 15GB came back to me.&lt;/p&gt;
+</description>
+                <link>http://blog.simpleit.us/tutorial/mac/2010/03/01/recovery-of-15gb-of-stolen-space-on-leopard</link>
+                <guid>http://blog.simpleit.us/tutorial/mac/2010/03/01/recovery-of-15gb-of-stolen-space-on-leopard</guid>
+                <pubDate>Mon, 01 Mar 2010 08:22:15 +0000</pubDate>
         </item>
 
 

@@ -4,22 +4,13 @@
  <title>SimpleIT</title>
  <link href="http://blog.simpleit.us/atom.xml" rel="self"/>
  <link href="http://blog.simpleit.us"/>
- <updated>2015-09-19T23:36:15+01:00</updated>
+ <updated>2015-09-19T23:38:15+01:00</updated>
  <id>http://blog.simpleit.us</id>
  <author>
    <name>Viet Le</name>
    <email>vietlq85@gmail.com</email>
  </author>
 
- 
- <entry>
-   <title>Hello World!</title>
-   <link href="http://blog.simpleit.us/2015/09/19/hello-world"/>
-   <updated>2015-09-19T00:00:00+01:00</updated>
-   <id>http://blog.simpleit.us/2015/09/19/hello-world</id>
-   <content type="html">
-</content>
- </entry>
  
  <entry>
    <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
@@ -129,22 +120,6 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 &lt;li&gt;Enable WebSockets for NginX &amp;amp; NodeJS&lt;/li&gt;&lt;br /&gt;
 &lt;/ol&gt;&lt;/p&gt;
 </content>
- </entry>
- 
- <entry>
-   <title>Home</title>
-   <link href="http://blog.simpleit.us/2012/11/12/home"/>
-   <updated>2012-11-12T20:53:15+00:00</updated>
-   <id>http://blog.simpleit.us/2012/11/12/home</id>
-   <content type="html"></content>
- </entry>
- 
- <entry>
-   <title>150</title>
-   <link href="http://blog.simpleit.us/2012/11/12/150"/>
-   <updated>2012-11-12T20:53:15+00:00</updated>
-   <id>http://blog.simpleit.us/2012/11/12/150</id>
-   <content type="html"></content>
  </entry>
  
  <entry>
@@ -776,6 +751,39 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via web&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Simple &amp; cool effect in OpenGL</title>
+   <link href="http://blog.simpleit.us/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl"/>
+   <updated>2010-03-08T11:14:06+00:00</updated>
+   <id>http://blog.simpleit.us/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</id>
+   <content type="html">&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
+&lt;p&gt;http://www.youtube.com/watch?v=IeoR4_5PFdM&lt;/p&gt;
+&lt;p&gt;It&#39;s in Russian but hold on, the effect is deadly simple but beautiful. Just watch and try it yourself.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>NTFS for Mac made easy</title>
+   <link href="http://blog.simpleit.us/tutorial/mac/2010/03/08/ntfs-for-mac-made-easy"/>
+   <updated>2010-03-08T11:01:27+00:00</updated>
+   <id>http://blog.simpleit.us/tutorial/mac/2010/03/08/ntfs-for-mac-made-easy</id>
+   <content type="html">&lt;p&gt;There are only 2 steps to enabled write option to NTFS partitions on Mac.&lt;/p&gt;
+&lt;p&gt;1. Install MacFUSE: &lt;a title=&quot;http://code.google.com/p/macfuse/&quot; href=&quot;http://code.google.com/p/macfuse/&quot;&gt;http://code.google.com/p/macfuse/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2. Install NTFS-3G: &lt;a title=&quot;http://macntfs-3g.blogspot.com/&quot; href=&quot;http://macntfs-3g.blogspot.com/&quot;&gt;http://macntfs-3g.blogspot.com/&lt;/a&gt; , &lt;a title=&quot;http://sourceforge.net/projects/catacombae/files/&quot; href=&quot;http://sourceforge.net/projects/catacombae/files/&quot;&gt;http://sourceforge.net/projects/catacombae/files/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You will be required to reboot and upon next start-up, you can write to NTFS partitions with ease. Successful installation will similar screenshot (MacFUSE &amp;amp; NTFS-3G at the bottom):&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;attachment_87&quot; align=&quot;aligncenter&quot; width=&quot;300&quot; caption=&quot;Successful installation of MacFUSE and NTFS-3G&quot;]&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-87&quot; title=&quot;Successful installation of MacFUSE and NTFS-3G&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1-300x251.png&quot; alt=&quot;Successful installation of MacFUSE and NTFS-3G&quot; width=&quot;300&quot; height=&quot;251&quot; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Recovery of 15GB+ of stolen space on Leopard</title>
+   <link href="http://blog.simpleit.us/tutorial/mac/2010/03/01/recovery-of-15gb-of-stolen-space-on-leopard"/>
+   <updated>2010-03-01T08:22:15+00:00</updated>
+   <id>http://blog.simpleit.us/tutorial/mac/2010/03/01/recovery-of-15gb-of-stolen-space-on-leopard</id>
+   <content type="html">&lt;p&gt;I&#39;ve noticed that my Leopard partition suddenly got fat and GBs were gone somewhere. I decided to find out truth and hope for the way to get back that free space. I checked every single folder under the /. System folders were OK (access to them needs root permissions so clearly no one could dump garbage there). One important folder was suspicious, that was Users. I smelled that my home folder was that fat guy. It turned out right. Diving deeper into each sub-directory of my home folder, I found ~/Library extremely interesting: 15GB+. I was shocked how much garbage was collected in a few days time. It turned out that the Apple Mail was culprit. I downloaded everything it could from my GMail account. It weighed more than 14GB. I deleted that GMail account from Mail and then removed all related folders of that mail account inside ~/Library/Mail. Further, I found that Copernicus (a lousy screen recorder that I removed days before) has collected almost 700MB inside ~/Library/Application Support/Copernicus. I removed it with zero mercy and happy to see more than 15GB came back to me.&lt;/p&gt;
 </content>
  </entry>
  

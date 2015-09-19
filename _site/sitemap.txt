@@ -11,14 +11,11 @@ http://blog.simpleit.us/rss.xml
 http://blog.simpleit.us/sitemap.txt
 http://blog.simpleit.us/tags.html
 
-http://blog.simpleit.us/2015/09/19/hello-world
 http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh
 http://blog.simpleit.us/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on
 http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours
 http://blog.simpleit.us/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now
 http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm
-http://blog.simpleit.us/2012/11/12/home
-http://blog.simpleit.us/2012/11/12/150
 http://blog.simpleit.us/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default
 http://blog.simpleit.us/lessons/2011/12/29/jekyll-introduction
 http://blog.simpleit.us/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard
