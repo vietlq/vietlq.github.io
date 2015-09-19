@@ -4,7 +4,7 @@
  <title>Jekyll Bootstrap</title>
  <link href="http://username.github.io/atom.xml" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2015-09-19T17:31:04+00:00</updated>
+ <updated>2015-09-19T18:37:39+01:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Hello World!</title>
    <link href="http://username.github.io/2015/09/19/hello-world"/>
-   <updated>2015-09-19T00:00:00+00:00</updated>
+   <updated>2015-09-19T00:00:00+01:00</updated>
    <id>http://username.github.io/2015/09/19/hello-world</id>
    <content type="html">
 </content>
@@ -24,7 +24,7 @@
  <entry>
    <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
    <link href="http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh"/>
-   <updated>2013-07-02T04:19:15+00:00</updated>
+   <updated>2013-07-02T05:19:15+01:00</updated>
    <id>http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</id>
    <content type="html">&lt;p&gt;Love Git but don&#39;t want to pay GitHub to have a private repo? No problem. Here&#39;s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):&lt;/p&gt;
 &lt;p&gt;1. Create a repo&lt;br /&gt;
@@ -60,7 +60,7 @@ client $ git push origin master&lt;br /&gt;
  <entry>
    <title>Listing all header files your cpp depends on</title>
    <link href="http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on"/>
-   <updated>2013-06-17T16:33:37+00:00</updated>
+   <updated>2013-06-17T17:33:37+01:00</updated>
    <id>http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</id>
    <content type="html">&lt;p&gt;I needed to extract certain Boost headers from its huge code base for memory mapped file &amp;amp; shared memory containers. The first idea came to my mind was a simple grep command for &#39;#include&#39; statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&lt;br /&gt;
@@ -83,7 +83,7 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
  <entry>
    <title>How I picked up TDD &amp; Google Test in a few hours</title>
    <link href="http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours"/>
-   <updated>2013-06-08T20:58:01+00:00</updated>
+   <updated>2013-06-08T21:58:01+01:00</updated>
    <id>http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</id>
    <content type="html">&lt;p&gt;[caption id=&quot;attachment_205&quot; align=&quot;aligncenter&quot; width=&quot;287&quot;]&lt;a href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; &amp;#47;&gt;&lt;&amp;#47;a&gt; TDD Diagram[&amp;#47;caption]&lt;/p&gt;
 &lt;p&gt;To confess, this is the first time I write unit testing for Java &amp;amp; C++ and it turned out this was rather simple. This weekend Daniel is hosting hackathon at his place and invited Kong &amp;amp; me to come over.&amp;nbsp;The first thing we did was TDD. Daniel was fluent in TDD &amp;amp; pair-programming as his company used Ruby and actively worshiped agile development.&lt;/p&gt;
@@ -101,7 +101,7 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
  <entry>
    <title>WebSocket Being Served Via NginX Proxy Now</title>
    <link href="http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now"/>
-   <updated>2013-06-07T08:56:38+00:00</updated>
+   <updated>2013-06-07T09:56:38+01:00</updated>
    <id>http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</id>
    <content type="html">&lt;p&gt;The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at&amp;nbsp;&lt;a title=&quot;Pico App&quot; href=&quot;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&lt;&amp;#47;a&gt;&amp;nbsp;. Only valid users can log in and fully experience it. If you want to test our new app, comment below.&lt;/p&gt;
 &lt;p&gt;The WebSocket proxy configuration I used:&lt;/p&gt;
@@ -128,7 +128,7 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
  <entry>
    <title>SimpleIT Blog is Now Powered by NginX &amp; PHP FPM</title>
    <link href="http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm"/>
-   <updated>2013-05-28T08:47:14+00:00</updated>
+   <updated>2013-05-28T09:47:14+01:00</updated>
    <id>http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</id>
    <content type="html">&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;350&quot;]&lt;img alt=&quot;NginX Logo&quot; src=&quot;http:&amp;#47;&amp;#47;wiki.nginx.org&amp;#47;local&amp;#47;nginx-logo.png&quot; width=&quot;350&quot; height=&quot;90&quot; &amp;#47;&gt; NginX Almighty[&amp;#47;caption]&lt;/p&gt;
 &lt;p&gt;After much consideration, I finally moved away from Apache &amp;amp; mod_php to NginX &amp;amp; PHP FPM. The site works much faster and no more I&amp;#47;O &amp;amp; CPU issues. I suspect my Apache was hacked last time, resulting in weird I&amp;#47;O behaviour and spikes in CPU usage.&lt;/p&gt;
@@ -160,7 +160,7 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
  <entry>
    <title>Why does Apache link sites-enabled&amp;#47;000-default to sites-available&amp;#47;default?</title>
    <link href="http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default"/>
-   <updated>2012-10-14T00:33:29+00:00</updated>
+   <updated>2012-10-14T01:33:29+01:00</updated>
    <id>http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</id>
    <content type="html">&lt;p&gt;I was cleaning up Apache config and removed the default 000-default &amp;amp; default-ssl from the Apache sites-enabled sub-folder. To my surprise the default page now goes to a web app that I did not expect. It took me a sec to realize 2 things:&lt;/p&gt;
 &lt;ol&gt;
@@ -598,7 +598,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Solving password input problem with Snow Leopard</title>
    <link href="http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard"/>
-   <updated>2011-10-16T19:30:36+00:00</updated>
+   <updated>2011-10-16T20:30:36+01:00</updated>
    <id>http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</id>
    <content type="html">&lt;p&gt;Snow Leopard is supposed to be a slimmer and more stable version than Leopard. When it comes to default password input, Leopard is far better as Snow Leopard has a few drawbacks:&lt;/p&gt;
 &lt;p&gt;1. It cannot input password in languages other than English! Leopard did that just smoothly.&lt;/p&gt;
@@ -622,7 +622,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Migrated DNS to Linode</title>
    <link href="http://username.github.io/development/2011/05/17/migrated-dns-to-linode"/>
-   <updated>2011-05-17T12:07:15+00:00</updated>
+   <updated>2011-05-17T13:07:15+01:00</updated>
    <id>http://username.github.io/development/2011/05/17/migrated-dns-to-linode</id>
    <content type="html">&lt;p&gt;Previously I hosted all DNS records for &lt;strong&gt;simpleit.us&lt;&amp;#47;strong&gt; with &lt;strong&gt;NearlyFreeSpeech&lt;&amp;#47;strong&gt; (&lt;a title=&quot;Nearly Free Speech Hosting&quot; href=&quot;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&lt;&amp;#47;a&gt;). They provide cheap DNS hosting at 1c&amp;#47;day per zone. Initially I didn&#39;t hosted my DNS records with Linode as I was interested in redundancy. However, later I realized that I didn&#39;t have any back-up&amp;#47;disaster recovery site on par with the VPS hosted with Linode. The&amp;nbsp; account I have with NearlyFreeSpeech is meant for low performance and HTML-only content did not match with my VPS. Thus having DNS hosting with NFS didn&#39;t give any extra advantage and I migrated to Linode to centralize my control.&lt;/p&gt;
 &lt;p&gt;Unlike NFS which gave me freedom to add any kind of records, the Linode DNS manager has the most basic records (SOA, NS, A&amp;#47;AAAA, MX, CNAME, TXT and SRV). That would suffice for any daily needs. I had experience with NFS and Zonomi (DNS host provider). They both require technical details such as the trailing dot &quot;.&quot; at the end of each alias&amp;#47;MX mail server. Linode, however, simplified this and caused little confusion. Linode also does not give as much freedom on cache time like NFS or Zonomi do.&lt;/p&gt;
@@ -638,7 +638,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Back for good - New features on Posterous</title>
    <link href="http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2"/>
-   <updated>2010-06-24T17:44:00+00:00</updated>
+   <updated>2010-06-24T18:44:00+01:00</updated>
    <id>http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</id>
    <content type="html">&lt;div class=&quot;posterous_autopost&quot;&gt;
 &lt;div style=&quot;text-align: justify;&quot;&gt;
@@ -655,7 +655,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Enabling OpenSSL for Qt C++ on Windows</title>
    <link href="http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows"/>
-   <updated>2010-05-30T14:13:21+00:00</updated>
+   <updated>2010-05-30T15:13:21+01:00</updated>
    <id>http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</id>
    <content type="html">&lt;p&gt;By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won&#39;t be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won&#39;t work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.&lt;/p&gt;
 &lt;p&gt;Make sure you have readandbefore proceeding.&lt;/p&gt;
@@ -680,7 +680,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Installing Qt, QtCreator and MinGW for Windows</title>
    <link href="http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows"/>
-   <updated>2010-05-30T13:53:41+00:00</updated>
+   <updated>2010-05-30T14:53:41+01:00</updated>
    <id>http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</id>
    <content type="html">&lt;p&gt;Ever thought of developing simple &amp;amp; nice cross-platform applications without sweating? Nokia Qt C++ frameworks empowers you to do so. To get started, first install the Qt SDK with IDE and of course famous GNU compiler chain GCC, branded under MinGW for Windows.&lt;/p&gt;
 &lt;p&gt;Get the framework, IDE &amp;amp; tool chain from: &lt;a href=&quot;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&quot;&gt;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&lt;&amp;#47;a&gt;&lt;/p&gt;
@@ -694,7 +694,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
  <entry>
    <title>Building OpenSSL with MinGW on Windows</title>
    <link href="http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows"/>
-   <updated>2010-05-30T13:42:45+00:00</updated>
+   <updated>2010-05-30T14:42:45+01:00</updated>
    <id>http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</id>
    <content type="html">&lt;p&gt;A number of libraries applications depend on OpenSSL, to name a few: cURL, QtNetwork, WebKit, your IMAP or secure SMTP client, etc. Building of OpenSSL is painstaking, unless you know some tricks. Read more for guidance.&lt;/p&gt;
 &lt;ol&gt;
