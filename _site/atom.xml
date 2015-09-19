@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jekyll Bootstrap</title>
+ <link href="http://username.github.io/atom.xml" rel="self"/>
+ <link href="http://username.github.io"/>
+ <updated>2015-09-19T17:27:33+00:00</updated>
+ <id>http://username.github.io</id>
+ <author>
+   <name>Name Lastname</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ <entry>
+   <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
+   <link href="http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh"/>
+   <updated>2013-07-02T04:19:15+00:00</updated>
+   <id>http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</id>
+   <content type="html">&lt;p&gt;Love Git but don&#39;t want to pay GitHub to have a private repo? No problem. Here&#39;s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):&lt;/p&gt;
+&lt;p&gt;1. Create a repo&lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;
+server $ mkdir ~&amp;#47;repos&amp;#47;&lt;br /&gt;
+server $ cd ~&amp;#47;repos&amp;#47;&lt;br /&gt;
+server $ GIT_DIR=project.git git init&lt;br /&gt;
+server $ cd project.git&lt;br /&gt;
+server $ git --bare update-server-info&lt;br /&gt;
+server $ cp hooks&amp;#47;post-update.sample hooks&amp;#47;post-update&lt;br /&gt;
+&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;2. Clone it on the client side via SSH&lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;
+client $ git clone user@server:~&amp;#47;repos&amp;#47;project.git # Check the [Reference 2]&lt;br /&gt;
+client $ mkdir project&lt;br /&gt;
+client $ cd project&lt;br /&gt;
+client $ git init&lt;br /&gt;
+client $ git remote add origin user@server:~&amp;#47;repos&amp;#47;project.git&amp;#47;&lt;br /&gt;
+&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;3. Code &amp;amp; Push&lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;
+client $ touch README&lt;br /&gt;
+client $ git add README&lt;br /&gt;
+client $ git commit -m &quot;Example.&quot;&lt;br /&gt;
+client $ git push origin master&lt;br /&gt;
+&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;&amp;#47;strong&gt;:&lt;/p&gt;
+&lt;p&gt;1. How to serve a Git repo via SSH:&amp;nbsp;&lt;a title=&quot;How to use git over SSH&quot; href=&quot;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&quot;&gt;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&lt;&amp;#47;a&gt;&lt;br /&gt;
+2. How to map SSH identity files to SSH servers &amp;amp; usernames:&amp;nbsp;&lt;a title=&quot;Best way to use multiple SSH private keys on one client&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Listing all header files your cpp depends on</title>
+   <link href="http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on"/>
+   <updated>2013-06-17T16:33:37+00:00</updated>
+   <id>http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</id>
+   <content type="html">&lt;p&gt;I needed to extract certain Boost headers from its huge code base for memory mapped file &amp;amp; shared memory containers. The first idea came to my mind was a simple grep command for &#39;#include&#39; statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&lt;br /&gt;
+#ifndef NO_STL&lt;br /&gt;
+#include &quot;my_class_no_stl.h&quot;&lt;br /&gt;
+#else&lt;br /&gt;
+#include &quot;my_class_stl.h&quot;&lt;br /&gt;
+#endif&lt;br /&gt;
+&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;To be honest, grep won&#39;t be able to handle it. We need a full fledged C++ pre-processor to correctly include headers and pass necessary values&amp;#47;definitions (it&#39;s done with -D for g++). I was struggling a bit and got a tip from Ralph. It turned out to be very simple:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&lt;br /&gt;
+g++ -D NO_STL -I A_PATH -M source.cpp # to get all headers, including system headers&lt;br /&gt;
+g++ -D NO_STL -I A_PATH&amp;nbsp;-MM source.cpp # to get all headers, except system headers&lt;br /&gt;
+g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in as a tree&lt;br /&gt;
+&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;&amp;#47;strong&gt;: &lt;a title=&quot;C++ Tip - Get all headers a file depends on&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How I picked up TDD &amp; Google Test in a few hours</title>
+   <link href="http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours"/>
+   <updated>2013-06-08T20:58:01+00:00</updated>
+   <id>http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</id>
+   <content type="html">&lt;p&gt;[caption id=&quot;attachment_205&quot; align=&quot;aligncenter&quot; width=&quot;287&quot;]&lt;a href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; &amp;#47;&gt;&lt;&amp;#47;a&gt; TDD Diagram[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;To confess, this is the first time I write unit testing for Java &amp;amp; C++ and it turned out this was rather simple. This weekend Daniel is hosting hackathon at his place and invited Kong &amp;amp; me to come over.&amp;nbsp;The first thing we did was TDD. Daniel was fluent in TDD &amp;amp; pair-programming as his company used Ruby and actively worshiped agile development.&lt;/p&gt;
+&lt;p&gt;I was given a task: To implement a set data structure in Java as simple as possible to pass the test cases that he would write to challenge the implementation. The first test case was to assert emptiness of a new set via the method `bool isEmpty`. Returning `true` was easy. Then Daniel wrote another task to add a new element and requested the set must return `false`. I added a count &amp;amp; array as private data members. Daniel said I should implement as simple as possible. So I used private one member _isEmpty and set it to `true` by default and `false` when invoking `add(int value)`.&lt;/p&gt;
+&lt;p&gt;And we went on to add test cases to cover methods `int count()`, `void remove(int value)`, `int getIndexOf(int value)`... I got 2 bugs and JUnit was able to point out which test cases failed and I was able to locate the bugs with ease.&lt;/p&gt;
+&lt;p&gt;I got excited and then moved to C++ and installed &lt;a title=&quot;Google Test framework&quot; href=&quot;https:&amp;#47;&amp;#47;code.google.com&amp;#47;p&amp;#47;googletest&amp;#47;wiki&amp;#47;V1_6_Primer&quot;&gt;Google Test framework&lt;&amp;#47;a&gt;. It was too simple and I regret not using it earlier. Read my TDD C++ code &lt;a title=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&quot; href=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&lt;&amp;#47;a&gt;, you will find it super simple. Here&#39;s the screenshot of the test program:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;Screen-Shot-2013-06-08-at-8.10.16-PM.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-210&quot; alt=&quot;Passed All Test Cases (Using Google Test)&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;Screen-Shot-2013-06-08-at-8.10.16-PM-300x238.png&quot; width=&quot;300&quot; height=&quot;238&quot; &amp;#47;&gt;&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;The real value is seen when refactoring was involved in the process. TDD approach &amp;amp; the written test cases greatly aided me in verifying that code refactoring worked like the old code.&amp;nbsp;When it comes to real life projects with hundeds of modules and millions of lines of code, refactoring without test coverage is like walking into a minefield. If you were diligent enough to write test cases to cover all functions and methods, then you can refactor at will and then run against the accumulated test cases with confidence.&lt;/p&gt;
+&lt;p&gt;However, one must be clear that test cases guarantee only the cases they cover. Passing the refactored code against the test cases doesn&#39;t guarantee correct outcomes of untested cases. So, be diligent and creative enough to write quality test cases to cover all possible cases to exactly define the behavior of the functions &amp;amp; methods.&lt;/p&gt;
+&lt;p&gt;Lastly, TDD enforces no optimization. TDD requires you to write simplest possible code to pass all the test cases. Refactor along the way and pass the test cases. Profile when you need performance. That&#39;s not to downplay the importance of throughout &amp;amp; mindful design of algorithms and data structures. One must find a good balance between TDD &amp;amp; efficient implementation that is crafted since the very beginning, not leaving refactoring to the very late stage.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; If the above C++ Set example is oversimplified for you, follow its sibling WordPath&amp;nbsp;&lt;a title=&quot;WordPath Game - Find optimal way to transform a word to another with 1 character being changed per move&quot; href=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>WebSocket Being Served Via NginX Proxy Now</title>
+   <link href="http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now"/>
+   <updated>2013-06-07T08:56:38+00:00</updated>
+   <id>http://username.github.io/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</id>
+   <content type="html">&lt;p&gt;The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at&amp;nbsp;&lt;a title=&quot;Pico App&quot; href=&quot;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&lt;&amp;#47;a&gt;&amp;nbsp;. Only valid users can log in and fully experience it. If you want to test our new app, comment below.&lt;/p&gt;
+&lt;p&gt;The WebSocket proxy configuration I used:&lt;/p&gt;
+&lt;pre&gt;server {&lt;br /&gt;
+    listen 80;&lt;br /&gt;
+    root &amp;#47;var&amp;#47;www&amp;#47;pico.simpleit.us;&lt;/p&gt;
+&lt;p&gt;    server_name pico.simpleit.us;&lt;/p&gt;
+&lt;p&gt;    location &amp;#47; {&lt;br /&gt;
+        proxy_pass http:&amp;#47;&amp;#47;localhost:3000;&lt;br /&gt;
+        proxy_http_version 1.1;&lt;br /&gt;
+        proxy_set_header Upgrade $http_upgrade;&lt;br /&gt;
+        proxy_set_header Connection &quot;upgrade&quot;;&lt;br /&gt;
+        proxy_set_header Host $host;&lt;br /&gt;
+    }&lt;br /&gt;
+}&lt;&amp;#47;pre&gt;&lt;br /&gt;
+For the curious, here are the configuration flags I used to compile NginX 1.4.1 (remember to install ssl dev packages)&lt;/p&gt;
+&lt;pre&gt;.&amp;#47;configure --sbin-path=&amp;#47;usr&amp;#47;sbin&amp;#47;nginx --conf-path=&amp;#47;etc&amp;#47;nginx&amp;#47;nginx.conf --prefix=&amp;#47;usr --pid-path=&amp;#47;run&amp;#47;nginx.pid --error-log-path=&amp;#47;var&amp;#47;log&amp;#47;nginx&amp;#47;error.log --with-openssl=&amp;#47;usr&amp;#47;lib&amp;#47;ssl&lt;&amp;#47;pre&gt;&lt;br /&gt;
+&lt;strong&gt;References:&lt;&amp;#47;strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot; href=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>SimpleIT Blog is Now Powered by NginX &amp; PHP FPM</title>
+   <link href="http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm"/>
+   <updated>2013-05-28T08:47:14+00:00</updated>
+   <id>http://username.github.io/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</id>
+   <content type="html">&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;350&quot;]&lt;img alt=&quot;NginX Logo&quot; src=&quot;http:&amp;#47;&amp;#47;wiki.nginx.org&amp;#47;local&amp;#47;nginx-logo.png&quot; width=&quot;350&quot; height=&quot;90&quot; &amp;#47;&gt; NginX Almighty[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;After much consideration, I finally moved away from Apache &amp;amp; mod_php to NginX &amp;amp; PHP FPM. The site works much faster and no more I&amp;#47;O &amp;amp; CPU issues. I suspect my Apache was hacked last time, resulting in weird I&amp;#47;O behaviour and spikes in CPU usage.&lt;/p&gt;
+&lt;p&gt;The next steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install uWSGI for Python and Ruby&lt;&amp;#47;li&gt;
+&lt;li&gt;Run NodeJS behind NginX proxy&lt;&amp;#47;li&gt;
+&lt;li&gt;Enable WebSockets for NginX &amp;amp; NodeJS&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Home</title>
+   <link href="http://username.github.io/2012/11/12/home"/>
+   <updated>2012-11-12T20:53:15+00:00</updated>
+   <id>http://username.github.io/2012/11/12/home</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>150</title>
+   <link href="http://username.github.io/2012/11/12/150"/>
+   <updated>2012-11-12T20:53:15+00:00</updated>
+   <id>http://username.github.io/2012/11/12/150</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Why does Apache link sites-enabled&amp;#47;000-default to sites-available&amp;#47;default?</title>
+   <link href="http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default"/>
+   <updated>2012-10-14T00:33:29+00:00</updated>
+   <id>http://username.github.io/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</id>
+   <content type="html">&lt;p&gt;I was cleaning up Apache config and removed the default 000-default &amp;amp; default-ssl from the Apache sites-enabled sub-folder. To my surprise the default page now goes to a web app that I did not expect. It took me a sec to realize 2 things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site&lt;&amp;#47;li&gt;
+&lt;li&gt;Apache loaded files in alphabetical order&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+So I prepended my blog config file with 000- and now blog is the default site across simpleit.us&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;2013&amp;#47;05&amp;#47;28&amp;#47;simpleit-blog-is-now-powered-by-nginx-php-fpm&amp;#47;&quot;&gt;powered by NginX&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jekyll Introduction</title>
+   <link href="http://username.github.io/lessons/2011/12/29/jekyll-introduction"/>
+   <updated>2011-12-29T00:00:00+00:00</updated>
+   <id>http://username.github.io/lessons/2011/12/29/jekyll-introduction</id>
+   <content type="html">
+&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
+Directly following the intro we’ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-jekyll&quot;&gt;What is Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
+dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;This website is created with Jekyll. &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Sites&quot;&gt;Other Jekyll websites&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-does-jekyll-do&quot;&gt;What does Jekyll Do?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a ruby gem you install on your local system.
+Once there you can call &lt;code&gt;jekyll --server&lt;/code&gt; on a directory and provided that directory
+is setup in a way jekyll expects, it will do magic stuff like parse markdown/textile files,
+compute categories, tags, permalinks, and construct your pages from layout templates and partials.&lt;/p&gt;
+
+&lt;p&gt;Once parsed, Jekyll stores the result in a self-contained static &lt;code&gt;_site&lt;/code&gt; folder.
+The intention here is that you can serve all contents in this folder statically from a plain static web-server.&lt;/p&gt;
+
+&lt;p&gt;You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
+on each request, Jekyll does this once &lt;em&gt;beforehand&lt;/em&gt; and caches the &lt;em&gt;entire website&lt;/em&gt; in a folder for serving statically.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-is-not-blogging-software&quot;&gt;Jekyll is Not Blogging Software&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll is a parsing engine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll does not come with any content nor does it have any templates or design elements.
+This is a common source of confusion when getting started.
+Jekyll does not come with anything you actually use or see on your website - you have to make it.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-i-care&quot;&gt;Why Should I Care?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is very minimalistic and very efficient.
+The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server.
+Traditional dynamic blogs like Wordpress require a database and server-side code.
+Heavily trafficked dynamic blogs must employ a caching layer that ultimately performs the same job Jekyll sets out to do; serve static content.&lt;/p&gt;
+
+&lt;p&gt;Therefore if you like to keep things simple and you prefer the command-line over an admin panel UI then give Jekyll a try.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developers like Jekyll because we can write content like we write code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ability to write content in markdown or textile in your favorite text-editor.&lt;/li&gt;
+  &lt;li&gt;Ability to write and preview your content via localhost.&lt;/li&gt;
+  &lt;li&gt;No internet connection required.&lt;/li&gt;
+  &lt;li&gt;Ability to publish via git.&lt;/li&gt;
+  &lt;li&gt;Ability to host your blog on a static web-server.&lt;/li&gt;
+  &lt;li&gt;Ability to host freely on GitHub Pages.&lt;/li&gt;
+  &lt;li&gt;No database required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;how-jekyll-works&quot;&gt;How Jekyll Works&lt;/h1&gt;
+
+&lt;p&gt;The following is a complete but concise outline of exactly how Jekyll works.&lt;/p&gt;
+
+&lt;p&gt;Be aware that core concepts are introduced in rapid succession without code examples.
+This information is not intended to specifically teach you how to do anything, rather it
+is intended to give you the &lt;em&gt;full picture&lt;/em&gt; relative to what is going on in Jekyll-world.&lt;/p&gt;
+
+&lt;p&gt;Learning these core concepts should help you avoid common frustrations and ultimately
+help you better understand the code examples contained throughout Jekyll-Bootstrap.&lt;/p&gt;
+
+&lt;h2 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h2&gt;
+
+&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you’ll need to format your website directory in a way jekyll expects.
+Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-jekyll-application-base-format&quot;&gt;The Jekyll Application Base Format&lt;/h3&gt;
+
+&lt;p&gt;Jekyll expects your website directory to be laid out like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- post.html
+|-- _posts
+|   |-- 2011-10-25-open-source-is-good.markdown
+|   |-- 2011-04-26-hello-world.markdown
+|-- _site
+|-- index.html
+|-- assets
+    |-- css
+        |-- style.css
+    |-- javascripts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;
+  Stores configuration data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_includes&lt;/strong&gt;
+  This folder is for partial views.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_layouts&lt;/strong&gt;
+  This folder is for the main templates your content will be inserted into.
+  You can have different layouts for different pages or page sections.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_posts&lt;/strong&gt;
+  This folder contains your dynamic content/posts.
+  the naming format is required to be &lt;code&gt;@YEAR-MONTH-DATE-title.MARKUP@&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_site&lt;/strong&gt;
+  This is where the generated site will be placed once Jekyll is done transforming it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;assets&lt;/strong&gt;
+  This folder is not part of the standard jekyll structure.
+  The assets folder represents &lt;em&gt;any generic&lt;/em&gt; folder you happen to create in your root directory.
+  Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(read more: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Usage&quot;&gt;https://github.com/mojombo/jekyll/wiki/Usage&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-configuration&quot;&gt;Jekyll Configuration&lt;/h3&gt;
+
+&lt;p&gt;Jekyll supports various configuration options that are fully outlined here:
+(&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;content-in-jekyll&quot;&gt;Content in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Content in Jekyll is either a post or a page.
+These content “objects” get inserted into one or more templates to build the final output for its respective static-page.&lt;/p&gt;
+
+&lt;h3 id=&quot;posts-and-pages&quot;&gt;Posts and Pages&lt;/h3&gt;
+
+&lt;p&gt;Both posts and pages should be written in markdown, textile, or HTML and may also contain Liquid templating syntax.
+Both posts and pages can have meta-data assigned on a per-page basis such as title, url path, as well as arbitrary custom meta-data.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-posts&quot;&gt;Working With Posts&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Post&lt;/strong&gt;
+Posts are created by properly formatting a file and placing it the &lt;code&gt;_posts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+A post must have a valid filename in the form &lt;code&gt;YEAR-MONTH-DATE-title.MARKUP&lt;/code&gt; and be placed in the &lt;code&gt;_posts&lt;/code&gt; directory.
+If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file.
+Additionally, each file must have &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt; prepended to its content.
+YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Order&lt;/strong&gt;
+Ordering is an important part of Jekyll but it is hard to specify a custom ordering strategy.
+Only reverse chronological and chronological ordering is supported in Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Since the date is hard-coded into the filename format, to change the order, you must change the dates in the filenames.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt;
+Posts can have tags associated with them as part of their meta-data.
+Tags may be placed on posts by providing them in the post’s YAML front matter.
+You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories&lt;/strong&gt;
+Posts may be categorized by providing one or more categories in the YAML front matter.
+Categories offer more significance over tags in that they can be reflected in the URL path to the given post.
+Note categories in Jekyll work in a specific way.
+If you define more than one category you are defining a category hierarchy “set”.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title :  Hello World
+categories : [lessons, beginner]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This defines the category hierarchy “lessons/beginner”. Note this is &lt;em&gt;one category&lt;/em&gt; node in Jekyll.
+You won’t find “lessons” and “beginner” as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-pages&quot;&gt;Working With Pages&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Page&lt;/strong&gt;
+Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do &lt;em&gt;not&lt;/em&gt; start with an underscore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+In order to register as a Jekyll page the file must contain &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt;.
+Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the &lt;code&gt;site.pages&lt;/code&gt; array for inclusion into your templates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories and Tags&lt;/strong&gt;
+Pages do not compute categories nor tags so defining them will have no effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sub-Directories&lt;/strong&gt;
+If pages are defined in sub-directories, the path to the page will be reflected in the url.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- people
+    |-- bob
+        |-- essay.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This page will be available at &lt;code&gt;http://yourdomain.com/people/bob/essay.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt;
+You will always want to define the root index.html page as this will display on your root URL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;404.html&lt;/strong&gt;
+Create a root 404.html page and GitHub Pages will serve it as your 404 response.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sitemap.html&lt;/strong&gt;
+Generating a sitemap is good practice for SEO.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;about.html&lt;/strong&gt;
+A nice about page is easy to do and gives the human perspective to your website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;templates-in-jekyll&quot;&gt;Templates in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Templates are used to contain a page’s or post’s content.
+All templates have access to a global site object variable: &lt;code&gt;site&lt;/code&gt; as well as a page object variable: &lt;code&gt;page&lt;/code&gt;.
+The site variable holds all accessible content and metadata relative to the site.
+The page variable holds accessible data for the given page or post being rendered at that point.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a Template&lt;/strong&gt;
+Templates are created by properly formatting a file and placing it in the &lt;code&gt;_layouts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+Templates should be coded in HTML and contain YAML Front Matter.
+All templates can contain Liquid code to work with your site’s data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rending Page/Post Content in a Template&lt;/strong&gt;
+There is a special variable in all templates named : &lt;code&gt;content&lt;/code&gt;.
+The &lt;code&gt;content&lt;/code&gt; variable holds the page/post content including any sub-template content previously defined.
+Render the content variable wherever you want your main content to be injected into your template:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+&amp;lt;body&amp;gt;
+  &amp;lt;div id=&quot;sidebar&quot;&amp;gt; ... &amp;lt;/div&amp;gt;
+  &amp;lt;div id=&quot;main&quot;&amp;gt;
+    &amp;#123;{content}&amp;#125;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;sub-templates&quot;&gt;Sub-Templates&lt;/h3&gt;
+
+&lt;p&gt;Sub-templates are exactly templates with the only difference being they
+define another “root” layout/template within their YAML Front Matter.
+This essentially means a template will render inside of another template.&lt;/p&gt;
+
+&lt;h3 id=&quot;includes&quot;&gt;Includes&lt;/h3&gt;
+&lt;p&gt;In Jekyll you can define include files by placing them in the &lt;code&gt;_includes&lt;/code&gt; folder.
+Includes are NOT templates, rather they are just code snippets that get included into templates.
+In this way, you can treat the code inside includes as if it was native to the parent template.&lt;/p&gt;
+
+&lt;p&gt;Any valid template code may be used in includes.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-liquid-for-templating&quot;&gt;Using Liquid for Templating&lt;/h2&gt;
+
+&lt;p&gt;Templating is perhaps the most confusing and frustrating part of Jekyll.
+This is mainly due to the fact that Jekyll templates must use the Liquid Templating Language.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-liquid&quot;&gt;What is Liquid?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt; is a secure templating language developed by &lt;a href=&quot;http://shopify.com&quot;&gt;Shopify&lt;/a&gt;.
+Liquid is designed for end-users to be able to execute logic within template files
+without imposing any security risk on the hosting server.&lt;/p&gt;
+
+&lt;p&gt;Jekyll uses Liquid to generate the post content within the final page layout structure and as the primary interface for working with
+your site and post/page data.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-do-we-have-to-use-liquid&quot;&gt;Why Do We Have to Use Liquid?&lt;/h3&gt;
+
+&lt;p&gt;GitHub uses Jekyll to power &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.
+GitHub cannot afford to run arbitrary code on their servers so they lock developers down via Liquid.&lt;/p&gt;
+
+&lt;h3 id=&quot;liquid-is-not-programmer-friendly&quot;&gt;Liquid is Not Programmer-Friendly.&lt;/h3&gt;
+
+&lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
+The point being you can’t do jackshit in liquid that hasn’t been allowed explicitly by the implementation.
+What’s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
+
+&lt;p&gt;In Jekyll’s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
+Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;As a programmer - this is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;But rather than look a gift horse in the mouth we are going to
+suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;
+My personal stance is to not invest time trying to hack liquid. It’s really unnecessary
+&lt;em&gt;from a programmer’s&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
+you are better off sticking with ruby. Toward that end I’ve built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;static-assets&quot;&gt;Static Assets&lt;/h2&gt;
+
+&lt;p&gt;Static assets are any file in the root or non-underscored subfolders that are not pages.
+That is they have no valid YAML Front Matter and are thus not treated as Jekyll Pages.&lt;/p&gt;
+
+&lt;p&gt;Static assets should be used for images, css, and javascript files.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-parses-files&quot;&gt;How Jekyll Parses Files&lt;/h2&gt;
+
+&lt;p&gt;Remember Jekyll is a processing engine. There are two main types of parsing in Jekyll.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content parsing.&lt;/strong&gt;
+  This is done with textile or markdown.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template parsing.&lt;/strong&gt;
+This is done with the liquid templating language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And thus there are two main types of file formats needed for this parsing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Post and Page files.&lt;/strong&gt;
+All content in Jekyll is either a post or a page so valid posts and pages are parsed with markdown or textile.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template files.&lt;/strong&gt;
+  These files go in &lt;code&gt;_layouts&lt;/code&gt; folder and contain your blogs &lt;strong&gt;templates&lt;/strong&gt;. They should be made in HTML with the help of Liquid syntax.
+  Since include files are simply injected into templates they are essentially parsed as if they were native to the template.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Arbitrary files and folders.&lt;/strong&gt;
+Files that &lt;em&gt;are not&lt;/em&gt; valid pages are treated as static content and pass through
+Jekyll untouched and reside on your blog in the exact structure and format they originally existed in.&lt;/p&gt;
+
+&lt;h3 id=&quot;formatting-files-for-parsing&quot;&gt;Formatting Files for Parsing.&lt;/h3&gt;
+
+&lt;p&gt;We’ve outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
+Templates, posts, and pages all need to provide valid YAML Front Matter even if the Matter is empty.
+This is the only way Jekyll knows you want the file processed.&lt;/p&gt;
+
+&lt;p&gt;YAML Front Matter must be prepended to the top of template/post/page files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+layout: post
+category : pages
+tags : [how-to, jekyll]
+---
+
+... contents ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
+The data inside the block must be valid YAML.&lt;/p&gt;
+
+&lt;p&gt;Configuration parameters for YAML Front-Matter is outlined here:
+&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;A comprehensive explanation of YAML Front Matter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;defining-layouts-for-posts-and-templates-parsing&quot;&gt;Defining Layouts for Posts and Templates Parsing.&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;layout&lt;/code&gt; parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
+If a template file specifies its own layout, it is effectively being used as a &lt;code&gt;sub-template.&lt;/code&gt;
+That is to say loading a post file into a template file that refers to another template file with work in the way you’d expect; as a nested sub-template.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-generates-the-final-static-files&quot;&gt;How Jekyll Generates the Final Static Files.&lt;/h2&gt;
+
+&lt;p&gt;Ultimately, Jekyll’s job is to generate a static representation of your website.
+The following is an outline of how that’s done:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll collects data.&lt;/strong&gt;
+  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll computes data.&lt;/strong&gt;
+  Jekyll takes these objects, computes metadata (permalinks, tags, categories, titles, dates) from them and constructs one
+  big &lt;code&gt;site&lt;/code&gt; object that holds all the posts, pages, layouts, and respective metadata.
+  At this stage your site is one big computed ruby object.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll liquifies posts and templates.&lt;/strong&gt;
+  Next jekyll loops through each post file and converts (through markdown or textile) and &lt;strong&gt;liquifies&lt;/strong&gt; the post inside of its respective layout(s).
+  Once the post is parsed and liquified inside the the proper layout structure, the layout itself is “liquified”.
+ &lt;strong&gt;Liquification&lt;/strong&gt; is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
+  hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll generates output.&lt;/strong&gt;
+ Finally the liquid templates are “rendered”, thereby processing any liquid syntax provided in the templates
+ and saving the final, static representation of the file.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes.&lt;/strong&gt;
+Because Jekyll computes the entire site in one fell swoop, each template is given access to
+a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you’ll iterate through and format
+using the Liquid tags and filters in order to render it onto a given page.&lt;/p&gt;
+
+&lt;p&gt;Remember, in Jekyll you are an end-user. Your API has only two components:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The manner in which you setup your directory.&lt;/li&gt;
+  &lt;li&gt;The liquid syntax and variables passed into the liquid templates.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All the data objects available to you in the templates via Liquid are outlined in the &lt;strong&gt;API Section&lt;/strong&gt; of Jekyll-Bootstrap.
+You can also read the original documentation here: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;https://github.com/mojombo/jekyll/wiki/Template-Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope this paints a clearer picture of what Jekyll is doing and why it works the way it does.
+As noted, our main programming constraint is the fact that our API is limited to what is accessible via Liquid and Liquid only.&lt;/p&gt;
+
+&lt;p&gt;Jekyll-bootstrap is intended to provide helper methods and strategies aimed at making it more intuitive and easier to work with Jekyll =)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thank you&lt;/strong&gt; for reading this far.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;Please take a look at []()
+or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Solving password input problem with Snow Leopard</title>
+   <link href="http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard"/>
+   <updated>2011-10-16T19:30:36+00:00</updated>
+   <id>http://username.github.io/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</id>
+   <content type="html">&lt;p&gt;Snow Leopard is supposed to be a slimmer and more stable version than Leopard. When it comes to default password input, Leopard is far better as Snow Leopard has a few drawbacks:&lt;/p&gt;
+&lt;p&gt;1. It cannot input password in languages other than English! Leopard did that just smoothly.&lt;/p&gt;
+&lt;p&gt;2. It does not have input language at password by default like Leopard. If you have tons of unsaved work and your screen is password protected, you are as good as a dead man.&lt;/p&gt;
+&lt;p&gt;3. Default Vietnamese input sucks, it does not work well in Apple&#39;s own Safari and also on third party apps such as Chrome, TextMate, TextWrangler, etc.&lt;/p&gt;
+&lt;p&gt;There&#39;s no guide or mentioning why such problems are still around and what&#39;s ETA for fixes.&lt;/p&gt;
+&lt;p&gt;Today I&#39;m solving only the issue with login dialog to avoid the issue with locked screen and you have lots of unsaved work and your boss is whistling:&lt;/p&gt;
+&lt;p&gt;1. Go the System Preferences&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;670&quot; caption=&quot;System Preferences - Accounts&quot;]&lt;img title=&quot;System Preferences - Accounts&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-07.00.15.png&quot; alt=&quot;System Preferences - Accounts&quot; width=&quot;670&quot; height=&quot;564&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;2. Select Accounts&lt;/p&gt;
+&lt;p&gt;3. Select Login Options&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;673&quot; caption=&quot;Select Login Options&quot;]&lt;img title=&quot;Select Login Options&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-07.00.43.png&quot; alt=&quot;Select Login Options&quot; width=&quot;673&quot; height=&quot;532&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;4. Unlock &amp;amp; input your password (please revert input to English first)&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;674&quot; caption=&quot;Input password&quot;]&lt;img title=&quot;Input password&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-06.59.49.png&quot; alt=&quot;Input password&quot; width=&quot;674&quot; height=&quot;535&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;5. Tick the option &quot;Show input menu in login window&quot;&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;671&quot; caption=&quot;Tick the option &quot;Show input menu in login window&quot;&quot;]&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;Lock the dialog to save the change. Now every time you login from locked screen, you will see language input on your top right hand corner. Change input to English and input your password. Let your Mac sleep and wake it up to test. No more hassle ;) !&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Migrated DNS to Linode</title>
+   <link href="http://username.github.io/development/2011/05/17/migrated-dns-to-linode"/>
+   <updated>2011-05-17T12:07:15+00:00</updated>
+   <id>http://username.github.io/development/2011/05/17/migrated-dns-to-linode</id>
+   <content type="html">&lt;p&gt;Previously I hosted all DNS records for &lt;strong&gt;simpleit.us&lt;&amp;#47;strong&gt; with &lt;strong&gt;NearlyFreeSpeech&lt;&amp;#47;strong&gt; (&lt;a title=&quot;Nearly Free Speech Hosting&quot; href=&quot;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&lt;&amp;#47;a&gt;). They provide cheap DNS hosting at 1c&amp;#47;day per zone. Initially I didn&#39;t hosted my DNS records with Linode as I was interested in redundancy. However, later I realized that I didn&#39;t have any back-up&amp;#47;disaster recovery site on par with the VPS hosted with Linode. The&amp;nbsp; account I have with NearlyFreeSpeech is meant for low performance and HTML-only content did not match with my VPS. Thus having DNS hosting with NFS didn&#39;t give any extra advantage and I migrated to Linode to centralize my control.&lt;/p&gt;
+&lt;p&gt;Unlike NFS which gave me freedom to add any kind of records, the Linode DNS manager has the most basic records (SOA, NS, A&amp;#47;AAAA, MX, CNAME, TXT and SRV). That would suffice for any daily needs. I had experience with NFS and Zonomi (DNS host provider). They both require technical details such as the trailing dot &quot;.&quot; at the end of each alias&amp;#47;MX mail server. Linode, however, simplified this and caused little confusion. Linode also does not give as much freedom on cache time like NFS or Zonomi do.&lt;/p&gt;
+&lt;p&gt;Linode was good at hiding technical details for simplicity and I got all SOA, NS and A&amp;#47;AAAA records populated. That saved me lots of typing effort and time as well. I was able to get my domain and subdomains back to running status within 15 minutes. The only issue I had is all emails I sent to @simpleit.us were rejected with 554 error. I have Google Apps hosted on my &lt;strong&gt;simpleit.us&lt;&amp;#47;strong&gt; and enjoyed using emails like abc@simpleit.us. Linode had MX records interface what were little confusing. I had to read their manual &lt;a title=&quot;Using Google Apps for Email&quot; href=&quot;http:&amp;#47;&amp;#47;library.linode.com&amp;#47;email&amp;#47;google-mail&quot;&gt;http:&amp;#47;&amp;#47;library.linode.com&amp;#47;email&amp;#47;google-mail&lt;&amp;#47;a&gt; to fix the issue of email rejection. I went little further by adding the SPF record as advised by Google manual: &lt;a href=&quot;http:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=33786&quot;&gt;http:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=33786&lt;&amp;#47;a&gt;.&lt;/p&gt;
+&lt;p&gt;There were handy tools that helped me verify my MX records, you may find them useful too:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;www.dnsstuff.com&amp;#47;tools&amp;#47;legacy&amp;#47;?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&quot;&gt;http:&amp;#47;&amp;#47;www.dnsstuff.com&amp;#47;tools&amp;#47;legacy&amp;#47;?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;www.dnsquery.org&amp;#47;dnsquery&amp;#47;simpleit.us&amp;#47;MX&quot;&gt;http:&amp;#47;&amp;#47;www.dnsquery.org&amp;#47;dnsquery&amp;#47;simpleit.us&amp;#47;MX&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;If you need to read extra on MX records, refer to Google help: &lt;a href=&quot;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&quot;&gt;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&lt;&amp;#47;a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall, Linode provides good service and I&#39;ve been using Linode VPS since Feb 2010. Free DNS with many record types is a good deal. If you are curious then check their site at : &lt;a href=&quot;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&quot;&gt;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&lt;&amp;#47;a&gt; (my referral link).&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Back for good - New features on Posterous</title>
+   <link href="http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2"/>
+   <updated>2010-06-24T17:44:00+00:00</updated>
+   <id>http://username.github.io/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</id>
+   <content type="html">&lt;div class=&quot;posterous_autopost&quot;&gt;
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;p&gt;Was not using this blog for quite a while as it lacked the features I needed such as reordering of the images in a gallery. Today I got an email from Posterous announcing a bundle of new features such as updated web editor, more flexible image&amp;#47;photo management and 2 new themes.&lt;/p&gt;
+&lt;p&gt;I love the new theme named &quot;Minimal&quot; (currently in use). It&#39;s clean &amp;amp; elegant. There are a few important additions to the themes, such as show on click and show on hover widgets. JS is not yet allowed but let&#39;s hope that there are will be more dynamic widgets to compensate the designers and users.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;getfile&amp;#47;files.posterous.com&amp;#47;temp-2010-06-24&amp;#47;nFulwnpcbCFtcshlspItgezHtEaDJftiowBcnycChlDFIJyyoyIghIwemoce&amp;#47;moz-screenshot-21.png.scaled500.png&quot; width=&quot;500&quot; height=&quot;500&quot; &amp;#47;&gt;&lt;/p&gt;
+&lt;p&gt;I&#39;m waiting for the moment when designers can add their own JS snippets. The meta language by Posterous for theme design is not feature rich yet. The editor always lacks the &quot;justified&quot; text alignment feature. Let&#39;s wait for a surprise from them.&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;back-for-good-new-features-on-posterous&quot;&gt;Everything about passion&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Enabling OpenSSL for Qt C++ on Windows</title>
+   <link href="http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows"/>
+   <updated>2010-05-30T14:13:21+00:00</updated>
+   <id>http://username.github.io/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</id>
+   <content type="html">&lt;p&gt;By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won&#39;t be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won&#39;t work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.&lt;/p&gt;
+&lt;p&gt;Make sure you have readandbefore proceeding.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open CMD console &amp;amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)&lt;&amp;#47;li&gt;
+&lt;li&gt;Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;code&gt;set PATH=%PATH%;C:\Qt\2010.02.1\mingw\bin;C:\Qt\2010.02.1\qt\bin;&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Configure QtNetwork build using this one-liner:&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;code&gt;qmake &quot;PWD=C:\Qt\2010.02.1\qt\src\network&quot; &quot;QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32&quot; &quot;DEFINES += QT_LINKED_OPENSSL&quot; &quot;DEFINES -= QT_NO_SSL&quot;&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;It&#39;s your responsibility to ensure that OpenSSL is installed and visible to MinGW.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go ahead with building with this single command:&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;code&gt;mingw32-make&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;Wait for 5-10 mins and you have QtNetwork with OpenSSL enabled. Enjoy!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Installing Qt, QtCreator and MinGW for Windows</title>
+   <link href="http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows"/>
+   <updated>2010-05-30T13:53:41+00:00</updated>
+   <id>http://username.github.io/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</id>
+   <content type="html">&lt;p&gt;Ever thought of developing simple &amp;amp; nice cross-platform applications without sweating? Nokia Qt C++ frameworks empowers you to do so. To get started, first install the Qt SDK with IDE and of course famous GNU compiler chain GCC, branded under MinGW for Windows.&lt;/p&gt;
+&lt;p&gt;Get the framework, IDE &amp;amp; tool chain from: &lt;a href=&quot;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&quot;&gt;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;If you are interested in particular parts of MinGW, look here: &lt;a href=&quot;http:&amp;#47;&amp;#47;sourceforge.net&amp;#47;projects&amp;#47;mingw&amp;#47;files&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;sourceforge.net&amp;#47;projects&amp;#47;mingw&amp;#47;files&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;Just follow default steps and you are safe. If you are interested in free M$ C&amp;#47;C++ compiler, just download the Qt source and build it yourself.&lt;/p&gt;
+&lt;p&gt;Now you are ready to play with magic. To appreciate Qt, run QtDemo and also watch some clips &amp;amp; read some stuff:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Building OpenSSL with MinGW on Windows</title>
+   <link href="http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows"/>
+   <updated>2010-05-30T13:42:45+00:00</updated>
+   <id>http://username.github.io/tutorial/2010/05/30/building-openssl-with-mingw-on-windows</id>
+   <content type="html">&lt;p&gt;A number of libraries applications depend on OpenSSL, to name a few: cURL, QtNetwork, WebKit, your IMAP or secure SMTP client, etc. Building of OpenSSL is painstaking, unless you know some tricks. Read more for guidance.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you yet to have MinGW, read to learn how to install it.&lt;&amp;#47;li&gt;
+&lt;li&gt;Download Perl from ActiveState site: . Choose version that match your Windows. MSI installer is recommended, unless you are so fluent in Windows and don&#39;t mind spending time with little tweaks like adding PATH, etc&lt;&amp;#47;li&gt;
+&lt;li&gt;Run the MSI installer and point path to C:\develop\tools\perl . You may choose different path, but that&#39;s what on my machine.&lt;&amp;#47;li&gt;
+&lt;li&gt;Having installed with Perl, now let&#39;s fetch OpenSSL: (the latest version of OpenSSL 0.9.8 at the time of writing). &amp;nbsp;I wouldn&#39;t recommend chasing after the version 1.0 for now.&lt;&amp;#47;li&gt;
+&lt;li&gt;Extract openssl to C:\develop\tools\ and you will obtain directory C:\develop\tools\openssl-0.9.8n . Get inside it.&lt;&amp;#47;li&gt;
+&lt;li&gt;Before you start building anything, take note that the macro OPENSSL_IMPLEMENT_GLOBAL causes fatal errors. Find it inside the files openssl-0.9.8n\e_os2.h , openssl-0.9.8n\include\openssl\e_os2.h and openssl-0.9.8n\outinc\openssl\e_os2.h . Find the macro&#39;s definition and change&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;code&gt;static type _hide_##name&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;#47;* static type _hide_##name *&amp;#47; type _hide_##name&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Now let&#39;s build shared &amp;amp; static versions of OpenSSL with a single command (you are now inside C:\develop\tools\openssl-0.9.8n):&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+ms\mingw32.bat shared&lt;/p&gt;
+&lt;p&gt;Navigate to YouTube and have some snack. It may take 15-20 mins to finish building.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When building is finished, you can copy outinc\openssl to your mingw\include directory. You also can copy generated *.a and *.dll files to mingw\lib directory and the *.dll to mingw\bin directory. If you hate copying, remember to make use of -I and -L flags to appropriate folders when building with MinGW.&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt;&amp;nbsp;As noted by&amp;nbsp;Darrell Walisser in the comments part, Perl distributed with msys was the culprit. Installing ActiveState Perl will solve the issue without this workaround. Thanks Darrell!&lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;p&gt;[1]&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Chrome wins Safari by a few tipping points</title>
+   <link href="http://username.github.io/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points"/>
+   <updated>2010-03-18T10:31:51+00:00</updated>
+   <id>http://username.github.io/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</id>
+   <content type="html">&lt;div class=&quot;posterous_autopost&quot;&gt;A winner app does not need a mind blowing or much superior feature or difference. Many times, a small bit of improvement can make a huge difference in user satisfaction and perception. Seeing Safari or Firefox designs, I perceive them as &quot;heavy&quot; and &quot;slow&quot;. Their design filled with dark colors and appear to be very &quot;thick&quot;. Chrome, conversely, delivers lightweight look and feel through its design. Lightweight appearance of Chrome makes me feel more pleasing and feel it much faster than Safari and Firefox. Opera design is even worse.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Not only is Chrome more lightweight in design but also outperforms other GUI browsers. But that&#39;s a huge topic. I just focus on little bits that make users more satisfied and better informed. I tried uploading files to IVLE &lt;a href=&quot;https:&amp;#47;&amp;#47;ivle.nus.edu.sg&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;ivle.nus.edu.sg&amp;#47;&lt;&amp;#47;a&gt; countless number of times using Safari and it stalls on medium and big uploads (300KB and more). It sit clueless and impatience takes over me when I have to upload submission over 9MB. There are no indication of speed, progress or even a single notice like &quot;loading&quot; or &quot;uploading&quot;. Firefox does not do much better. Chrome is different. It keeps me informed about the progress. It&#39;s just a tiny bit but has big impact: I know that it&#39;s running, I know the progress and I can expect when it finishes and I feel staying in control. Here&#39;s the tiny screenshot that makes me happy:&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;getfile&amp;#47;files.posterous.com&amp;#47;vietlq&amp;#47;IhPJshsmwPSsbFzGQkFgDfVQd4wTvfp1kbbOBhu7S0NwEitkB0YoCAgHwoMa&amp;#47;pastedGraphic.tiff.converted.jpg&quot; width=&quot;331&quot; height=&quot;108&quot; &amp;#47;&gt;&lt;/p&gt;
+&lt;p&gt;I deduce that good design and good application cares about keeping users informed, making them feel staying in control and reduces the degree of uncertainties.&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;chrome-wins-safari-by-a-few-tipping-points&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Audi breaks the spell</title>
+   <link href="http://username.github.io/uncategorized/2010/03/17/audi-breaks-the-spell"/>
+   <updated>2010-03-17T20:58:34+00:00</updated>
+   <id>http://username.github.io/uncategorized/2010/03/17/audi-breaks-the-spell</id>
+   <content type="html">&lt;div class=&quot;posterous_autopost&quot;&gt;
+&lt;p&gt;Stumbled upon this Audi commercial:&lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;417&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;window&quot; &amp;#47;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; &amp;#47;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;embed width=&quot;500&quot; height=&quot;417&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; wmode=&quot;window&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
+&lt;p&gt;I like the sports car the most. Thinking of buying one in 5-6 years :)&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;audi-breaks-the-spell&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>In the kitchen - Album by May</title>
+   <link href="http://username.github.io/uncategorized/2010/03/16/in-the-kitchen-album-by-may"/>
+   <updated>2010-03-16T20:04:34+00:00</updated>
+   <id>http://username.github.io/uncategorized/2010/03/16/in-the-kitchen-album-by-may</id>
+   <content type="html">&lt;div class=&#39;posterous_autopost&#39;&gt;
+&lt;p&gt;I have heart for food and enjoy seeing photos capturing food and exploring kitchen:&lt;&amp;#47;p&gt;
+&lt;p&gt;&lt;object height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;param name=&quot;flashvars&quot; value=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; &amp;#47;&gt;&lt;param name=&quot;movie&quot; value=&quot;http:&amp;#47;&amp;#47;www.flickr.com&amp;#47;apps&amp;#47;slideshow&amp;#47;show.swf?v=71649&quot; &amp;#47;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;embed type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.flickr.com&amp;#47;apps&amp;#47;slideshow&amp;#47;show.swf?v=71649&quot; allowFullScreen=&quot;true&quot; flashvars=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;&amp;#47;embed&gt;&lt;&amp;#47;object&gt;&lt;&amp;#47;p&gt;
+&lt;p&gt;Photo credits go to May, one of my acquaintances. Yummy!&lt;&amp;#47;p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;  &lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt;   from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;in-the-kitchen-album-by-may&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;  &lt;&amp;#47;p&gt;  &lt;&amp;#47;div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Posterous is awesome!</title>
+   <link href="http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome"/>
+   <updated>2010-03-16T19:28:30+00:00</updated>
+   <id>http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome</id>
+   <content type="html">&lt;div class=&quot;posterous_autopost&quot;&gt;
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;p&gt;Learn few great thing about Posterous: You can create your themes and add custom domain for free! It&#39;s super simple and no PHP needed, while WordPress requires designer to learn PHP to be able to create themes. One more thing, owners can publish by just sending an email. The technique is simple but the usability and convenience have been greatly improved.&lt;/p&gt;
+&lt;p&gt;There&#39;s a few shortcomings too:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;No image embedding in web posting interface&lt;&amp;#47;li&gt;
+&lt;li&gt;No predefined styles (such as H1, H2, Body Text, ...) but only font sizes in web posting interface&lt;&amp;#47;li&gt;
+&lt;li&gt;Searching sucks! I can never find anything, even tags and content match!&lt;&amp;#47;li&gt;&lt;br /&gt;
+&lt;&amp;#47;ol&gt;&lt;br /&gt;
+But one still can add images by going to the raw HTML editing. Here&#39;s my image and YouTube:&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;images&amp;#47;posterous-small.png&quot; &amp;#47;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;300&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; &amp;#47;&gt;&lt;embed width=&quot;500&quot; height=&quot;300&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;480&quot; height=&quot;385&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; &amp;#47;&gt;&lt;embed width=&quot;480&quot; height=&quot;385&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Simple &amp; cool effect in OpenGL</title>
+   <link href="http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl"/>
+   <updated>2010-03-08T11:14:06+00:00</updated>
+   <id>http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</id>
+   <content type="html">&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
+&lt;p&gt;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;watch?v=IeoR4_5PFdM&lt;/p&gt;
+&lt;p&gt;It&#39;s in Russian but hold on, the effect is deadly simple but beautiful. Just watch and try it yourself.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

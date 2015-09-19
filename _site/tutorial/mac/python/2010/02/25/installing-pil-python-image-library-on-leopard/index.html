@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Installing PIL (Python Image Library) on Leopard</title>
+    
+    <meta name="author" content="Name Lastname">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap styles -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Sticky Footer -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="/assets/themes/bootstrap-3/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jekyll Bootstrap</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="container">
+        
+<div class="page-header">
+  <h1>Installing PIL (Python Image Library) on Leopard </h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+    <div class="date">
+      <span>25 February 2010</span>
+    </div>
+    <div class="content">
+      <p>PIL is a simple yet powerful image processing library for Python which has both low level and high-level features. In this tutorial I will demonstrate installation of PIL on for Python 2.5 and 2.6 on Leopard. Below are steps:</p>
+<p>0. Set up folder for installation</p>
+<p>[cc lang="bash"]<br />
+cd ~<br />
+mkdir -p simpleit&#47;temp<br />
+cd simpleit&#47;temp<br />
+[&#47;cc]</p>
+<p>1. Install Python 2.6</p>
+<p>By default Leopard comes with Python 2.5.1 so we need to install Python 2.6. Let's download Python 2.6 from ActiveState website: <a title="http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;" href="http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;">http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;<&#47;a>.</p>
+<p>[cc lang="bash"]<br />
+curl -C - -O http:&#47;&#47;downloads.activestate.com&#47;ActivePython&#47;releases&#47;2.6.4.10&#47;ActivePython-2.6.4.10-macosx.dmg<br />
+open ActivePython-2.6.4.10-macosx.dmg<br />
+[&#47;cc]</p>
+<p>Proceed with normal installation (don't change any default configurations).</p>
+<p>2. Install ZLIB</p>
+<p>Grab ZLIB from its website&nbsp;<a title="http:&#47;&#47;www.zlib.net&#47;" href="http:&#47;&#47;www.zlib.net&#47;">http:&#47;&#47;www.zlib.net&#47;<&#47;a> and do simple installation (both static &amp; dynamic):</p>
+<p>[cc lang="bash"]<br />
+curl -C - -O http:&#47;&#47;www.zlib.net&#47;zlib-1.2.3.tar.gz<br />
+tar zxvf zlib-1.2.3.tar.gz<br />
+cd zlib-1.2.3<br />
+.&#47;configure<br />
+make<br />
+sudo make install<br />
+.&#47;configure --shared<br />
+make<br />
+sudo make install<br />
+[&#47;cc]</p>
+<p>3. Install FreeType2</p>
+<p>Get FreeType2&nbsp;from its main site: <a title="http:&#47;&#47;www.freetype.org&#47;" href="http:&#47;&#47;www.freetype.org&#47;">http:&#47;&#47;www.freetype.org&#47;<&#47;a>:</p>
+<p>[cc lang="bash"]<br />
+curl -L -C - -O http:&#47;&#47;downloads.sourceforge.net&#47;project&#47;freetype&#47;freetype2&#47;2.3.12&#47;freetype-2.3.12.tar.gz<br />
+tar zxvf freetype-2.3.12.tar.gz<br />
+cd freetype-2.3.12<br />
+.&#47;configure --with-zlib=&#47;usr&#47;local<br />
+make<br />
+sudo make install<br />
+[&#47;cc]</p>
+<p>4. Install jpeg</p>
+<p>Get JPEG (now it's version 8)&nbsp;from its main site: <a title="http:&#47;&#47;www.ijg.org&#47;" href="http:&#47;&#47;www.ijg.org&#47;">http:&#47;&#47;www.ijg.org&#47;<&#47;a>:</p>
+<p>[cc lang="bash"]<br />
+curl -L -C - -O http:&#47;&#47;www.ijg.org&#47;files&#47;jpegsrc.v8.tar.gz<br />
+tar zxvf jpegsrc.v8.tar.gz<br />
+cd jpeg-8<br />
+.&#47;configure --enable-shared --enable-static<br />
+make<br />
+sudo make install<br />
+[&#47;cc]</p>
+<p>5. Install TIFF</p>
+<p>Get TIFF&nbsp;from its main site: <a title="http:&#47;&#47;www.libtiff.org&#47;" href="http:&#47;&#47;www.libtiff.org&#47;">http:&#47;&#47;www.libtiff.org&#47;<&#47;a>:</p>
+<p>[cc lang="bash"]<br />
+curl -L -C - -O ftp:&#47;&#47;ftp.remotesensing.org&#47;pub&#47;libtiff&#47;tiff-3.9.2.tar.gz<br />
+tar zxvf tiff-3.9.2.tar.gz<br />
+cd tiff-3.9.2<br />
+.&#47;configure --with-zlib-include-dir=&#47;usr&#47;local&#47;include --with-zlib-lib-dir=&#47;usr&#47;local&#47;lib --with-jpeg-include-dir=&#47;usr&#47;local&#47;include --with-jpeg-lib-dir=&#47;usr&#47;local&#47;lib --enable-cxx   --enable-jpeg  --enable-zlib<br />
+make<br />
+sudo make install<br />
+[&#47;cc]</p>
+<p>6. Amend Python config Makefile</p>
+<p>The easy part is over. Now read carefully. By default ActiveState Python assumes that you can build Universal binaries (x86 + PPC), which is wrong in most of cases. There is high chance that you are running Leopard on Intel Mac (x86). So you need to amend this file: &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile. You need to remove 3 occurrences of '-arch ppc' to build smoothly (or leave it to try your luck):</p>
+<p>[cc lang="bash"]<br />
+cp &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile.BAK<br />
+sudo sed -e '&#47;-arch ppc&#47;&#47;g' &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile.BAK > &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile<br />
+[&#47;cc]</p>
+<p>7. Install PIL</p>
+<p>Now you are ready to download PIL. There is a bit of configuration involved but you can do it quickly. Grab latest stable PIL source package from <a title="http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;" href="http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;">http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;<&#47;a>.</p>
+<p>[cc lang="bash"]<br />
+curl -L -C - -O http:&#47;&#47;effbot.org&#47;media&#47;downloads&#47;Imaging-1.1.7.tar.gz<br />
+tar zxvf Imaging-1.1.7.tar.gz<br />
+cd Imaging-1.1.7<br />
+emacs setup.py<br />
+[&#47;cc]</p>
+<p>Replace the following chunk with the one below:</p>
+<p>[cc lang="python"]<br />
+TCL_ROOT = None<br />
+JPEG_ROOT = None<br />
+ZLIB_ROOT = None<br />
+TIFF_ROOT = None<br />
+FREETYPE_ROOT = None<br />
+LCMS_ROOT = None<br />
+[&#47;cc]</p>
+<p>[cc lang="python"]<br />
+TCL_ROOT = None<br />
+JPEG_ROOT = libinclude('&#47;usr&#47;local')<br />
+ZLIB_ROOT = libinclude('&#47;usr&#47;local')<br />
+TIFF_ROOT = libinclude('&#47;usr&#47;local')<br />
+FREETYPE_ROOT = libinclude('&#47;usr&#47;local')<br />
+LCMS_ROOT = None<br />
+[&#47;cc]</p>
+<p>Save and close the emacs and run the commands:</p>
+<p>[cc lang="bash"]<br />
+sudo python2.6 setup.py install</p>
+<p>sudo python2.5 setup.py install<br />
+[&#47;cc]</p>
+<p>Congrats! Now you have the latest PIL installed for both Python 2.5 and 2.6.</p>
+<p>8. Test PIL for fun :D</p>
+<p>You can test your PIL by following this awesome tutorial written by a very beautiful Python engineer: <a title="http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing" href="http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing">http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing<&#47;a>.</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#tutorial-ref">
+    		tutorial <span>14</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#mac-ref">
+    		mac <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#python-ref">
+    		python <span>3</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#mac-ref">mac <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#tutorial-ref">tutorial <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#tip-ref">tip <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#python-ref">python <span>3</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/tutorial/apache/2010/02/24/enable-caching-for-wordpress-apache" title="Enable caching for WordPress on Apache">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next"><a href="/python/2010/02/25/my-first-github-project-pysmile" title="My first GitHub project - PySmile">Next &raquo;</a></li>
+    
+    </ul>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    var disqus_identifier = '65 http://username.github.io/?p=65';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2015 Name Lastname
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        </p>
+      </div>
+    </div>
+
+    
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap-3/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
