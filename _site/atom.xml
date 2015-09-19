@@ -4,13 +4,22 @@
  <title>Jekyll Bootstrap</title>
  <link href="http://username.github.io/atom.xml" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2015-09-19T17:27:33+00:00</updated>
+ <updated>2015-09-19T17:31:04+00:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
    <email>blah@email.test</email>
  </author>
 
+ 
+ <entry>
+   <title>Hello World!</title>
+   <link href="http://username.github.io/2015/09/19/hello-world"/>
+   <updated>2015-09-19T00:00:00+00:00</updated>
+   <id>http://username.github.io/2015/09/19/hello-world</id>
+   <content type="html">
+</content>
+ </entry>
  
  <entry>
    <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
@@ -778,17 +787,6 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
 &lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Simple &amp; cool effect in OpenGL</title>
-   <link href="http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl"/>
-   <updated>2010-03-08T11:14:06+00:00</updated>
-   <id>http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</id>
-   <content type="html">&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
-&lt;p&gt;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;watch?v=IeoR4_5PFdM&lt;/p&gt;
-&lt;p&gt;It&#39;s in Russian but hold on, the effect is deadly simple but beautiful. Just watch and try it yourself.&lt;/p&gt;
 </content>
  </entry>
  

@@ -5,10 +5,19 @@
         <description>Jekyll Bootstrap - Name Lastname</description>
         <link>http://username.github.io</link>
         <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 19 Sep 2015 17:27:33 +0000</lastBuildDate>
-        <pubDate>Sat, 19 Sep 2015 17:27:33 +0000</pubDate>
+        <lastBuildDate>Sat, 19 Sep 2015 17:31:04 +0000</lastBuildDate>
+        <pubDate>Sat, 19 Sep 2015 17:31:04 +0000</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Hello World!</title>
+                <description>
+</description>
+                <link>http://username.github.io/2015/09/19/hello-world</link>
+                <guid>http://username.github.io/2015/09/19/hello-world</guid>
+                <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
+        </item>
 
         <item>
                 <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
@@ -777,17 +786,6 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
                 <link>http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome</link>
                 <guid>http://username.github.io/uncategorized/2010/03/16/posterous-is-awesome</guid>
                 <pubDate>Tue, 16 Mar 2010 19:28:30 +0000</pubDate>
-        </item>
-
-        <item>
-                <title>Simple &amp; cool effect in OpenGL</title>
-                <description>&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
-&lt;p&gt;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;watch?v=IeoR4_5PFdM&lt;/p&gt;
-&lt;p&gt;It&#39;s in Russian but hold on, the effect is deadly simple but beautiful. Just watch and try it yourself.&lt;/p&gt;
-</description>
-                <link>http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</link>
-                <guid>http://username.github.io/tutorial/opengl/c++/2010/03/08/simple-cool-effect-in-opengl</guid>
-                <pubDate>Mon, 08 Mar 2010 11:14:06 +0000</pubDate>
         </item>
 
 

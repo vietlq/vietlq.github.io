@@ -3,12 +3,14 @@ http://username.github.io/archive.html
 http://username.github.io/atom.xml
 http://username.github.io/categories.html
 http://username.github.io/about/index.html
+http://username.github.io/pages/me/index.html
 http://username.github.io/index.html
 http://username.github.io/pages.html
 http://username.github.io/rss.xml
 http://username.github.io/sitemap.txt
 http://username.github.io/tags.html
 
+http://username.github.io/2015/09/19/hello-world
 http://username.github.io/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh
 http://username.github.io/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on
 http://username.github.io/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours
