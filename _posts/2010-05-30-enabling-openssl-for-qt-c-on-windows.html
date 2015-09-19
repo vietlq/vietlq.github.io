@@ -41,8 +41,8 @@ comments:
   date_gmt: '2011-07-21 14:56:42 +0000'
   content: "Thanks for this useful  tutorial. everything sets fine but not the last
     one ie \"mingw32-make\" command, that gave me error like: \r\nC:\\Qt\\4.7.3\\src\\network>mingw32-make\r\nmingw32-make
-    -f Makefile.Debug\r\nmingw32-make[1]: Entering directory `C:&#47;Qt&#47;4.7.3&#47;src&#47;network'\r\nMakefile.Debug:222:
-    *** missing separator.  Stop.\r\nmingw32-make[1]: Leaving directory `C:&#47;Qt&#47;4.7.3&#47;src&#47;network'\r\nmingw32-make:
+    -f Makefile.Debug\r\nmingw32-make[1]: Entering directory `C:/Qt/4.7.3/src/network'\r\nMakefile.Debug:222:
+    *** missing separator.  Stop.\r\nmingw32-make[1]: Leaving directory `C:/Qt/4.7.3/src/network'\r\nmingw32-make:
     *** [debug] Error 2\r\n\r\nPlease can you give me a hint where I have missed something.
     Thanks in advance."
 - id: 4167
@@ -61,7 +61,7 @@ comments:
   date: '2011-07-23 20:47:13 +0000'
   date_gmt: '2011-07-23 12:47:13 +0000'
   content: "Hello Le,\r\nThanks for reply. Well you can find the my makefile.debug
-    file from https:&#47;&#47;sites.google.com&#47;site&#47;blackberrydigger&#47;Makefile.Debug?attredirects=0&amp;d=1\r\n\r\nAfter
+    file from https://sites.google.com/site/blackberrydigger/Makefile.Debug?attredirects=0&amp;d=1\r\n\r\nAfter
     running the step (3) i got: \r\nC:\\Qt\\4.7.3\\src\\network>qmake \"PWD=C:\\Qt\\4.7.3\\src\\network\"
     \"QMAKE_LIBS_NETWORK=-lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32\" \"DEFINES
     += QT_LINKED_OPENSSL\" \"DEFINES -= QT_NO_SSL\"\r\nWARNING: (internal):1: Unescaped
@@ -70,9 +70,9 @@ comments:
     (internal):1: Unescaped backslashes are deprecated.\r\nWARNING: c:\\Qt\\4.7.3\\src\\network\\ssl\\ssl.pri:8:
     Unable to find file for inclusio\r\nn \\config.tests\\unix\\openssl\\openssl.pri\r\nWARNING:
     (internal):1: Unescaped backslashes are deprecated.\r\nWARNING: c:\\Qt\\4.7.3\\src\\network\\ssl\\ssl.pri:8:
-    Unable to find file for inclusio\r\nn \\config.tests\\unix\\openssl\\openssl.pri\r\n\r\nthen,\r\n\r\nc:&#47;qt&#47;4.7.3&#47;src&#47;network>mingw32-make\r\ni
-    got following output on prompt : http:&#47;&#47;pastebin.com&#47;K15cs3Ez\r\n\r\n\r\n----FYI---\r\nQTDIR=c:\\qt\\4.7.3\r\nQMAKESPEC=win32-g++\r\nenv
-    path : http:&#47;&#47;pastebin.com&#47;LewVgDRE\r\nopenssl install path= C:\\openssl-0.9.8n\r\nActive
+    Unable to find file for inclusio\r\nn \\config.tests\\unix\\openssl\\openssl.pri\r\n\r\nthen,\r\n\r\nc:/qt/4.7.3/src/network>mingw32-make\r\ni
+    got following output on prompt : http://pastebin.com/K15cs3Ez\r\n\r\n\r\n----FYI---\r\nQTDIR=c:\\qt\\4.7.3\r\nQMAKESPEC=win32-g++\r\nenv
+    path : http://pastebin.com/LewVgDRE\r\nopenssl install path= C:\\openssl-0.9.8n\r\nActive
     Perl = C:\\Perl\r\nmingW = C:\\Qt\\4.7.3\\mingw"
 - id: 5909
   author: Le Quoc Viet
@@ -80,8 +80,8 @@ comments:
   author_url: http://simpleit.us
   date: '2011-10-17 01:00:56 +0000'
   date_gmt: '2011-10-16 17:00:56 +0000'
-  content: "http:&#47;&#47;stackoverflow.com&#47;questions&#47;7070419&#47;undefined-reference-to-qobject\r\n\r\nPlease
-    read this: \"You're missing the Qt libs&#47;dlls in your linker command. Can help
+  content: "http://stackoverflow.com/questions/7070419/undefined-reference-to-qobject\r\n\r\nPlease
+    read this: \"You're missing the Qt libs/dlls in your linker command. Can help
     you without knowing how you're building this. &ndash; Mat Aug 15 at 20:29\"."
 - id: 5998
   author: Jam
@@ -113,17 +113,17 @@ comments:
 <p>By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won't be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won't work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.</p>
 <p>Make sure you have readandbefore proceeding.</p>
 <ol>
-<li>Open CMD console &amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)<&#47;li>
-<li>Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:<&#47;li><br />
-<&#47;ol><br />
-<code>set PATH=%PATH%;C:\Qt\2010.02.1\mingw\bin;C:\Qt\2010.02.1\qt\bin;<&#47;code></p>
+<li>Open CMD console &amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)</li>
+<li>Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:</li><br />
+</ol><br />
+{% highlight bash %}set PATH=%PATH%;C:\Qt\2010.02.1\mingw\bin;C:\Qt\2010.02.1\qt\bin;{% endhighlight %}</p>
 <ol>
-<li>Configure QtNetwork build using this one-liner:<&#47;li><br />
-<&#47;ol><br />
-<code>qmake "PWD=C:\Qt\2010.02.1\qt\src\network" "QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32" "DEFINES += QT_LINKED_OPENSSL" "DEFINES -= QT_NO_SSL"<&#47;code></p>
+<li>Configure QtNetwork build using this one-liner:</li><br />
+</ol><br />
+{% highlight bash %}qmake "PWD=C:\Qt\2010.02.1\qt\src\network" "QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32" "DEFINES += QT_LINKED_OPENSSL" "DEFINES -= QT_NO_SSL"{% endhighlight %}</p>
 <p>It's your responsibility to ensure that OpenSSL is installed and visible to MinGW.</p>
 <ol>
-<li>Go ahead with building with this single command:<&#47;li><br />
-<&#47;ol><br />
-<code>mingw32-make<&#47;code></p>
+<li>Go ahead with building with this single command:</li><br />
+</ol><br />
+{% highlight bash %}mingw32-make{% endhighlight %}</p>
 <p>Wait for 5-10 mins and you have QtNetwork with OpenSSL enabled. Enjoy!</p>

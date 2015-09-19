@@ -158,19 +158,19 @@
       <p>By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won't be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won't work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.</p>
 <p>Make sure you have readandbefore proceeding.</p>
 <ol>
-<li>Open CMD console &amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)<&#47;li>
-<li>Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:<&#47;li><br />
-<&#47;ol><br />
-<code>set PATH=%PATH%;C:\Qt\2010.02.1\mingw\bin;C:\Qt\2010.02.1\qt\bin;<&#47;code></p>
+<li>Open CMD console &amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)</li>
+<li>Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:</li><br />
+</ol><br />
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set </span><span class="nv">PATH</span><span class="o">=</span>%PATH%<span class="p">;</span>C:<span class="se">\Q</span>t<span class="se">\2</span>010.02.1<span class="se">\m</span>ingw<span class="se">\b</span>in<span class="p">;</span>C:<span class="se">\Q</span>t<span class="se">\2</span>010.02.1<span class="se">\q</span>t<span class="se">\b</span>in<span class="p">;</span></code></pre></div></p>
 <ol>
-<li>Configure QtNetwork build using this one-liner:<&#47;li><br />
-<&#47;ol><br />
-<code>qmake "PWD=C:\Qt\2010.02.1\qt\src\network" "QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32" "DEFINES += QT_LINKED_OPENSSL" "DEFINES -= QT_NO_SSL"<&#47;code></p>
+<li>Configure QtNetwork build using this one-liner:</li><br />
+</ol><br />
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">qmake <span class="s2">&quot;PWD=C:\Qt\2010.02.1\qt\src\network&quot;</span> <span class="s2">&quot;QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32&quot;</span> <span class="s2">&quot;DEFINES += QT_LINKED_OPENSSL&quot;</span> <span class="s2">&quot;DEFINES -= QT_NO_SSL&quot;</span></code></pre></div></p>
 <p>It's your responsibility to ensure that OpenSSL is installed and visible to MinGW.</p>
 <ol>
-<li>Go ahead with building with this single command:<&#47;li><br />
-<&#47;ol><br />
-<code>mingw32-make<&#47;code></p>
+<li>Go ahead with building with this single command:</li><br />
+</ol><br />
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mingw32-make</code></pre></div></p>
 <p>Wait for 5-10 mins and you have QtNetwork with OpenSSL enabled. Enjoy!</p>
 
     </div>

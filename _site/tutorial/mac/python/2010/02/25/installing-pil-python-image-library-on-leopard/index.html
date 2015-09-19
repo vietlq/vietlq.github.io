@@ -159,73 +159,73 @@
 <p>0. Set up folder for installation</p>
 <p>[cc lang="bash"]<br />
 cd ~<br />
-mkdir -p simpleit&#47;temp<br />
-cd simpleit&#47;temp<br />
-[&#47;cc]</p>
+mkdir -p simpleit/temp<br />
+cd simpleit/temp<br />
+[/cc]</p>
 <p>1. Install Python 2.6</p>
-<p>By default Leopard comes with Python 2.5.1 so we need to install Python 2.6. Let's download Python 2.6 from ActiveState website: <a title="http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;" href="http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;">http:&#47;&#47;www.activestate.com&#47;activepython&#47;downloads&#47;<&#47;a>.</p>
+<p>By default Leopard comes with Python 2.5.1 so we need to install Python 2.6. Let's download Python 2.6 from ActiveState website: <a title="http://www.activestate.com/activepython/downloads/" href="http://www.activestate.com/activepython/downloads/">http://www.activestate.com/activepython/downloads/</a>.</p>
 <p>[cc lang="bash"]<br />
-curl -C - -O http:&#47;&#47;downloads.activestate.com&#47;ActivePython&#47;releases&#47;2.6.4.10&#47;ActivePython-2.6.4.10-macosx.dmg<br />
+curl -C - -O http://downloads.activestate.com/ActivePython/releases/2.6.4.10/ActivePython-2.6.4.10-macosx.dmg<br />
 open ActivePython-2.6.4.10-macosx.dmg<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>Proceed with normal installation (don't change any default configurations).</p>
 <p>2. Install ZLIB</p>
-<p>Grab ZLIB from its website&nbsp;<a title="http:&#47;&#47;www.zlib.net&#47;" href="http:&#47;&#47;www.zlib.net&#47;">http:&#47;&#47;www.zlib.net&#47;<&#47;a> and do simple installation (both static &amp; dynamic):</p>
+<p>Grab ZLIB from its website <a title="http://www.zlib.net/" href="http://www.zlib.net/">http://www.zlib.net/</a> and do simple installation (both static &amp; dynamic):</p>
 <p>[cc lang="bash"]<br />
-curl -C - -O http:&#47;&#47;www.zlib.net&#47;zlib-1.2.3.tar.gz<br />
+curl -C - -O http://www.zlib.net/zlib-1.2.3.tar.gz<br />
 tar zxvf zlib-1.2.3.tar.gz<br />
 cd zlib-1.2.3<br />
-.&#47;configure<br />
+./configure<br />
 make<br />
 sudo make install<br />
-.&#47;configure --shared<br />
+./configure --shared<br />
 make<br />
 sudo make install<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>3. Install FreeType2</p>
-<p>Get FreeType2&nbsp;from its main site: <a title="http:&#47;&#47;www.freetype.org&#47;" href="http:&#47;&#47;www.freetype.org&#47;">http:&#47;&#47;www.freetype.org&#47;<&#47;a>:</p>
+<p>Get FreeType2 from its main site: <a title="http://www.freetype.org/" href="http://www.freetype.org/">http://www.freetype.org/</a>:</p>
 <p>[cc lang="bash"]<br />
-curl -L -C - -O http:&#47;&#47;downloads.sourceforge.net&#47;project&#47;freetype&#47;freetype2&#47;2.3.12&#47;freetype-2.3.12.tar.gz<br />
+curl -L -C - -O http://downloads.sourceforge.net/project/freetype/freetype2/2.3.12/freetype-2.3.12.tar.gz<br />
 tar zxvf freetype-2.3.12.tar.gz<br />
 cd freetype-2.3.12<br />
-.&#47;configure --with-zlib=&#47;usr&#47;local<br />
+./configure --with-zlib=/usr/local<br />
 make<br />
 sudo make install<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>4. Install jpeg</p>
-<p>Get JPEG (now it's version 8)&nbsp;from its main site: <a title="http:&#47;&#47;www.ijg.org&#47;" href="http:&#47;&#47;www.ijg.org&#47;">http:&#47;&#47;www.ijg.org&#47;<&#47;a>:</p>
+<p>Get JPEG (now it's version 8) from its main site: <a title="http://www.ijg.org/" href="http://www.ijg.org/">http://www.ijg.org/</a>:</p>
 <p>[cc lang="bash"]<br />
-curl -L -C - -O http:&#47;&#47;www.ijg.org&#47;files&#47;jpegsrc.v8.tar.gz<br />
+curl -L -C - -O http://www.ijg.org/files/jpegsrc.v8.tar.gz<br />
 tar zxvf jpegsrc.v8.tar.gz<br />
 cd jpeg-8<br />
-.&#47;configure --enable-shared --enable-static<br />
+./configure --enable-shared --enable-static<br />
 make<br />
 sudo make install<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>5. Install TIFF</p>
-<p>Get TIFF&nbsp;from its main site: <a title="http:&#47;&#47;www.libtiff.org&#47;" href="http:&#47;&#47;www.libtiff.org&#47;">http:&#47;&#47;www.libtiff.org&#47;<&#47;a>:</p>
+<p>Get TIFF from its main site: <a title="http://www.libtiff.org/" href="http://www.libtiff.org/">http://www.libtiff.org/</a>:</p>
 <p>[cc lang="bash"]<br />
-curl -L -C - -O ftp:&#47;&#47;ftp.remotesensing.org&#47;pub&#47;libtiff&#47;tiff-3.9.2.tar.gz<br />
+curl -L -C - -O ftp://ftp.remotesensing.org/pub/libtiff/tiff-3.9.2.tar.gz<br />
 tar zxvf tiff-3.9.2.tar.gz<br />
 cd tiff-3.9.2<br />
-.&#47;configure --with-zlib-include-dir=&#47;usr&#47;local&#47;include --with-zlib-lib-dir=&#47;usr&#47;local&#47;lib --with-jpeg-include-dir=&#47;usr&#47;local&#47;include --with-jpeg-lib-dir=&#47;usr&#47;local&#47;lib --enable-cxx   --enable-jpeg  --enable-zlib<br />
+./configure --with-zlib-include-dir=/usr/local/include --with-zlib-lib-dir=/usr/local/lib --with-jpeg-include-dir=/usr/local/include --with-jpeg-lib-dir=/usr/local/lib --enable-cxx   --enable-jpeg  --enable-zlib<br />
 make<br />
 sudo make install<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>6. Amend Python config Makefile</p>
-<p>The easy part is over. Now read carefully. By default ActiveState Python assumes that you can build Universal binaries (x86 + PPC), which is wrong in most of cases. There is high chance that you are running Leopard on Intel Mac (x86). So you need to amend this file: &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile. You need to remove 3 occurrences of '-arch ppc' to build smoothly (or leave it to try your luck):</p>
+<p>The easy part is over. Now read carefully. By default ActiveState Python assumes that you can build Universal binaries (x86 + PPC), which is wrong in most of cases. There is high chance that you are running Leopard on Intel Mac (x86). So you need to amend this file: /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile. You need to remove 3 occurrences of '-arch ppc' to build smoothly (or leave it to try your luck):</p>
 <p>[cc lang="bash"]<br />
-cp &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile.BAK<br />
-sudo sed -e '&#47;-arch ppc&#47;&#47;g' &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile.BAK > &#47;Library&#47;Frameworks&#47;Python.framework&#47;Versions&#47;2.6&#47;lib&#47;python2.6&#47;config&#47;Makefile<br />
-[&#47;cc]</p>
+cp /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile.BAK<br />
+sudo sed -e '/-arch ppc//g' /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile.BAK > /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile<br />
+[/cc]</p>
 <p>7. Install PIL</p>
-<p>Now you are ready to download PIL. There is a bit of configuration involved but you can do it quickly. Grab latest stable PIL source package from <a title="http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;" href="http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;">http:&#47;&#47;www.pythonware.com&#47;products&#47;pil&#47;<&#47;a>.</p>
+<p>Now you are ready to download PIL. There is a bit of configuration involved but you can do it quickly. Grab latest stable PIL source package from <a title="http://www.pythonware.com/products/pil/" href="http://www.pythonware.com/products/pil/">http://www.pythonware.com/products/pil/</a>.</p>
 <p>[cc lang="bash"]<br />
-curl -L -C - -O http:&#47;&#47;effbot.org&#47;media&#47;downloads&#47;Imaging-1.1.7.tar.gz<br />
+curl -L -C - -O http://effbot.org/media/downloads/Imaging-1.1.7.tar.gz<br />
 tar zxvf Imaging-1.1.7.tar.gz<br />
 cd Imaging-1.1.7<br />
 emacs setup.py<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>Replace the following chunk with the one below:</p>
 <p>[cc lang="python"]<br />
 TCL_ROOT = None<br />
@@ -234,23 +234,23 @@ ZLIB_ROOT = None<br />
 TIFF_ROOT = None<br />
 FREETYPE_ROOT = None<br />
 LCMS_ROOT = None<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>[cc lang="python"]<br />
 TCL_ROOT = None<br />
-JPEG_ROOT = libinclude('&#47;usr&#47;local')<br />
-ZLIB_ROOT = libinclude('&#47;usr&#47;local')<br />
-TIFF_ROOT = libinclude('&#47;usr&#47;local')<br />
-FREETYPE_ROOT = libinclude('&#47;usr&#47;local')<br />
+JPEG_ROOT = libinclude('/usr/local')<br />
+ZLIB_ROOT = libinclude('/usr/local')<br />
+TIFF_ROOT = libinclude('/usr/local')<br />
+FREETYPE_ROOT = libinclude('/usr/local')<br />
 LCMS_ROOT = None<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>Save and close the emacs and run the commands:</p>
 <p>[cc lang="bash"]<br />
 sudo python2.6 setup.py install</p>
 <p>sudo python2.5 setup.py install<br />
-[&#47;cc]</p>
+[/cc]</p>
 <p>Congrats! Now you have the latest PIL installed for both Python 2.5 and 2.6.</p>
 <p>8. Test PIL for fun :D</p>
-<p>You can test your PIL by following this awesome tutorial written by a very beautiful Python engineer: <a title="http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing" href="http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing">http:&#47;&#47;nadiana.com&#47;pil-tutorial-basic-advanced-drawing<&#47;a>.</p>
+<p>You can test your PIL by following this awesome tutorial written by a very beautiful Python engineer: <a title="http://nadiana.com/pil-tutorial-basic-advanced-drawing" href="http://nadiana.com/pil-tutorial-basic-advanced-drawing">http://nadiana.com/pil-tutorial-basic-advanced-drawing</a>.</p>
 
     </div>
 

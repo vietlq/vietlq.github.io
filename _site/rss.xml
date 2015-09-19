@@ -5,8 +5,8 @@
         <description>SimpleIT - Viet Le</description>
         <link>http://blog.simpleit.us</link>
         <atom:link href="http://blog.simpleit.us/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 19 Sep 2015 22:17:41 +0100</lastBuildDate>
-        <pubDate>Sat, 19 Sep 2015 22:17:41 +0100</pubDate>
+        <lastBuildDate>Sat, 19 Sep 2015 23:21:31 +0100</lastBuildDate>
+        <pubDate>Sat, 19 Sep 2015 23:21:31 +0100</pubDate>
         <ttl>60</ttl>
 
 
@@ -23,32 +23,29 @@
                 <title>How To Instal A Git Repo &amp; Serve Via SSH</title>
                 <description>&lt;p&gt;Love Git but don&#39;t want to pay GitHub to have a private repo? No problem. Here&#39;s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):&lt;/p&gt;
 &lt;p&gt;1. Create a repo&lt;br /&gt;
-&lt;code&gt;&lt;br /&gt;
-server $ mkdir ~&amp;#47;repos&amp;#47;&lt;br /&gt;
-server $ cd ~&amp;#47;repos&amp;#47;&lt;br /&gt;
-server $ GIT_DIR=project.git git init&lt;br /&gt;
-server $ cd project.git&lt;br /&gt;
-server $ git --bare update-server-info&lt;br /&gt;
-server $ cp hooks&amp;#47;post-update.sample hooks&amp;#47;post-update&lt;br /&gt;
-&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/repos/&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/repos/&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ GIT_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;project.git git init&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project.git&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git --bare update-server-info&amp;lt;br /&amp;gt;
+server &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cp hooks/post-update.sample hooks/post-update&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;2. Clone it on the client side via SSH&lt;br /&gt;
-&lt;code&gt;&lt;br /&gt;
-client $ git clone user@server:~&amp;#47;repos&amp;#47;project.git # Check the [Reference 2]&lt;br /&gt;
-client $ mkdir project&lt;br /&gt;
-client $ cd project&lt;br /&gt;
-client $ git init&lt;br /&gt;
-client $ git remote add origin user@server:~&amp;#47;repos&amp;#47;project.git&amp;#47;&lt;br /&gt;
-&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone user@server:~/repos/project.git &lt;span class=&quot;c&quot;&gt;# Check the [Reference 2]&amp;lt;br /&amp;gt;&lt;/span&gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir project&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin user@server:~/repos/project.git/&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;3. Code &amp;amp; Push&lt;br /&gt;
-&lt;code&gt;&lt;br /&gt;
-client $ touch README&lt;br /&gt;
-client $ git add README&lt;br /&gt;
-client $ git commit -m &quot;Example.&quot;&lt;br /&gt;
-client $ git push origin master&lt;br /&gt;
-&lt;&amp;#47;code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;References&lt;&amp;#47;strong&gt;:&lt;/p&gt;
-&lt;p&gt;1. How to serve a Git repo via SSH:&amp;nbsp;&lt;a title=&quot;How to use git over SSH&quot; href=&quot;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&quot;&gt;http:&amp;#47;&amp;#47;www.mindfuzz.net&amp;#47;?p=250&lt;&amp;#47;a&gt;&lt;br /&gt;
-2. How to map SSH identity files to SSH servers &amp;amp; usernames:&amp;nbsp;&lt;a title=&quot;Best way to use multiple SSH private keys on one client&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;2419566&amp;#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add README&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Example.&amp;quot;&lt;/span&gt;&amp;lt;br /&amp;gt;
+client &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;1. How to serve a Git repo via SSH: &lt;a title=&quot;How to use git over SSH&quot; href=&quot;http://www.mindfuzz.net/?p=250&quot;&gt;http://www.mindfuzz.net/?p=250&lt;/a&gt;&lt;br /&gt;
+2. How to map SSH identity files to SSH servers &amp;amp; usernames: &lt;a title=&quot;Best way to use multiple SSH private keys on one client&quot; href=&quot;http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&quot;&gt;http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</link>
                 <guid>http://blog.simpleit.us/uncategorized/tutorial/development/tips/2013/07/02/how-to-instal-a-git-repo-serve-via-ssh</guid>
@@ -58,20 +55,16 @@ client $ git push origin master&lt;br /&gt;
         <item>
                 <title>Listing all header files your cpp depends on</title>
                 <description>&lt;p&gt;I needed to extract certain Boost headers from its huge code base for memory mapped file &amp;amp; shared memory containers. The first idea came to my mind was a simple grep command for &#39;#include&#39; statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&lt;br /&gt;
-#ifndef NO_STL&lt;br /&gt;
-#include &quot;my_class_no_stl.h&quot;&lt;br /&gt;
-#else&lt;br /&gt;
-#include &quot;my_class_stl.h&quot;&lt;br /&gt;
-#endif&lt;br /&gt;
-&lt;&amp;#47;code&gt;&lt;/p&gt;
-&lt;p&gt;To be honest, grep won&#39;t be able to handle it. We need a full fledged C++ pre-processor to correctly include headers and pass necessary values&amp;#47;definitions (it&#39;s done with -D for g++). I was struggling a bit and got a tip from Ralph. It turned out to be very simple:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&lt;br /&gt;
-g++ -D NO_STL -I A_PATH -M source.cpp # to get all headers, including system headers&lt;br /&gt;
-g++ -D NO_STL -I A_PATH&amp;nbsp;-MM source.cpp # to get all headers, except system headers&lt;br /&gt;
-g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in as a tree&lt;br /&gt;
-&lt;&amp;#47;code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Source&lt;&amp;#47;strong&gt;: &lt;a title=&quot;C++ Tip - Get all headers a file depends on&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;5834778&amp;#47;g-how-to-tell-where-a-header-file-is-included-from&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef NO_STL&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;my_class_no_stl.h&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#else&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;my_class_stl.h&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;To be honest, grep won&#39;t be able to handle it. We need a full fledged C++ pre-processor to correctly include headers and pass necessary values/definitions (it&#39;s done with -D for g++). I was struggling a bit and got a tip from Ralph. It turned out to be very simple:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;g++ -D NO_STL -I A_PATH -M source.cpp &lt;span class=&quot;c&quot;&gt;# to get all headers, including system headers&lt;/span&gt;
+g++ -D NO_STL -I A_PATH -MM source.cpp &lt;span class=&quot;c&quot;&gt;# to get all headers, except system headers&lt;/span&gt;
+g++ -D NO_STL -I A_PATH -H source.cpp &lt;span class=&quot;c&quot;&gt;# to print all headers nested in as a tree&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a title=&quot;C++ Tip - Get all headers a file depends on&quot; href=&quot;http://stackoverflow.com/questions/5834778/g-how-to-tell-where-a-header-file-is-included-from&quot;&gt;http://stackoverflow.com/questions/5834778/g-how-to-tell-where-a-header-file-is-included-from&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</link>
                 <guid>http://blog.simpleit.us/tutorial/c++/tools/development/tips/2013/06/17/listing-all-header-files-your-cpp-depends-on</guid>
@@ -80,16 +73,16 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
 
         <item>
                 <title>How I picked up TDD &amp; Google Test in a few hours</title>
-                <description>&lt;p&gt;[caption id=&quot;attachment_205&quot; align=&quot;aligncenter&quot; width=&quot;287&quot;]&lt;a href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; &amp;#47;&gt;&lt;&amp;#47;a&gt; TDD Diagram[&amp;#47;caption]&lt;/p&gt;
-&lt;p&gt;To confess, this is the first time I write unit testing for Java &amp;amp; C++ and it turned out this was rather simple. This weekend Daniel is hosting hackathon at his place and invited Kong &amp;amp; me to come over.&amp;nbsp;The first thing we did was TDD. Daniel was fluent in TDD &amp;amp; pair-programming as his company used Ruby and actively worshiped agile development.&lt;/p&gt;
+                <description>&lt;p&gt;[caption id=&quot;attachment_205&quot; align=&quot;aligncenter&quot; width=&quot;287&quot;]&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; /&gt;&lt;/a&gt; TDD Diagram[/caption]&lt;/p&gt;
+&lt;p&gt;To confess, this is the first time I write unit testing for Java &amp;amp; C++ and it turned out this was rather simple. This weekend Daniel is hosting hackathon at his place and invited Kong &amp;amp; me to come over. The first thing we did was TDD. Daniel was fluent in TDD &amp;amp; pair-programming as his company used Ruby and actively worshiped agile development.&lt;/p&gt;
 &lt;p&gt;I was given a task: To implement a set data structure in Java as simple as possible to pass the test cases that he would write to challenge the implementation. The first test case was to assert emptiness of a new set via the method `bool isEmpty`. Returning `true` was easy. Then Daniel wrote another task to add a new element and requested the set must return `false`. I added a count &amp;amp; array as private data members. Daniel said I should implement as simple as possible. So I used private one member _isEmpty and set it to `true` by default and `false` when invoking `add(int value)`.&lt;/p&gt;
 &lt;p&gt;And we went on to add test cases to cover methods `int count()`, `void remove(int value)`, `int getIndexOf(int value)`... I got 2 bugs and JUnit was able to point out which test cases failed and I was able to locate the bugs with ease.&lt;/p&gt;
-&lt;p&gt;I got excited and then moved to C++ and installed &lt;a title=&quot;Google Test framework&quot; href=&quot;https:&amp;#47;&amp;#47;code.google.com&amp;#47;p&amp;#47;googletest&amp;#47;wiki&amp;#47;V1_6_Primer&quot;&gt;Google Test framework&lt;&amp;#47;a&gt;. It was too simple and I regret not using it earlier. Read my TDD C++ code &lt;a title=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&quot; href=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;tdd_set&lt;&amp;#47;a&gt;, you will find it super simple. Here&#39;s the screenshot of the test program:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;Screen-Shot-2013-06-08-at-8.10.16-PM.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-210&quot; alt=&quot;Passed All Test Cases (Using Google Test)&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2013&amp;#47;06&amp;#47;Screen-Shot-2013-06-08-at-8.10.16-PM-300x238.png&quot; width=&quot;300&quot; height=&quot;238&quot; &amp;#47;&gt;&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;The real value is seen when refactoring was involved in the process. TDD approach &amp;amp; the written test cases greatly aided me in verifying that code refactoring worked like the old code.&amp;nbsp;When it comes to real life projects with hundeds of modules and millions of lines of code, refactoring without test coverage is like walking into a minefield. If you were diligent enough to write test cases to cover all functions and methods, then you can refactor at will and then run against the accumulated test cases with confidence.&lt;/p&gt;
+&lt;p&gt;I got excited and then moved to C++ and installed &lt;a title=&quot;Google Test framework&quot; href=&quot;https://code.google.com/p/googletest/wiki/V1_6_Primer&quot;&gt;Google Test framework&lt;/a&gt;. It was too simple and I regret not using it earlier. Read my TDD C++ code &lt;a title=&quot;https://github.com/vietlq/cpp/tree/master/tdd_set&quot; href=&quot;https://github.com/vietlq/cpp/tree/master/tdd_set&quot;&gt;https://github.com/vietlq/cpp/tree/master/tdd_set&lt;/a&gt;, you will find it super simple. Here&#39;s the screenshot of the test program:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/Screen-Shot-2013-06-08-at-8.10.16-PM.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-210&quot; alt=&quot;Passed All Test Cases (Using Google Test)&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/Screen-Shot-2013-06-08-at-8.10.16-PM-300x238.png&quot; width=&quot;300&quot; height=&quot;238&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The real value is seen when refactoring was involved in the process. TDD approach &amp;amp; the written test cases greatly aided me in verifying that code refactoring worked like the old code. When it comes to real life projects with hundeds of modules and millions of lines of code, refactoring without test coverage is like walking into a minefield. If you were diligent enough to write test cases to cover all functions and methods, then you can refactor at will and then run against the accumulated test cases with confidence.&lt;/p&gt;
 &lt;p&gt;However, one must be clear that test cases guarantee only the cases they cover. Passing the refactored code against the test cases doesn&#39;t guarantee correct outcomes of untested cases. So, be diligent and creative enough to write quality test cases to cover all possible cases to exactly define the behavior of the functions &amp;amp; methods.&lt;/p&gt;
 &lt;p&gt;Lastly, TDD enforces no optimization. TDD requires you to write simplest possible code to pass all the test cases. Refactor along the way and pass the test cases. Profile when you need performance. That&#39;s not to downplay the importance of throughout &amp;amp; mindful design of algorithms and data structures. One must find a good balance between TDD &amp;amp; efficient implementation that is crafted since the very beginning, not leaving refactoring to the very late stage.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; If the above C++ Set example is oversimplified for you, follow its sibling WordPath&amp;nbsp;&lt;a title=&quot;WordPath Game - Find optimal way to transform a word to another with 1 character being changed per move&quot; href=&quot;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;vietlq&amp;#47;cpp&amp;#47;tree&amp;#47;master&amp;#47;WordPath&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; If the above C++ Set example is oversimplified for you, follow its sibling WordPath &lt;a title=&quot;WordPath Game - Find optimal way to transform a word to another with 1 character being changed per move&quot; href=&quot;https://github.com/vietlq/cpp/tree/master/WordPath&quot;&gt;https://github.com/vietlq/cpp/tree/master/WordPath&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</link>
                 <guid>http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</guid>
@@ -98,25 +91,25 @@ g++ -D NO_STL -I A_PATH&amp;nbsp;-H source.cpp # to print all headers nested in 
 
         <item>
                 <title>WebSocket Being Served Via NginX Proxy Now</title>
-                <description>&lt;p&gt;The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at&amp;nbsp;&lt;a title=&quot;Pico App&quot; href=&quot;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;pico.simpleit.us&amp;#47;&lt;&amp;#47;a&gt;&amp;nbsp;. Only valid users can log in and fully experience it. If you want to test our new app, comment below.&lt;/p&gt;
+                <description>&lt;p&gt;The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at &lt;a title=&quot;Pico App&quot; href=&quot;http://pico.simpleit.us/&quot;&gt;http://pico.simpleit.us/&lt;/a&gt; . Only valid users can log in and fully experience it. If you want to test our new app, comment below.&lt;/p&gt;
 &lt;p&gt;The WebSocket proxy configuration I used:&lt;/p&gt;
 &lt;pre&gt;server {&lt;br /&gt;
     listen 80;&lt;br /&gt;
-    root &amp;#47;var&amp;#47;www&amp;#47;pico.simpleit.us;&lt;/p&gt;
+    root /var/www/pico.simpleit.us;&lt;/p&gt;
 &lt;p&gt;    server_name pico.simpleit.us;&lt;/p&gt;
-&lt;p&gt;    location &amp;#47; {&lt;br /&gt;
-        proxy_pass http:&amp;#47;&amp;#47;localhost:3000;&lt;br /&gt;
+&lt;p&gt;    location / {&lt;br /&gt;
+        proxy_pass http://localhost:3000;&lt;br /&gt;
         proxy_http_version 1.1;&lt;br /&gt;
         proxy_set_header Upgrade $http_upgrade;&lt;br /&gt;
         proxy_set_header Connection &quot;upgrade&quot;;&lt;br /&gt;
         proxy_set_header Host $host;&lt;br /&gt;
     }&lt;br /&gt;
-}&lt;&amp;#47;pre&gt;&lt;br /&gt;
+}&lt;/pre&gt;&lt;br /&gt;
 For the curious, here are the configuration flags I used to compile NginX 1.4.1 (remember to install ssl dev packages)&lt;/p&gt;
-&lt;pre&gt;.&amp;#47;configure --sbin-path=&amp;#47;usr&amp;#47;sbin&amp;#47;nginx --conf-path=&amp;#47;etc&amp;#47;nginx&amp;#47;nginx.conf --prefix=&amp;#47;usr --pid-path=&amp;#47;run&amp;#47;nginx.pid --error-log-path=&amp;#47;var&amp;#47;log&amp;#47;nginx&amp;#47;error.log --with-openssl=&amp;#47;usr&amp;#47;lib&amp;#47;ssl&lt;&amp;#47;pre&gt;&lt;br /&gt;
-&lt;strong&gt;References:&lt;&amp;#47;strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a title=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot; href=&quot;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;chrislea.com&amp;#47;2013&amp;#47;02&amp;#47;23&amp;#47;proxying-websockets-with-nginx&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a title=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot; href=&quot;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&quot;&gt;http:&amp;#47;&amp;#47;stackoverflow.com&amp;#47;questions&amp;#47;16469581&amp;#47;nginx-and-proxying-websockets&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;pre&gt;./configure --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --prefix=/usr --pid-path=/run/nginx.pid --error-log-path=/var/log/nginx/error.log --with-openssl=/usr/lib/ssl&lt;/pre&gt;&lt;br /&gt;
+&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/&quot; href=&quot;https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/&quot;&gt;https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets&quot; href=&quot;http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets&quot;&gt;http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</link>
                 <guid>http://blog.simpleit.us/web/development/tips/2013/06/07/websocket-being-served-via-nginx-proxy-now</guid>
@@ -125,14 +118,14 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
 
         <item>
                 <title>SimpleIT Blog is Now Powered by NginX &amp; PHP FPM</title>
-                <description>&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;350&quot;]&lt;img alt=&quot;NginX Logo&quot; src=&quot;http:&amp;#47;&amp;#47;wiki.nginx.org&amp;#47;local&amp;#47;nginx-logo.png&quot; width=&quot;350&quot; height=&quot;90&quot; &amp;#47;&gt; NginX Almighty[&amp;#47;caption]&lt;/p&gt;
-&lt;p&gt;After much consideration, I finally moved away from Apache &amp;amp; mod_php to NginX &amp;amp; PHP FPM. The site works much faster and no more I&amp;#47;O &amp;amp; CPU issues. I suspect my Apache was hacked last time, resulting in weird I&amp;#47;O behaviour and spikes in CPU usage.&lt;/p&gt;
+                <description>&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;350&quot;]&lt;img alt=&quot;NginX Logo&quot; src=&quot;http://wiki.nginx.org/local/nginx-logo.png&quot; width=&quot;350&quot; height=&quot;90&quot; /&gt; NginX Almighty[/caption]&lt;/p&gt;
+&lt;p&gt;After much consideration, I finally moved away from Apache &amp;amp; mod_php to NginX &amp;amp; PHP FPM. The site works much faster and no more I/O &amp;amp; CPU issues. I suspect my Apache was hacked last time, resulting in weird I/O behaviour and spikes in CPU usage.&lt;/p&gt;
 &lt;p&gt;The next steps:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Install uWSGI for Python and Ruby&lt;&amp;#47;li&gt;
-&lt;li&gt;Run NodeJS behind NginX proxy&lt;&amp;#47;li&gt;
-&lt;li&gt;Enable WebSockets for NginX &amp;amp; NodeJS&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;/p&gt;
+&lt;li&gt;Install uWSGI for Python and Ruby&lt;/li&gt;
+&lt;li&gt;Run NodeJS behind NginX proxy&lt;/li&gt;
+&lt;li&gt;Enable WebSockets for NginX &amp;amp; NodeJS&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</link>
                 <guid>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</guid>
@@ -156,14 +149,14 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
         </item>
 
         <item>
-                <title>Why does Apache link sites-enabled&amp;#47;000-default to sites-available&amp;#47;default?</title>
+                <title>Why does Apache link sites-enabled/000-default to sites-available/default?</title>
                 <description>&lt;p&gt;I was cleaning up Apache config and removed the default 000-default &amp;amp; default-ssl from the Apache sites-enabled sub-folder. To my surprise the default page now goes to a web app that I did not expect. It took me a sec to realize 2 things:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site&lt;&amp;#47;li&gt;
-&lt;li&gt;Apache loaded files in alphabetical order&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;li&gt;The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site&lt;/li&gt;
+&lt;li&gt;Apache loaded files in alphabetical order&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
 So I prepended my blog config file with 000- and now blog is the default site across simpleit.us&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;2013&amp;#47;05&amp;#47;28&amp;#47;simpleit-blog-is-now-powered-by-nginx-php-fpm&amp;#47;&quot;&gt;powered by NginX&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; This site is now &lt;a title=&quot;SimpleIT Blog is Now Powered by NginX &amp;amp; PHP FPM&quot; href=&quot;http://blog.simpleit.us/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm/&quot;&gt;powered by NginX&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</link>
                 <guid>http://blog.simpleit.us/apache/tips/2012/10/14/why-does-apache-link-sites-enabled-000-default-to-sites-available-default</guid>
@@ -602,14 +595,14 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 &lt;p&gt;There&#39;s no guide or mentioning why such problems are still around and what&#39;s ETA for fixes.&lt;/p&gt;
 &lt;p&gt;Today I&#39;m solving only the issue with login dialog to avoid the issue with locked screen and you have lots of unsaved work and your boss is whistling:&lt;/p&gt;
 &lt;p&gt;1. Go the System Preferences&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;670&quot; caption=&quot;System Preferences - Accounts&quot;]&lt;img title=&quot;System Preferences - Accounts&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-07.00.15.png&quot; alt=&quot;System Preferences - Accounts&quot; width=&quot;670&quot; height=&quot;564&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;670&quot; caption=&quot;System Preferences - Accounts&quot;]&lt;img title=&quot;System Preferences - Accounts&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.15.png&quot; alt=&quot;System Preferences - Accounts&quot; width=&quot;670&quot; height=&quot;564&quot; /&gt;[/caption]&lt;/p&gt;
 &lt;p&gt;2. Select Accounts&lt;/p&gt;
 &lt;p&gt;3. Select Login Options&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;673&quot; caption=&quot;Select Login Options&quot;]&lt;img title=&quot;Select Login Options&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-07.00.43.png&quot; alt=&quot;Select Login Options&quot; width=&quot;673&quot; height=&quot;532&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;673&quot; caption=&quot;Select Login Options&quot;]&lt;img title=&quot;Select Login Options&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.43.png&quot; alt=&quot;Select Login Options&quot; width=&quot;673&quot; height=&quot;532&quot; /&gt;[/caption]&lt;/p&gt;
 &lt;p&gt;4. Unlock &amp;amp; input your password (please revert input to English first)&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;674&quot; caption=&quot;Input password&quot;]&lt;img title=&quot;Input password&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-06.59.49.png&quot; alt=&quot;Input password&quot; width=&quot;674&quot; height=&quot;535&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;674&quot; caption=&quot;Input password&quot;]&lt;img title=&quot;Input password&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.49.png&quot; alt=&quot;Input password&quot; width=&quot;674&quot; height=&quot;535&quot; /&gt;[/caption]&lt;/p&gt;
 &lt;p&gt;5. Tick the option &quot;Show input menu in login window&quot;&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;671&quot; caption=&quot;Tick the option &quot;Show input menu in login window&quot;&quot;]&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;blog.simpleit.us&amp;#47;wp-content&amp;#47;uploads&amp;#47;2011&amp;#47;10&amp;#47;Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; &amp;#47;&gt;[&amp;#47;caption]&lt;/p&gt;
+&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;671&quot; caption=&quot;Tick the option &quot;Show input menu in login window&quot;&quot;]&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; /&gt;[/caption]&lt;/p&gt;
 &lt;p&gt;Lock the dialog to save the change. Now every time you login from locked screen, you will see language input on your top right hand corner. Change input to English and input your password. Let your Mac sleep and wake it up to test. No more hassle ;) !&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/tutorial/mac/vietnamese/2011/10/16/solving-password-input-problem-with-snow-leopard</link>
@@ -619,14 +612,14 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 
         <item>
                 <title>Migrated DNS to Linode</title>
-                <description>&lt;p&gt;Previously I hosted all DNS records for &lt;strong&gt;simpleit.us&lt;&amp;#47;strong&gt; with &lt;strong&gt;NearlyFreeSpeech&lt;&amp;#47;strong&gt; (&lt;a title=&quot;Nearly Free Speech Hosting&quot; href=&quot;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;www.nearlyfreespeech.net&amp;#47;&lt;&amp;#47;a&gt;). They provide cheap DNS hosting at 1c&amp;#47;day per zone. Initially I didn&#39;t hosted my DNS records with Linode as I was interested in redundancy. However, later I realized that I didn&#39;t have any back-up&amp;#47;disaster recovery site on par with the VPS hosted with Linode. The&amp;nbsp; account I have with NearlyFreeSpeech is meant for low performance and HTML-only content did not match with my VPS. Thus having DNS hosting with NFS didn&#39;t give any extra advantage and I migrated to Linode to centralize my control.&lt;/p&gt;
-&lt;p&gt;Unlike NFS which gave me freedom to add any kind of records, the Linode DNS manager has the most basic records (SOA, NS, A&amp;#47;AAAA, MX, CNAME, TXT and SRV). That would suffice for any daily needs. I had experience with NFS and Zonomi (DNS host provider). They both require technical details such as the trailing dot &quot;.&quot; at the end of each alias&amp;#47;MX mail server. Linode, however, simplified this and caused little confusion. Linode also does not give as much freedom on cache time like NFS or Zonomi do.&lt;/p&gt;
-&lt;p&gt;Linode was good at hiding technical details for simplicity and I got all SOA, NS and A&amp;#47;AAAA records populated. That saved me lots of typing effort and time as well. I was able to get my domain and subdomains back to running status within 15 minutes. The only issue I had is all emails I sent to @simpleit.us were rejected with 554 error. I have Google Apps hosted on my &lt;strong&gt;simpleit.us&lt;&amp;#47;strong&gt; and enjoyed using emails like abc@simpleit.us. Linode had MX records interface what were little confusing. I had to read their manual &lt;a title=&quot;Using Google Apps for Email&quot; href=&quot;http:&amp;#47;&amp;#47;library.linode.com&amp;#47;email&amp;#47;google-mail&quot;&gt;http:&amp;#47;&amp;#47;library.linode.com&amp;#47;email&amp;#47;google-mail&lt;&amp;#47;a&gt; to fix the issue of email rejection. I went little further by adding the SPF record as advised by Google manual: &lt;a href=&quot;http:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=33786&quot;&gt;http:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=33786&lt;&amp;#47;a&gt;.&lt;/p&gt;
+                <description>&lt;p&gt;Previously I hosted all DNS records for &lt;strong&gt;simpleit.us&lt;/strong&gt; with &lt;strong&gt;NearlyFreeSpeech&lt;/strong&gt; (&lt;a title=&quot;Nearly Free Speech Hosting&quot; href=&quot;https://www.nearlyfreespeech.net/&quot;&gt;https://www.nearlyfreespeech.net/&lt;/a&gt;). They provide cheap DNS hosting at 1c/day per zone. Initially I didn&#39;t hosted my DNS records with Linode as I was interested in redundancy. However, later I realized that I didn&#39;t have any back-up/disaster recovery site on par with the VPS hosted with Linode. The  account I have with NearlyFreeSpeech is meant for low performance and HTML-only content did not match with my VPS. Thus having DNS hosting with NFS didn&#39;t give any extra advantage and I migrated to Linode to centralize my control.&lt;/p&gt;
+&lt;p&gt;Unlike NFS which gave me freedom to add any kind of records, the Linode DNS manager has the most basic records (SOA, NS, A/AAAA, MX, CNAME, TXT and SRV). That would suffice for any daily needs. I had experience with NFS and Zonomi (DNS host provider). They both require technical details such as the trailing dot &quot;.&quot; at the end of each alias/MX mail server. Linode, however, simplified this and caused little confusion. Linode also does not give as much freedom on cache time like NFS or Zonomi do.&lt;/p&gt;
+&lt;p&gt;Linode was good at hiding technical details for simplicity and I got all SOA, NS and A/AAAA records populated. That saved me lots of typing effort and time as well. I was able to get my domain and subdomains back to running status within 15 minutes. The only issue I had is all emails I sent to @simpleit.us were rejected with 554 error. I have Google Apps hosted on my &lt;strong&gt;simpleit.us&lt;/strong&gt; and enjoyed using emails like abc@simpleit.us. Linode had MX records interface what were little confusing. I had to read their manual &lt;a title=&quot;Using Google Apps for Email&quot; href=&quot;http://library.linode.com/email/google-mail&quot;&gt;http://library.linode.com/email/google-mail&lt;/a&gt; to fix the issue of email rejection. I went little further by adding the SPF record as advised by Google manual: &lt;a href=&quot;http://www.google.com/support/a/bin/answer.py?answer=33786&quot;&gt;http://www.google.com/support/a/bin/answer.py?answer=33786&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There were handy tools that helped me verify my MX records, you may find them useful too:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;www.dnsstuff.com&amp;#47;tools&amp;#47;legacy&amp;#47;?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&quot;&gt;http:&amp;#47;&amp;#47;www.dnsstuff.com&amp;#47;tools&amp;#47;legacy&amp;#47;?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;www.dnsquery.org&amp;#47;dnsquery&amp;#47;simpleit.us&amp;#47;MX&quot;&gt;http:&amp;#47;&amp;#47;www.dnsquery.org&amp;#47;dnsquery&amp;#47;simpleit.us&amp;#47;MX&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;If you need to read extra on MX records, refer to Google help: &lt;a href=&quot;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&quot;&gt;https:&amp;#47;&amp;#47;www.google.com&amp;#47;support&amp;#47;a&amp;#47;bin&amp;#47;answer.py?answer=174125&lt;&amp;#47;a&gt;.&lt;/p&gt;
-&lt;p&gt;Overall, Linode provides good service and I&#39;ve been using Linode VPS since Feb 2010. Free DNS with many record types is a good deal. If you are curious then check their site at : &lt;a href=&quot;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&quot;&gt;http:&amp;#47;&amp;#47;www.linode.com&amp;#47;?r=c046af93bfab8095a43d25a23a88a9ba87403040&lt;&amp;#47;a&gt; (my referral link).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.dnsstuff.com/tools/legacy/?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&quot;&gt;http://www.dnsstuff.com/tools/legacy/?formaction=DNSLOOKUP&amp;amp;ToolFormName=customlookup&amp;amp;name=simpleit.us&amp;amp;r=235660&amp;amp;detail=0&amp;amp;type=MX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.dnsquery.org/dnsquery/simpleit.us/MX&quot;&gt;http://www.dnsquery.org/dnsquery/simpleit.us/MX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you need to read extra on MX records, refer to Google help: &lt;a href=&quot;https://www.google.com/support/a/bin/answer.py?answer=174125&quot;&gt;https://www.google.com/support/a/bin/answer.py?answer=174125&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall, Linode provides good service and I&#39;ve been using Linode VPS since Feb 2010. Free DNS with many record types is a good deal. If you are curious then check their site at : &lt;a href=&quot;http://www.linode.com/?r=c046af93bfab8095a43d25a23a88a9ba87403040&quot;&gt;http://www.linode.com/?r=c046af93bfab8095a43d25a23a88a9ba87403040&lt;/a&gt; (my referral link).&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/development/2011/05/17/migrated-dns-to-linode</link>
                 <guid>http://blog.simpleit.us/development/2011/05/17/migrated-dns-to-linode</guid>
@@ -637,13 +630,13 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
                 <title>Back for good - New features on Posterous</title>
                 <description>&lt;div class=&quot;posterous_autopost&quot;&gt;
 &lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;p&gt;Was not using this blog for quite a while as it lacked the features I needed such as reordering of the images in a gallery. Today I got an email from Posterous announcing a bundle of new features such as updated web editor, more flexible image&amp;#47;photo management and 2 new themes.&lt;/p&gt;
+&lt;p&gt;Was not using this blog for quite a while as it lacked the features I needed such as reordering of the images in a gallery. Today I got an email from Posterous announcing a bundle of new features such as updated web editor, more flexible image/photo management and 2 new themes.&lt;/p&gt;
 &lt;p&gt;I love the new theme named &quot;Minimal&quot; (currently in use). It&#39;s clean &amp;amp; elegant. There are a few important additions to the themes, such as show on click and show on hover widgets. JS is not yet allowed but let&#39;s hope that there are will be more dynamic widgets to compensate the designers and users.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;getfile&amp;#47;files.posterous.com&amp;#47;temp-2010-06-24&amp;#47;nFulwnpcbCFtcshlspItgezHtEaDJftiowBcnycChlDFIJyyoyIghIwemoce&amp;#47;moz-screenshot-21.png.scaled500.png&quot; width=&quot;500&quot; height=&quot;500&quot; &amp;#47;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://posterous.com/getfile/files.posterous.com/temp-2010-06-24/nFulwnpcbCFtcshlspItgezHtEaDJftiowBcnycChlDFIJyyoyIghIwemoce/moz-screenshot-21.png.scaled500.png&quot; width=&quot;500&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;I&#39;m waiting for the moment when designers can add their own JS snippets. The meta language by Posterous for theme design is not feature rich yet. The editor always lacks the &quot;justified&quot; text alignment feature. Let&#39;s wait for a surprise from them.&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;back-for-good-new-features-on-posterous&quot;&gt;Everything about passion&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via email&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/back-for-good-new-features-on-posterous&quot;&gt;Everything about passion&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</guid>
@@ -655,19 +648,19 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
                 <description>&lt;p&gt;By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won&#39;t be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won&#39;t work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.&lt;/p&gt;
 &lt;p&gt;Make sure you have readandbefore proceeding.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Open CMD console &amp;amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)&lt;&amp;#47;li&gt;
-&lt;li&gt;Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
-&lt;code&gt;set PATH=%PATH%;C:\Qt\2010.02.1\mingw\bin;C:\Qt\2010.02.1\qt\bin;&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;li&gt;Open CMD console &amp;amp; go to the directory C:\Qt\2010.02.1\qt\src\network (given that you have Qt 4.6.2. installed using standard options offered by the installer)&lt;/li&gt;
+&lt;li&gt;Make sure the directories C:\Qt\2010.02.1\qt\bin and C:\Qt\2010.02.1\mingw\bin are in the environment variable PATH. If you are unsure, enter this command:&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%PATH%&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\Q&lt;/span&gt;t&lt;span class=&quot;se&quot;&gt;\2&lt;/span&gt;010.02.1&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;ingw&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;in&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\Q&lt;/span&gt;t&lt;span class=&quot;se&quot;&gt;\2&lt;/span&gt;010.02.1&lt;span class=&quot;se&quot;&gt;\q&lt;/span&gt;t&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;in&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Configure QtNetwork build using this one-liner:&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
-&lt;code&gt;qmake &quot;PWD=C:\Qt\2010.02.1\qt\src\network&quot; &quot;QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32&quot; &quot;DEFINES += QT_LINKED_OPENSSL&quot; &quot;DEFINES -= QT_NO_SSL&quot;&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;li&gt;Configure QtNetwork build using this one-liner:&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;qmake &lt;span class=&quot;s2&quot;&gt;&amp;quot;PWD=C:\Qt\2010.02.1\qt\src\network&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;QMAKE_LIBS_NETWORK = -lws2_32 -lcrypto -leay32 -lssl32 -lssl -lgdi32&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;DEFINES += QT_LINKED_OPENSSL&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;DEFINES -= QT_NO_SSL&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;It&#39;s your responsibility to ensure that OpenSSL is installed and visible to MinGW.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Go ahead with building with this single command:&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
-&lt;code&gt;mingw32-make&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;li&gt;Go ahead with building with this single command:&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mingw32-make&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Wait for 5-10 mins and you have QtNetwork with OpenSSL enabled. Enjoy!&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/enabling-openssl-for-qt-c-on-windows</link>
@@ -678,11 +671,11 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
         <item>
                 <title>Installing Qt, QtCreator and MinGW for Windows</title>
                 <description>&lt;p&gt;Ever thought of developing simple &amp;amp; nice cross-platform applications without sweating? Nokia Qt C++ frameworks empowers you to do so. To get started, first install the Qt SDK with IDE and of course famous GNU compiler chain GCC, branded under MinGW for Windows.&lt;/p&gt;
-&lt;p&gt;Get the framework, IDE &amp;amp; tool chain from: &lt;a href=&quot;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&quot;&gt;http:&amp;#47;&amp;#47;qt.nokia.com&amp;#47;downloads&amp;#47;sdk-windows-cpp&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;If you are interested in particular parts of MinGW, look here: &lt;a href=&quot;http:&amp;#47;&amp;#47;sourceforge.net&amp;#47;projects&amp;#47;mingw&amp;#47;files&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;sourceforge.net&amp;#47;projects&amp;#47;mingw&amp;#47;files&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
-&lt;p&gt;Just follow default steps and you are safe. If you are interested in free M$ C&amp;#47;C++ compiler, just download the Qt source and build it yourself.&lt;/p&gt;
+&lt;p&gt;Get the framework, IDE &amp;amp; tool chain from: &lt;a href=&quot;http://qt.nokia.com/downloads/sdk-windows-cpp&quot;&gt;http://qt.nokia.com/downloads/sdk-windows-cpp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are interested in particular parts of MinGW, look here: &lt;a href=&quot;http://sourceforge.net/projects/mingw/files/&quot;&gt;http://sourceforge.net/projects/mingw/files/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Just follow default steps and you are safe. If you are interested in free M$ C/C++ compiler, just download the Qt source and build it yourself.&lt;/p&gt;
 &lt;p&gt;Now you are ready to play with magic. To appreciate Qt, run QtDemo and also watch some clips &amp;amp; read some stuff:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&quot;&gt;http:&amp;#47;&amp;#47;labs.trolltech.com&amp;#47;blogs&amp;#47;author&amp;#47;qtdeclarative&amp;#47;&lt;&amp;#47;a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://labs.trolltech.com/blogs/author/qtdeclarative/&quot;&gt;http://labs.trolltech.com/blogs/author/qtdeclarative/&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</link>
                 <guid>http://blog.simpleit.us/tutorial/c++/qt/2010/05/30/installing-qt-qtcreator-and-mingw-for-windows</guid>
@@ -693,26 +686,25 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
                 <title>Building OpenSSL with MinGW on Windows</title>
                 <description>&lt;p&gt;A number of libraries applications depend on OpenSSL, to name a few: cURL, QtNetwork, WebKit, your IMAP or secure SMTP client, etc. Building of OpenSSL is painstaking, unless you know some tricks. Read more for guidance.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;If you yet to have MinGW, read to learn how to install it.&lt;&amp;#47;li&gt;
-&lt;li&gt;Download Perl from ActiveState site: . Choose version that match your Windows. MSI installer is recommended, unless you are so fluent in Windows and don&#39;t mind spending time with little tweaks like adding PATH, etc&lt;&amp;#47;li&gt;
-&lt;li&gt;Run the MSI installer and point path to C:\develop\tools\perl . You may choose different path, but that&#39;s what on my machine.&lt;&amp;#47;li&gt;
-&lt;li&gt;Having installed with Perl, now let&#39;s fetch OpenSSL: (the latest version of OpenSSL 0.9.8 at the time of writing). &amp;nbsp;I wouldn&#39;t recommend chasing after the version 1.0 for now.&lt;&amp;#47;li&gt;
-&lt;li&gt;Extract openssl to C:\develop\tools\ and you will obtain directory C:\develop\tools\openssl-0.9.8n . Get inside it.&lt;&amp;#47;li&gt;
-&lt;li&gt;Before you start building anything, take note that the macro OPENSSL_IMPLEMENT_GLOBAL causes fatal errors. Find it inside the files openssl-0.9.8n\e_os2.h , openssl-0.9.8n\include\openssl\e_os2.h and openssl-0.9.8n\outinc\openssl\e_os2.h . Find the macro&#39;s definition and change&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
-&lt;code&gt;static type _hide_##name&lt;&amp;#47;code&gt;&lt;/p&gt;
+&lt;li&gt;If you yet to have MinGW, read to learn how to install it.&lt;/li&gt;
+&lt;li&gt;Download Perl from ActiveState site: . Choose version that match your Windows. MSI installer is recommended, unless you are so fluent in Windows and don&#39;t mind spending time with little tweaks like adding PATH, etc&lt;/li&gt;
+&lt;li&gt;Run the MSI installer and point path to C:\develop\tools\perl . You may choose different path, but that&#39;s what on my machine.&lt;/li&gt;
+&lt;li&gt;Having installed with Perl, now let&#39;s fetch OpenSSL: (the latest version of OpenSSL 0.9.8 at the time of writing).  I wouldn&#39;t recommend chasing after the version 1.0 for now.&lt;/li&gt;
+&lt;li&gt;Extract openssl to C:\develop\tools\ and you will obtain directory C:\develop\tools\openssl-0.9.8n . Get inside it.&lt;/li&gt;
+&lt;li&gt;Before you start building anything, take note that the macro OPENSSL_IMPLEMENT_GLOBAL causes fatal errors. Find it inside the files openssl-0.9.8n\e_os2.h , openssl-0.9.8n\include\openssl\e_os2.h and openssl-0.9.8n\outinc\openssl\e_os2.h . Find the macro&#39;s definition and change&lt;/li&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_hide_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;to&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;#47;* static type _hide_##name *&amp;#47; type _hide_##name&lt;&amp;#47;code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Now let&#39;s build shared &amp;amp; static versions of OpenSSL with a single command (you are now inside C:\develop\tools\openssl-0.9.8n):&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* static type _hide_##name */&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_hide_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;li&gt;Now let&#39;s build shared &amp;amp; static versions of OpenSSL with a single command (you are now inside C:\develop\tools\openssl-0.9.8n):&lt;/li&gt;&lt;br /&gt;
+&lt;br /&gt;
 ms\mingw32.bat shared&lt;/p&gt;
 &lt;p&gt;Navigate to YouTube and have some snack. It may take 15-20 mins to finish building.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;When building is finished, you can copy outinc\openssl to your mingw\include directory. You also can copy generated *.a and *.dll files to mingw\lib directory and the *.dll to mingw\bin directory. If you hate copying, remember to make use of -I and -L flags to appropriate folders when building with MinGW.&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;li&gt;When building is finished, you can copy outinc\openssl to your mingw\include directory. You also can copy generated *.a and *.dll files to mingw\lib directory and the *.dll to mingw\bin directory. If you hate copying, remember to make use of -I and -L flags to appropriate folders when building with MinGW.&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
 Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Edit:&lt;&amp;#47;strong&gt;&amp;nbsp;As noted by&amp;nbsp;Darrell Walisser in the comments part, Perl distributed with msys was the culprit. Installing ActiveState Perl will solve the issue without this workaround. Thanks Darrell!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; As noted by Darrell Walisser in the comments part, Perl distributed with msys was the culprit. Installing ActiveState Perl will solve the issue without this workaround. Thanks Darrell!&lt;/p&gt;
 &lt;p&gt;References:&lt;/p&gt;
 &lt;p&gt;[1]&lt;/p&gt;
 </description>
@@ -723,11 +715,11 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 
         <item>
                 <title>Chrome wins Safari by a few tipping points</title>
-                <description>&lt;div class=&quot;posterous_autopost&quot;&gt;A winner app does not need a mind blowing or much superior feature or difference. Many times, a small bit of improvement can make a huge difference in user satisfaction and perception. Seeing Safari or Firefox designs, I perceive them as &quot;heavy&quot; and &quot;slow&quot;. Their design filled with dark colors and appear to be very &quot;thick&quot;. Chrome, conversely, delivers lightweight look and feel through its design. Lightweight appearance of Chrome makes me feel more pleasing and feel it much faster than Safari and Firefox. Opera design is even worse.&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;Not only is Chrome more lightweight in design but also outperforms other GUI browsers. But that&#39;s a huge topic. I just focus on little bits that make users more satisfied and better informed. I tried uploading files to IVLE &lt;a href=&quot;https:&amp;#47;&amp;#47;ivle.nus.edu.sg&amp;#47;&quot;&gt;https:&amp;#47;&amp;#47;ivle.nus.edu.sg&amp;#47;&lt;&amp;#47;a&gt; countless number of times using Safari and it stalls on medium and big uploads (300KB and more). It sit clueless and impatience takes over me when I have to upload submission over 9MB. There are no indication of speed, progress or even a single notice like &quot;loading&quot; or &quot;uploading&quot;. Firefox does not do much better. Chrome is different. It keeps me informed about the progress. It&#39;s just a tiny bit but has big impact: I know that it&#39;s running, I know the progress and I can expect when it finishes and I feel staying in control. Here&#39;s the tiny screenshot that makes me happy:&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;getfile&amp;#47;files.posterous.com&amp;#47;vietlq&amp;#47;IhPJshsmwPSsbFzGQkFgDfVQd4wTvfp1kbbOBhu7S0NwEitkB0YoCAgHwoMa&amp;#47;pastedGraphic.tiff.converted.jpg&quot; width=&quot;331&quot; height=&quot;108&quot; &amp;#47;&gt;&lt;/p&gt;
+                <description>&lt;div class=&quot;posterous_autopost&quot;&gt;A winner app does not need a mind blowing or much superior feature or difference. Many times, a small bit of improvement can make a huge difference in user satisfaction and perception. Seeing Safari or Firefox designs, I perceive them as &quot;heavy&quot; and &quot;slow&quot;. Their design filled with dark colors and appear to be very &quot;thick&quot;. Chrome, conversely, delivers lightweight look and feel through its design. Lightweight appearance of Chrome makes me feel more pleasing and feel it much faster than Safari and Firefox. Opera design is even worse. &lt;/p&gt;
+&lt;p&gt;Not only is Chrome more lightweight in design but also outperforms other GUI browsers. But that&#39;s a huge topic. I just focus on little bits that make users more satisfied and better informed. I tried uploading files to IVLE &lt;a href=&quot;https://ivle.nus.edu.sg/&quot;&gt;https://ivle.nus.edu.sg/&lt;/a&gt; countless number of times using Safari and it stalls on medium and big uploads (300KB and more). It sit clueless and impatience takes over me when I have to upload submission over 9MB. There are no indication of speed, progress or even a single notice like &quot;loading&quot; or &quot;uploading&quot;. Firefox does not do much better. Chrome is different. It keeps me informed about the progress. It&#39;s just a tiny bit but has big impact: I know that it&#39;s running, I know the progress and I can expect when it finishes and I feel staying in control. Here&#39;s the tiny screenshot that makes me happy:&lt;img alt=&quot;&quot; src=&quot;http://posterous.com/getfile/files.posterous.com/vietlq/IhPJshsmwPSsbFzGQkFgDfVQd4wTvfp1kbbOBhu7S0NwEitkB0YoCAgHwoMa/pastedGraphic.tiff.converted.jpg&quot; width=&quot;331&quot; height=&quot;108&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;I deduce that good design and good application cares about keeping users informed, making them feel staying in control and reduces the degree of uncertainties.&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via email&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;chrome-wins-safari-by-a-few-tipping-points&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via email&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/chrome-wins-safari-by-a-few-tipping-points&quot;&gt;Scriptwriting&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/03/18/chrome-wins-safari-by-a-few-tipping-points</guid>
@@ -738,10 +730,10 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
                 <title>Audi breaks the spell</title>
                 <description>&lt;div class=&quot;posterous_autopost&quot;&gt;
 &lt;p&gt;Stumbled upon this Audi commercial:&lt;/p&gt;
-&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;417&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;window&quot; &amp;#47;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; &amp;#47;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;embed width=&quot;500&quot; height=&quot;417&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; wmode=&quot;window&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;417&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;window&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; /&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;embed width=&quot;500&quot; height=&quot;417&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.youtube.com/v/J3IArJTfUy8&amp;amp;hl=en&amp;amp;fs=1&quot; wmode=&quot;window&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;&lt;/p&gt;
 &lt;p&gt;I like the sports car the most. Thinking of buying one in 5-6 years :)&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;audi-breaks-the-spell&quot;&gt;Scriptwriting&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via web&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/audi-breaks-the-spell&quot;&gt;Scriptwriting&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/2010/03/17/audi-breaks-the-spell</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/03/17/audi-breaks-the-spell</guid>
@@ -751,10 +743,10 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
         <item>
                 <title>In the kitchen - Album by May</title>
                 <description>&lt;div class=&#39;posterous_autopost&#39;&gt;
-&lt;p&gt;I have heart for food and enjoy seeing photos capturing food and exploring kitchen:&lt;&amp;#47;p&gt;
-&lt;p&gt;&lt;object height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;param name=&quot;flashvars&quot; value=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; &amp;#47;&gt;&lt;param name=&quot;movie&quot; value=&quot;http:&amp;#47;&amp;#47;www.flickr.com&amp;#47;apps&amp;#47;slideshow&amp;#47;show.swf?v=71649&quot; &amp;#47;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;embed type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.flickr.com&amp;#47;apps&amp;#47;slideshow&amp;#47;show.swf?v=71649&quot; allowFullScreen=&quot;true&quot; flashvars=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;&amp;#47;embed&gt;&lt;&amp;#47;object&gt;&lt;&amp;#47;p&gt;
-&lt;p&gt;Photo credits go to May, one of my acquaintances. Yummy!&lt;&amp;#47;p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;  &lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt;   from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;in-the-kitchen-album-by-may&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;  &lt;&amp;#47;p&gt;  &lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p&gt;I have heart for food and enjoy seeing photos capturing food and exploring kitchen:&lt;/p&gt;
+&lt;p&gt;&lt;object height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;param name=&quot;flashvars&quot; value=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.flickr.com/apps/slideshow/show.swf?v=71649&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.flickr.com/apps/slideshow/show.swf?v=71649&quot; allowFullScreen=&quot;true&quot; flashvars=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fvanarts%2Fsets%2F72157600662177892%2F&amp;set_id=72157600662177892&amp;jump_to=&quot; height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/p&gt;
+&lt;p&gt;Photo credits go to May, one of my acquaintances. Yummy!&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;  &lt;a href=&quot;http://posterous.com&quot;&gt;Posted via web&lt;/a&gt;   from &lt;a href=&quot;http://vietlq.posterous.com/in-the-kitchen-album-by-may&quot;&gt;Scriptwriter&#39;s Creation&lt;/a&gt;  &lt;/p&gt;  &lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/2010/03/16/in-the-kitchen-album-by-may</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/03/16/in-the-kitchen-album-by-may</guid>
@@ -768,20 +760,20 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
 &lt;p&gt;Learn few great thing about Posterous: You can create your themes and add custom domain for free! It&#39;s super simple and no PHP needed, while WordPress requires designer to learn PHP to be able to create themes. One more thing, owners can publish by just sending an email. The technique is simple but the usability and convenience have been greatly improved.&lt;/p&gt;
 &lt;p&gt;There&#39;s a few shortcomings too:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;No image embedding in web posting interface&lt;&amp;#47;li&gt;
-&lt;li&gt;No predefined styles (such as H1, H2, Body Text, ...) but only font sizes in web posting interface&lt;&amp;#47;li&gt;
-&lt;li&gt;Searching sucks! I can never find anything, even tags and content match!&lt;&amp;#47;li&gt;&lt;br /&gt;
-&lt;&amp;#47;ol&gt;&lt;br /&gt;
+&lt;li&gt;No image embedding in web posting interface&lt;/li&gt;
+&lt;li&gt;No predefined styles (such as H1, H2, Body Text, ...) but only font sizes in web posting interface&lt;/li&gt;
+&lt;li&gt;Searching sucks! I can never find anything, even tags and content match!&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;br /&gt;
 But one still can add images by going to the raw HTML editing. Here&#39;s my image and YouTube:&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http:&amp;#47;&amp;#47;posterous.com&amp;#47;images&amp;#47;posterous-small.png&quot; &amp;#47;&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;300&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; &amp;#47;&gt;&lt;embed width=&quot;500&quot; height=&quot;300&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;object width=&quot;480&quot; height=&quot;385&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http:&amp;#47;&amp;#47;download.macromedia.com&amp;#47;pub&amp;#47;shockwave&amp;#47;cabs&amp;#47;flash&amp;#47;swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; &amp;#47;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; &amp;#47;&gt;&lt;param name=&quot;src&quot; value=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; &amp;#47;&gt;&lt;embed width=&quot;480&quot; height=&quot;385&quot; type=&quot;application&amp;#47;x-shockwave-flash&quot; src=&quot;http:&amp;#47;&amp;#47;www.youtube.com&amp;#47;v&amp;#47;BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; &amp;#47;&gt;&lt;&amp;#47;object&gt;&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http:&amp;#47;&amp;#47;posterous.com&quot;&gt;Posted via web&lt;&amp;#47;a&gt; from &lt;a href=&quot;http:&amp;#47;&amp;#47;vietlq.posterous.com&amp;#47;posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;&amp;#47;a&gt;&lt;&amp;#47;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;&amp;#47;div&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://posterous.com/images/posterous-small.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;300&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; /&gt;&lt;embed width=&quot;500&quot; height=&quot;300&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.youtube.com/v/yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; /&gt;&lt;/object&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;object width=&quot;480&quot; height=&quot;385&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; /&gt;&lt;embed width=&quot;480&quot; height=&quot;385&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.youtube.com/v/BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; /&gt;&lt;/object&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via web&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</link>
                 <guid>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</guid>

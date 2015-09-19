@@ -22,22 +22,22 @@ categories:
 tags: []
 comments: []
 ---
-<p>The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at&nbsp;<a title="Pico App" href="http:&#47;&#47;pico.simpleit.us&#47;">http:&#47;&#47;pico.simpleit.us&#47;<&#47;a>&nbsp;. Only valid users can log in and fully experience it. If you want to test our new app, comment below.</p>
+<p>The NginX server from the Ubuntu LTS repo was 1.1.x and did not support WebSockets. The minimum version of NginX that supports WebSockets is 1.3.13. Note that supports comes in the proxy module. I upgraded to 1.4.1 by compiling from source and the proxy module is enabled by default. Now you can taste WebSockets via NginX proxy at <a title="Pico App" href="http://pico.simpleit.us/">http://pico.simpleit.us/</a> . Only valid users can log in and fully experience it. If you want to test our new app, comment below.</p>
 <p>The WebSocket proxy configuration I used:</p>
 <pre>server {<br />
     listen 80;<br />
-    root &#47;var&#47;www&#47;pico.simpleit.us;</p>
+    root /var/www/pico.simpleit.us;</p>
 <p>    server_name pico.simpleit.us;</p>
-<p>    location &#47; {<br />
-        proxy_pass http:&#47;&#47;localhost:3000;<br />
+<p>    location / {<br />
+        proxy_pass http://localhost:3000;<br />
         proxy_http_version 1.1;<br />
         proxy_set_header Upgrade $http_upgrade;<br />
         proxy_set_header Connection "upgrade";<br />
         proxy_set_header Host $host;<br />
     }<br />
-}<&#47;pre><br />
+}</pre><br />
 For the curious, here are the configuration flags I used to compile NginX 1.4.1 (remember to install ssl dev packages)</p>
-<pre>.&#47;configure --sbin-path=&#47;usr&#47;sbin&#47;nginx --conf-path=&#47;etc&#47;nginx&#47;nginx.conf --prefix=&#47;usr --pid-path=&#47;run&#47;nginx.pid --error-log-path=&#47;var&#47;log&#47;nginx&#47;error.log --with-openssl=&#47;usr&#47;lib&#47;ssl<&#47;pre><br />
-<strong>References:<&#47;strong></p>
-<p><a title="https:&#47;&#47;chrislea.com&#47;2013&#47;02&#47;23&#47;proxying-websockets-with-nginx&#47;" href="https:&#47;&#47;chrislea.com&#47;2013&#47;02&#47;23&#47;proxying-websockets-with-nginx&#47;">https:&#47;&#47;chrislea.com&#47;2013&#47;02&#47;23&#47;proxying-websockets-with-nginx&#47;<&#47;a></p>
-<p><a title="http:&#47;&#47;stackoverflow.com&#47;questions&#47;16469581&#47;nginx-and-proxying-websockets" href="http:&#47;&#47;stackoverflow.com&#47;questions&#47;16469581&#47;nginx-and-proxying-websockets">http:&#47;&#47;stackoverflow.com&#47;questions&#47;16469581&#47;nginx-and-proxying-websockets<&#47;a></p>
+<pre>./configure --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --prefix=/usr --pid-path=/run/nginx.pid --error-log-path=/var/log/nginx/error.log --with-openssl=/usr/lib/ssl</pre><br />
+<strong>References:</strong></p>
+<p><a title="https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/" href="https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/">https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/</a></p>
+<p><a title="http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets" href="http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets">http://stackoverflow.com/questions/16469581/nginx-and-proxying-websockets</a></p>

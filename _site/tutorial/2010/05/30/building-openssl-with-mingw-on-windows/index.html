@@ -157,26 +157,25 @@
     <div class="content">
       <p>A number of libraries applications depend on OpenSSL, to name a few: cURL, QtNetwork, WebKit, your IMAP or secure SMTP client, etc. Building of OpenSSL is painstaking, unless you know some tricks. Read more for guidance.</p>
 <ol>
-<li>If you yet to have MinGW, read to learn how to install it.<&#47;li>
-<li>Download Perl from ActiveState site: . Choose version that match your Windows. MSI installer is recommended, unless you are so fluent in Windows and don't mind spending time with little tweaks like adding PATH, etc<&#47;li>
-<li>Run the MSI installer and point path to C:\develop\tools\perl . You may choose different path, but that's what on my machine.<&#47;li>
-<li>Having installed with Perl, now let's fetch OpenSSL: (the latest version of OpenSSL 0.9.8 at the time of writing). &nbsp;I wouldn't recommend chasing after the version 1.0 for now.<&#47;li>
-<li>Extract openssl to C:\develop\tools\ and you will obtain directory C:\develop\tools\openssl-0.9.8n . Get inside it.<&#47;li>
-<li>Before you start building anything, take note that the macro OPENSSL_IMPLEMENT_GLOBAL causes fatal errors. Find it inside the files openssl-0.9.8n\e_os2.h , openssl-0.9.8n\include\openssl\e_os2.h and openssl-0.9.8n\outinc\openssl\e_os2.h . Find the macro's definition and change<&#47;li><br />
-<&#47;ol><br />
-<code>static type _hide_##name<&#47;code></p>
+<li>If you yet to have MinGW, read to learn how to install it.</li>
+<li>Download Perl from ActiveState site: . Choose version that match your Windows. MSI installer is recommended, unless you are so fluent in Windows and don't mind spending time with little tweaks like adding PATH, etc</li>
+<li>Run the MSI installer and point path to C:\develop\tools\perl . You may choose different path, but that's what on my machine.</li>
+<li>Having installed with Perl, now let's fetch OpenSSL: (the latest version of OpenSSL 0.9.8 at the time of writing).  I wouldn't recommend chasing after the version 1.0 for now.</li>
+<li>Extract openssl to C:\develop\tools\ and you will obtain directory C:\develop\tools\openssl-0.9.8n . Get inside it.</li>
+<li>Before you start building anything, take note that the macro OPENSSL_IMPLEMENT_GLOBAL causes fatal errors. Find it inside the files openssl-0.9.8n\e_os2.h , openssl-0.9.8n\include\openssl\e_os2.h and openssl-0.9.8n\outinc\openssl\e_os2.h . Find the macro's definition and change</li><br />
+<br />
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="n">type</span> <span class="n">_hide_</span><span class="err">##</span><span class="n">name</span></code></pre></div></p>
 <p>to</p>
-<p><code>&#47;* static type _hide_##name *&#47; type _hide_##name<&#47;code></p>
-<ol>
-<li>Now let's build shared &amp; static versions of OpenSSL with a single command (you are now inside C:\develop\tools\openssl-0.9.8n):<&#47;li><br />
-<&#47;ol><br />
+<p><div class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/* static type _hide_##name */</span> <span class="n">type</span> <span class="n">_hide_</span><span class="err">##</span><span class="n">name</span></code></pre></div></p>
+
+<li>Now let's build shared &amp; static versions of OpenSSL with a single command (you are now inside C:\develop\tools\openssl-0.9.8n):</li><br />
+<br />
 ms\mingw32.bat shared</p>
 <p>Navigate to YouTube and have some snack. It may take 15-20 mins to finish building.</p>
-<ol>
-<li>When building is finished, you can copy outinc\openssl to your mingw\include directory. You also can copy generated *.a and *.dll files to mingw\lib directory and the *.dll to mingw\bin directory. If you hate copying, remember to make use of -I and -L flags to appropriate folders when building with MinGW.<&#47;li><br />
-<&#47;ol><br />
+<li>When building is finished, you can copy outinc\openssl to your mingw\include directory. You also can copy generated *.a and *.dll files to mingw\lib directory and the *.dll to mingw\bin directory. If you hate copying, remember to make use of -I and -L flags to appropriate folders when building with MinGW.</li><br />
+</ol><br />
 Building &amp; installation of OpenSSL is done.</p>
-<p><strong>Edit:<&#47;strong>&nbsp;As noted by&nbsp;Darrell Walisser in the comments part, Perl distributed with msys was the culprit. Installing ActiveState Perl will solve the issue without this workaround. Thanks Darrell!</p>
+<p><strong>Edit:</strong> As noted by Darrell Walisser in the comments part, Perl distributed with msys was the culprit. Installing ActiveState Perl will solve the issue without this workaround. Thanks Darrell!</p>
 <p>References:</p>
 <p>[1]</p>
 

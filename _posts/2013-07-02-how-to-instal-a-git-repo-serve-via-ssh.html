@@ -25,29 +25,29 @@ comments: []
 ---
 <p>Love Git but don't want to pay GitHub to have a private repo? No problem. Here's the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1]):</p>
 <p>1. Create a repo<br />
-<code><br />
-server $ mkdir ~&#47;repos&#47;<br />
-server $ cd ~&#47;repos&#47;<br />
+{% highlight bash %}<br />
+server $ mkdir ~/repos/<br />
+server $ cd ~/repos/<br />
 server $ GIT_DIR=project.git git init<br />
 server $ cd project.git<br />
 server $ git --bare update-server-info<br />
-server $ cp hooks&#47;post-update.sample hooks&#47;post-update<br />
-<&#47;code></p>
+server $ cp hooks/post-update.sample hooks/post-update<br />
+{% endhighlight %}</p>
 <p>2. Clone it on the client side via SSH<br />
-<code><br />
-client $ git clone user@server:~&#47;repos&#47;project.git # Check the [Reference 2]<br />
+{% highlight bash %}<br />
+client $ git clone user@server:~/repos/project.git # Check the [Reference 2]<br />
 client $ mkdir project<br />
 client $ cd project<br />
 client $ git init<br />
-client $ git remote add origin user@server:~&#47;repos&#47;project.git&#47;<br />
-<&#47;code></p>
+client $ git remote add origin user@server:~/repos/project.git/<br />
+{% endhighlight %}</p>
 <p>3. Code &amp; Push<br />
-<code><br />
+{% highlight bash %}<br />
 client $ touch README<br />
 client $ git add README<br />
 client $ git commit -m "Example."<br />
 client $ git push origin master<br />
-<&#47;code></p>
-<p><strong>References<&#47;strong>:</p>
-<p>1. How to serve a Git repo via SSH:&nbsp;<a title="How to use git over SSH" href="http:&#47;&#47;www.mindfuzz.net&#47;?p=250">http:&#47;&#47;www.mindfuzz.net&#47;?p=250<&#47;a><br />
-2. How to map SSH identity files to SSH servers &amp; usernames:&nbsp;<a title="Best way to use multiple SSH private keys on one client" href="http:&#47;&#47;stackoverflow.com&#47;questions&#47;2419566&#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1">http:&#47;&#47;stackoverflow.com&#47;questions&#47;2419566&#47;best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1<&#47;a></p>
+{% endhighlight %}</p>
+<p><strong>References</strong>:</p>
+<p>1. How to serve a Git repo via SSH: <a title="How to use git over SSH" href="http://www.mindfuzz.net/?p=250">http://www.mindfuzz.net/?p=250</a><br />
+2. How to map SSH identity files to SSH servers &amp; usernames: <a title="Best way to use multiple SSH private keys on one client" href="http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1">http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client?rq=1</a></p>

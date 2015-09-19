@@ -160,27 +160,27 @@
 <p>This part is a bit tricky. You need to install and enable mod_expires and then update .htaccess file at the top folder of WP blog.</p>
 <p>mod_expires comes with your regular Apache 2.0 and 2.2 installation.</p>
 <ul>
-<li>Enable with "sudo a2enmod expires"<&#47;li>
-<li>Restart apache with "sudo &#47;etc&#47;init.d&#47;apache2 restart" or "sudo apache2ctl restart"<&#47;li>
-<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):<&#47;li><br />
-<&#47;ul><br />
+<li>Enable with "sudo a2enmod expires"</li>
+<li>Restart apache with "sudo /etc/init.d/apache2 restart" or "sudo apache2ctl restart"</li>
+<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):</li><br />
+</ul><br />
 [cc lang="apache"]</p>
 <p>< IfModule mod_expires.c ><br />
 ExpiresActive on<br />
 ExpiresDefault "access plus 1 month"<br />
-ExpiresByType image&#47;png "access plus 1 month"<br />
-ExpiresByType image&#47;gif "access plus 1 month"<br />
-ExpiresByType image&#47;jpeg "access plus 1 month"<br />
-ExpiresByType image&#47;bmp "access plus 1 month"</p>
-<p>ExpiresByType text&#47;css "access plus 1 month"</p>
-<p>ExpiresByType text&#47;js "access plus 1 month"</p>
-<p>AddType image&#47;vnd.microsoft.icon .ico<br />
-ExpiresByType image&#47;vnd.microsoft.icon "access plus 3 months"<br />
-< &#47;IfModule ></p>
-<p>[&#47;cc]</p>
-<p>Read more on mod_expires at <a title="http:&#47;&#47;httpd.apache.org&#47;docs&#47;1.3&#47;mod&#47;mod_expires.html" href="http:&#47;&#47;httpd.apache.org&#47;docs&#47;1.3&#47;mod&#47;mod_expires.html">http:&#47;&#47;httpd.apache.org&#47;docs&#47;1.3&#47;mod&#47;mod_expires.html<&#47;a> and <a title="http:&#47;&#47;httpd.apache.org&#47;docs&#47;2.0&#47;mod&#47;mod_expires.html" href="http:&#47;&#47;httpd.apache.org&#47;docs&#47;2.0&#47;mod&#47;mod_expires.html">http:&#47;&#47;httpd.apache.org&#47;docs&#47;2.0&#47;mod&#47;mod_expires.html<&#47;a>.</p>
+ExpiresByType image/png "access plus 1 month"<br />
+ExpiresByType image/gif "access plus 1 month"<br />
+ExpiresByType image/jpeg "access plus 1 month"<br />
+ExpiresByType image/bmp "access plus 1 month"</p>
+<p>ExpiresByType text/css "access plus 1 month"</p>
+<p>ExpiresByType text/js "access plus 1 month"</p>
+<p>AddType image/vnd.microsoft.icon .ico<br />
+ExpiresByType image/vnd.microsoft.icon "access plus 3 months"<br />
+< /IfModule ></p>
+<p>[/cc]</p>
+<p>Read more on mod_expires at <a title="http://httpd.apache.org/docs/1.3/mod/mod_expires.html" href="http://httpd.apache.org/docs/1.3/mod/mod_expires.html">http://httpd.apache.org/docs/1.3/mod/mod_expires.html</a> and <a title="http://httpd.apache.org/docs/2.0/mod/mod_expires.html" href="http://httpd.apache.org/docs/2.0/mod/mod_expires.html">http://httpd.apache.org/docs/2.0/mod/mod_expires.html</a>.</p>
 <p>2. WordPress</p>
-<p><a title="WP Super Cache" href="http:&#47;&#47;wordpress.org&#47;extend&#47;plugins&#47;wp-super-cache&#47;">WP Super Cache<&#47;a> plug-in doesn't give me much clue how things work and it's rather complicated. I installed <a title="WP-Cache" href="http:&#47;&#47;wordpress.org&#47;extend&#47;plugins&#47;wp-cache&#47;">WP-Cache<&#47;a> instead. Pretty simple.</p>
+<p><a title="WP Super Cache" href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> plug-in doesn't give me much clue how things work and it's rather complicated. I installed <a title="WP-Cache" href="http://wordpress.org/extend/plugins/wp-cache/">WP-Cache</a> instead. Pretty simple.</p>
 <p>Here are the results after enabling caching:</p>
 <p>[gallery link="file"]</p>
 

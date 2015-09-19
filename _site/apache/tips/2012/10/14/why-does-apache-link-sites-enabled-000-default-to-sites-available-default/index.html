@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Why does Apache link sites-enabled&#47;000-default to sites-available&#47;default?</title>
+    <title>Why does Apache link sites-enabled/000-default to sites-available/default?</title>
     
     <meta name="author" content="Viet Le">
 
@@ -146,7 +146,7 @@
       <div class="container">
         
 <div class="page-header">
-  <h1>Why does Apache link sites-enabled&#47;000-default to sites-available&#47;default? </h1>
+  <h1>Why does Apache link sites-enabled/000-default to sites-available/default? </h1>
 </div>
 
 <div class="row post-full">
@@ -157,11 +157,11 @@
     <div class="content">
       <p>I was cleaning up Apache config and removed the default 000-default &amp; default-ssl from the Apache sites-enabled sub-folder. To my surprise the default page now goes to a web app that I did not expect. It took me a sec to realize 2 things:</p>
 <ol>
-<li>The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site<&#47;li>
-<li>Apache loaded files in alphabetical order<&#47;li><br />
-<&#47;ol><br />
+<li>The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site</li>
+<li>Apache loaded files in alphabetical order</li><br />
+</ol><br />
 So I prepended my blog config file with 000- and now blog is the default site across simpleit.us</p>
-<p><strong>Edit:<&#47;strong> This site is now <a title="SimpleIT Blog is Now Powered by NginX &amp; PHP FPM" href="http:&#47;&#47;blog.simpleit.us&#47;2013&#47;05&#47;28&#47;simpleit-blog-is-now-powered-by-nginx-php-fpm&#47;">powered by NginX<&#47;a></p>
+<p><strong>Edit:</strong> This site is now <a title="SimpleIT Blog is Now Powered by NginX &amp; PHP FPM" href="http://blog.simpleit.us/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm/">powered by NginX</a></p>
 
     </div>
 
