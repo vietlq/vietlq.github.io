@@ -162,22 +162,20 @@
 <ul>
 <li>Enable with "sudo a2enmod expires"</li>
 <li>Restart apache with "sudo /etc/init.d/apache2 restart" or "sudo apache2ctl restart"</li>
-<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):</li><br />
-</ul><br />
-<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;</span><span class="err">&lt;</span> <span class="nb">IfModule</span> mod_expires.c &gt;&lt;br /&gt;
-<span class="nb">ExpiresActive</span> <span class="k">on</span>&lt;br /&gt;
-<span class="nb">ExpiresDefault</span> <span class="s2">&quot;access plus 1 month&quot;</span>&lt;br /&gt;
-<span class="nb">ExpiresByType</span> image/png <span class="s2">&quot;access plus 1 month&quot;</span>&lt;br /&gt;
-<span class="nb">ExpiresByType</span> image/gif <span class="s2">&quot;access plus 1 month&quot;</span>&lt;br /&gt;
-<span class="nb">ExpiresByType</span> image/jpeg <span class="s2">&quot;access plus 1 month&quot;</span>&lt;br /&gt;
-<span class="nb">ExpiresByType</span> image/bmp <span class="s2">&quot;access plus 1 month&quot;</span>&lt;/p&gt;
-<span class="nt">&lt;p&gt;</span><span class="nb">ExpiresByType</span> text/css <span class="s2">&quot;access plus 1 month&quot;</span>&lt;/p&gt;
-<span class="nt">&lt;p&gt;</span><span class="nb">ExpiresByType</span> text/js <span class="s2">&quot;access plus 1 month&quot;</span>&lt;/p&gt;
-<span class="nt">&lt;p&gt;</span><span class="nb">AddType</span> image/vnd.microsoft.icon .ico&lt;br /&gt;
-<span class="nb">ExpiresByType</span> image/vnd.microsoft.icon <span class="s2">&quot;access plus 3 months&quot;</span>&lt;br /&gt;
-<span class="err">&lt;</span> <span class="err">/</span><span class="nb">IfModule</span> &gt;&lt;/p&gt;
-<span class="nt">&lt;p&gt;</span></code></pre></div></p>
+<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):</li>
+</ul>
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="err">&lt;</span> <span class="nb">IfModule</span> mod_expires.c &gt;
+<span class="nb">ExpiresActive</span> <span class="k">on</span>
+<span class="nb">ExpiresDefault</span> <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> image/png <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> image/gif <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> image/jpeg <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> image/bmp <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> text/css <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">ExpiresByType</span> text/js <span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="nb">AddType</span> image/vnd.microsoft.icon .ico
+<span class="nb">ExpiresByType</span> image/vnd.microsoft.icon <span class="s2">&quot;access plus 3 months&quot;</span>
+<span class="err">&lt;</span> <span class="err">/</span><span class="nb">IfModule</span> &gt;</code></pre></div></p>
 <p>Read more on mod_expires at <a title="http://httpd.apache.org/docs/1.3/mod/mod_expires.html" href="http://httpd.apache.org/docs/1.3/mod/mod_expires.html">http://httpd.apache.org/docs/1.3/mod/mod_expires.html</a> and <a title="http://httpd.apache.org/docs/2.0/mod/mod_expires.html" href="http://httpd.apache.org/docs/2.0/mod/mod_expires.html">http://httpd.apache.org/docs/2.0/mod/mod_expires.html</a>.</p>
 <p>2. WordPress</p>
 <p><a title="WP Super Cache" href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> plug-in doesn't give me much clue how things work and it's rather complicated. I installed <a title="WP-Cache" href="http://wordpress.org/extend/plugins/wp-cache/">WP-Cache</a> instead. Pretty simple.</p>

@@ -34,22 +34,22 @@ comments: []
 <ul>
 <li>Enable with "sudo a2enmod expires"</li>
 <li>Restart apache with "sudo /etc/init.d/apache2 restart" or "sudo apache2ctl restart"</li>
-<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):</li><br />
-</ul><br />
-{% highlight apache %}</p>
-<p>< IfModule mod_expires.c ><br />
-ExpiresActive on<br />
-ExpiresDefault "access plus 1 month"<br />
-ExpiresByType image/png "access plus 1 month"<br />
-ExpiresByType image/gif "access plus 1 month"<br />
-ExpiresByType image/jpeg "access plus 1 month"<br />
-ExpiresByType image/bmp "access plus 1 month"</p>
-<p>ExpiresByType text/css "access plus 1 month"</p>
-<p>ExpiresByType text/js "access plus 1 month"</p>
-<p>AddType image/vnd.microsoft.icon .ico<br />
-ExpiresByType image/vnd.microsoft.icon "access plus 3 months"<br />
-< /IfModule ></p>
-<p>{% endhighlight %}</p>
+<li>Open your .htaccess at the top folder of WP blog folder and append to the end of the file the following part (make sure you remove extra spaces after < and before > for Apache directives):</li>
+</ul>
+{% highlight apache %}
+< IfModule mod_expires.c >
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/bmp "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/js "access plus 1 month"
+AddType image/vnd.microsoft.icon .ico
+ExpiresByType image/vnd.microsoft.icon "access plus 3 months"
+< /IfModule >
+{% endhighlight %}</p>
 <p>Read more on mod_expires at <a title="http://httpd.apache.org/docs/1.3/mod/mod_expires.html" href="http://httpd.apache.org/docs/1.3/mod/mod_expires.html">http://httpd.apache.org/docs/1.3/mod/mod_expires.html</a> and <a title="http://httpd.apache.org/docs/2.0/mod/mod_expires.html" href="http://httpd.apache.org/docs/2.0/mod/mod_expires.html">http://httpd.apache.org/docs/2.0/mod/mod_expires.html</a>.</p>
 <p>2. WordPress</p>
 <p><a title="WP Super Cache" href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> plug-in doesn't give me much clue how things work and it's rather complicated. I installed <a title="WP-Cache" href="http://wordpress.org/extend/plugins/wp-cache/">WP-Cache</a> instead. Pretty simple.</p>
