@@ -4,7 +4,7 @@
  <title>SimpleIT</title>
  <link href="http://blog.simpleit.us/atom.xml" rel="self"/>
  <link href="http://blog.simpleit.us"/>
- <updated>2015-09-20T00:29:00+01:00</updated>
+ <updated>2015-09-20T00:53:48+01:00</updated>
  <id>http://blog.simpleit.us</id>
  <author>
    <name>Viet Le</name>
@@ -66,7 +66,7 @@ g++ -D NO_STL -I A_PATH -H source.cpp &lt;span class=&quot;c&quot;&gt;# to print
    <link href="http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours"/>
    <updated>2013-06-08T21:58:01+01:00</updated>
    <id>http://blog.simpleit.us/c++/tools/development/tips/2013/06/08/how-i-picked-up-tdd-google-test-in-a-few-hours</id>
-   <content type="html">&lt;p&gt;[caption id=&quot;attachment_205&quot; align=&quot;aligncenter&quot; width=&quot;287&quot;]&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; /&gt;&lt;/a&gt; TDD Diagram[/caption]&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd.gif&quot;&gt;&lt;img class=&quot;size-medium wp-image-205&quot; alt=&quot;TDD Diagram&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2013/06/tdd-287x300.gif&quot; width=&quot;287&quot; height=&quot;300&quot; /&gt;&lt;/a&gt; TDD Diagram&lt;/p&gt;
 &lt;p&gt;To confess, this is the first time I write unit testing for Java &amp;amp; C++ and it turned out this was rather simple. This weekend Daniel is hosting hackathon at his place and invited Kong &amp;amp; me to come over. The first thing we did was TDD. Daniel was fluent in TDD &amp;amp; pair-programming as his company used Ruby and actively worshiped agile development.&lt;/p&gt;
 &lt;p&gt;I was given a task: To implement a set data structure in Java as simple as possible to pass the test cases that he would write to challenge the implementation. The first test case was to assert emptiness of a new set via the method `bool isEmpty`. Returning `true` was easy. Then Daniel wrote another task to add a new element and requested the set must return `false`. I added a count &amp;amp; array as private data members. Daniel said I should implement as simple as possible. So I used private one member _isEmpty and set it to `true` by default and `false` when invoking `add(int value)`.&lt;/p&gt;
 &lt;p&gt;And we went on to add test cases to cover methods `int count()`, `void remove(int value)`, `int getIndexOf(int value)`... I got 2 bugs and JUnit was able to point out which test cases failed and I was able to locate the bugs with ease.&lt;/p&gt;
@@ -111,7 +111,7 @@ For the curious, here are the configuration flags I used to compile NginX 1.4.1 
    <link href="http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm"/>
    <updated>2013-05-28T09:47:14+01:00</updated>
    <id>http://blog.simpleit.us/web/2013/05/28/simpleit-blog-is-now-powered-by-nginx-php-fpm</id>
-   <content type="html">&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;350&quot;]&lt;img alt=&quot;NginX Logo&quot; src=&quot;http://wiki.nginx.org/local/nginx-logo.png&quot; width=&quot;350&quot; height=&quot;90&quot; /&gt; NginX Almighty[/caption]&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img alt=&quot;NginX Logo&quot; src=&quot;http://nginx.org/nginx.png&quot; width=&quot;350&quot; height=&quot;90&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;After much consideration, I finally moved away from Apache &amp;amp; mod_php to NginX &amp;amp; PHP FPM. The site works much faster and no more I/O &amp;amp; CPU issues. I suspect my Apache was hacked last time, resulting in weird I/O behaviour and spikes in CPU usage.&lt;/p&gt;
 &lt;p&gt;The next steps:&lt;/p&gt;
 &lt;ol&gt;
@@ -149,14 +149,14 @@ So I prepended my blog config file with 000- and now blog is the default site ac
 &lt;p&gt;There&#39;s no guide or mentioning why such problems are still around and what&#39;s ETA for fixes.&lt;/p&gt;
 &lt;p&gt;Today I&#39;m solving only the issue with login dialog to avoid the issue with locked screen and you have lots of unsaved work and your boss is whistling:&lt;/p&gt;
 &lt;p&gt;1. Go the System Preferences&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;670&quot; caption=&quot;System Preferences - Accounts&quot;]&lt;img title=&quot;System Preferences - Accounts&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.15.png&quot; alt=&quot;System Preferences - Accounts&quot; width=&quot;670&quot; height=&quot;564&quot; /&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;System Preferences - Accounts&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.15.png&quot; alt=&quot;System Preferences - Accounts&quot; width=&quot;670&quot; height=&quot;564&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;2. Select Accounts&lt;/p&gt;
 &lt;p&gt;3. Select Login Options&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;673&quot; caption=&quot;Select Login Options&quot;]&lt;img title=&quot;Select Login Options&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.43.png&quot; alt=&quot;Select Login Options&quot; width=&quot;673&quot; height=&quot;532&quot; /&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;Select Login Options&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-07.00.43.png&quot; alt=&quot;Select Login Options&quot; width=&quot;673&quot; height=&quot;532&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;4. Unlock &amp;amp; input your password (please revert input to English first)&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;674&quot; caption=&quot;Input password&quot;]&lt;img title=&quot;Input password&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.49.png&quot; alt=&quot;Input password&quot; width=&quot;674&quot; height=&quot;535&quot; /&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;Input password&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.49.png&quot; alt=&quot;Input password&quot; width=&quot;674&quot; height=&quot;535&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;5. Tick the option &quot;Show input menu in login window&quot;&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;671&quot; caption=&quot;Tick the option &quot;Show input menu in login window&quot;&quot;]&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; /&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;Tick the option &quot;Show input in login window&quot;&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2011/10/Screen-shot-2011-10-16-at-PM-06.59.09.png&quot; alt=&quot;Tick the option &quot;Show input in login window&quot;&quot; width=&quot;671&quot; height=&quot;533&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Lock the dialog to save the change. Now every time you login from locked screen, you will see language input on your top right hand corner. Change input to English and input your password. Let your Mac sleep and wake it up to test. No more hassle ;) !&lt;/p&gt;
 </content>
  </entry>
@@ -351,7 +351,7 @@ But one still can add images by going to the raw HTML editing. Here&#39;s my ima
 &lt;p&gt;1. Install MacFUSE: &lt;a title=&quot;http://code.google.com/p/macfuse/&quot; href=&quot;http://code.google.com/p/macfuse/&quot;&gt;http://code.google.com/p/macfuse/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2. Install NTFS-3G: &lt;a title=&quot;http://macntfs-3g.blogspot.com/&quot; href=&quot;http://macntfs-3g.blogspot.com/&quot;&gt;http://macntfs-3g.blogspot.com/&lt;/a&gt; , &lt;a title=&quot;http://sourceforge.net/projects/catacombae/files/&quot; href=&quot;http://sourceforge.net/projects/catacombae/files/&quot;&gt;http://sourceforge.net/projects/catacombae/files/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You will be required to reboot and upon next start-up, you can write to NTFS partitions with ease. Successful installation will similar screenshot (MacFUSE &amp;amp; NTFS-3G at the bottom):&lt;/p&gt;
-&lt;p&gt;[caption id=&quot;attachment_87&quot; align=&quot;aligncenter&quot; width=&quot;300&quot; caption=&quot;Successful installation of MacFUSE and NTFS-3G&quot;]&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-87&quot; title=&quot;Successful installation of MacFUSE and NTFS-3G&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1-300x251.png&quot; alt=&quot;Successful installation of MacFUSE and NTFS-3G&quot; width=&quot;300&quot; height=&quot;251&quot; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-87&quot; title=&quot;Successful installation of MacFUSE and NTFS-3G&quot; src=&quot;http://blog.simpleit.us/wp-content/uploads/2010/03/Picture-1-300x251.png&quot; alt=&quot;Successful installation of MacFUSE and NTFS-3G&quot; width=&quot;300&quot; height=&quot;251&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
