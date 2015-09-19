@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Why does Apache link sites-enabled&#47;000-default to sites-available&#47;default?
+author:
+  display_name: Le Quoc Viet
+  login: admin
+  email: vietlq85@gmail.com
+  url: http://simpleit.us
+author_login: admin
+author_email: vietlq85@gmail.com
+author_url: http://simpleit.us
+wordpress_id: 144
+wordpress_url: http://blog.simpleit.us/?p=144
+date: '2012-10-14 00:33:29 +0000'
+date_gmt: '2012-10-13 16:33:29 +0000'
+categories:
+- apache
+- tips
+tags: []
+comments: []
+---
+<p>I was cleaning up Apache config and removed the default 000-default &amp; default-ssl from the Apache sites-enabled sub-folder. To my surprise the default page now goes to a web app that I did not expect. It took me a sec to realize 2 things:</p>
+<ol>
+<li>The first VirtualHost config that has format *:80 (HTTP) or *:443 (HTTPS) was considered the default site<&#47;li>
+<li>Apache loaded files in alphabetical order<&#47;li><br />
+<&#47;ol><br />
+So I prepended my blog config file with 000- and now blog is the default site across simpleit.us</p>
+<p><strong>Edit:<&#47;strong> This site is now <a title="SimpleIT Blog is Now Powered by NginX &amp; PHP FPM" href="http:&#47;&#47;blog.simpleit.us&#47;2013&#47;05&#47;28&#47;simpleit-blog-is-now-powered-by-nginx-php-fpm&#47;">powered by NginX<&#47;a></p>

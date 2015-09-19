@@ -1,0 +1,41 @@
+---
+layout: post
+status: publish
+published: true
+title: Listing all header files your cpp depends on
+author:
+  display_name: Le Quoc Viet
+  login: admin
+  email: vietlq85@gmail.com
+  url: http://simpleit.us
+author_login: admin
+author_email: vietlq85@gmail.com
+author_url: http://simpleit.us
+wordpress_id: 217
+wordpress_url: http://blog.simpleit.us/?p=217
+date: '2013-06-17 16:33:37 +0000'
+date_gmt: '2013-06-17 08:33:37 +0000'
+categories:
+- tutorial
+- c++
+- tools
+- development
+- tips
+tags: []
+comments: []
+---
+<p>I needed to extract certain Boost headers from its huge code base for memory mapped file &amp; shared memory containers. The first idea came to my mind was a simple grep command for '#include' statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:</p>
+<p><code><br />
+#ifndef NO_STL<br />
+#include "my_class_no_stl.h"<br />
+#else<br />
+#include "my_class_stl.h"<br />
+#endif<br />
+<&#47;code></p>
+<p>To be honest, grep won't be able to handle it. We need a full fledged C++ pre-processor to correctly include headers and pass necessary values&#47;definitions (it's done with -D for g++). I was struggling a bit and got a tip from Ralph. It turned out to be very simple:</p>
+<p><code><br />
+g++ -D NO_STL -I A_PATH -M source.cpp # to get all headers, including system headers<br />
+g++ -D NO_STL -I A_PATH&nbsp;-MM source.cpp # to get all headers, except system headers<br />
+g++ -D NO_STL -I A_PATH&nbsp;-H source.cpp # to print all headers nested in as a tree<br />
+<&#47;code></p>
+<p><strong>Source<&#47;strong>: <a title="C++ Tip - Get all headers a file depends on" href="http:&#47;&#47;stackoverflow.com&#47;questions&#47;5834778&#47;g-how-to-tell-where-a-header-file-is-included-from">http:&#47;&#47;stackoverflow.com&#47;questions&#47;5834778&#47;g-how-to-tell-where-a-header-file-is-included-from<&#47;a></p>
