@@ -5,8 +5,8 @@
         <description>SimpleIT - Viet Le</description>
         <link>http://blog.simpleit.us</link>
         <atom:link href="http://blog.simpleit.us/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 20 Sep 2015 00:53:48 +0100</lastBuildDate>
-        <pubDate>Sun, 20 Sep 2015 00:53:48 +0100</pubDate>
+        <lastBuildDate>Sun, 20 Sep 2015 00:59:45 +0100</lastBuildDate>
+        <pubDate>Sun, 20 Sep 2015 00:59:45 +0100</pubDate>
         <ttl>60</ttl>
 
 
@@ -176,23 +176,6 @@ So I prepended my blog config file with 000- and now blog is the default site ac
         </item>
 
         <item>
-                <title>Back for good - New features on Posterous</title>
-                <description>&lt;div class=&quot;posterous_autopost&quot;&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;p&gt;Was not using this blog for quite a while as it lacked the features I needed such as reordering of the images in a gallery. Today I got an email from Posterous announcing a bundle of new features such as updated web editor, more flexible image/photo management and 2 new themes.&lt;/p&gt;
-&lt;p&gt;I love the new theme named &quot;Minimal&quot; (currently in use). It&#39;s clean &amp;amp; elegant. There are a few important additions to the themes, such as show on click and show on hover widgets. JS is not yet allowed but let&#39;s hope that there are will be more dynamic widgets to compensate the designers and users.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://posterous.com/getfile/files.posterous.com/temp-2010-06-24/nFulwnpcbCFtcshlspItgezHtEaDJftiowBcnycChlDFIJyyoyIghIwemoce/moz-screenshot-21.png.scaled500.png&quot; width=&quot;500&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;I&#39;m waiting for the moment when designers can add their own JS snippets. The meta language by Posterous for theme design is not feature rich yet. The editor always lacks the &quot;justified&quot; text alignment feature. Let&#39;s wait for a surprise from them.&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via email&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/back-for-good-new-features-on-posterous&quot;&gt;Everything about passion&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-                <link>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</link>
-                <guid>http://blog.simpleit.us/uncategorized/2010/06/24/back-for-good-new-features-on-posterous-2</guid>
-                <pubDate>Thu, 24 Jun 2010 18:44:00 +0100</pubDate>
-        </item>
-
-        <item>
                 <title>Enabling OpenSSL for Qt C++ on Windows</title>
                 <description>&lt;p&gt;By default, Nokia Qt does not ship its Qt C++ framework with OpenSSL enabled. This degrades value of the framework and you won&#39;t be able to access HTTPS pages or SSL enabled web services. The examples that require SSL won&#39;t work as well. Take examples\webkit\googlechat for example. This post gives an approach to enable OpenSSL for Qt C++ framework on Windows.&lt;/p&gt;
 &lt;p&gt;Make sure you have readandbefore proceeding.&lt;/p&gt;
@@ -303,33 +286,6 @@ Building &amp;amp; installation of OpenSSL is done.&lt;/p&gt;
         </item>
 
         <item>
-                <title>Posterous is awesome!</title>
-                <description>&lt;div class=&quot;posterous_autopost&quot;&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;p&gt;Learn few great thing about Posterous: You can create your themes and add custom domain for free! It&#39;s super simple and no PHP needed, while WordPress requires designer to learn PHP to be able to create themes. One more thing, owners can publish by just sending an email. The technique is simple but the usability and convenience have been greatly improved.&lt;/p&gt;
-&lt;p&gt;There&#39;s a few shortcomings too:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;No image embedding in web posting interface&lt;/li&gt;
-&lt;li&gt;No predefined styles (such as H1, H2, Body Text, ...) but only font sizes in web posting interface&lt;/li&gt;
-&lt;li&gt;Searching sucks! I can never find anything, even tags and content match!&lt;/li&gt;&lt;br /&gt;
-&lt;/ol&gt;&lt;br /&gt;
-But one still can add images by going to the raw HTML editing. Here&#39;s my image and YouTube:&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://posterous.com/images/posterous-small.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;object width=&quot;500&quot; height=&quot;300&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; /&gt;&lt;embed width=&quot;500&quot; height=&quot;300&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.youtube.com/v/yX8yrOAjfKM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; /&gt;&lt;/object&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;object width=&quot;480&quot; height=&quot;385&quot; classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; /&gt;&lt;embed width=&quot;480&quot; height=&quot;385&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.youtube.com/v/BPDhLcqJrWM&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;&quot; allowFullScreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; /&gt;&lt;/object&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p style=&quot;font-size: 10px;&quot;&gt;&lt;a href=&quot;http://posterous.com&quot;&gt;Posted via web&lt;/a&gt; from &lt;a href=&quot;http://vietlq.posterous.com/posterous-is-awesome-8&quot;&gt;Scriptwriter&#39;s Creation&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-                <link>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</link>
-                <guid>http://blog.simpleit.us/uncategorized/2010/03/16/posterous-is-awesome</guid>
-                <pubDate>Tue, 16 Mar 2010 19:28:30 +0000</pubDate>
-        </item>
-
-        <item>
                 <title>Simple &amp; cool effect in OpenGL</title>
                 <description>&lt;p&gt;Today I stumbled on a simple an amazing tutorial in C++ :&lt;/p&gt;
 &lt;p&gt;http://www.youtube.com/watch?v=IeoR4_5PFdM&lt;/p&gt;
@@ -396,6 +352,97 @@ sudo make install
                 <link>http://blog.simpleit.us/tutorial/mac/python/2010/02/28/building-pyqt-47-on-leopard</link>
                 <guid>http://blog.simpleit.us/tutorial/mac/python/2010/02/28/building-pyqt-47-on-leopard</guid>
                 <pubDate>Sun, 28 Feb 2010 11:17:45 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>My first GitHub project - PySmile</title>
+                <description>&lt;p&gt;I launched a new FOSS project - PySmile. As the name suggests, the project written in Python. It&#39;s a part of my learning process with Python and PIL (Python Imaging Library). The current version is 0.2. The application is able to do conversion of images to any of types [&#39;png&#39;, &#39;gif&#39;, &#39;jpg&#39;, &#39;bmp&#39;, &#39;pdf&#39;]. Feel free to browse &lt;a title=&quot;http://github.com/vietlq/PySmile&quot; href=&quot;http://github.com/vietlq/PySmile&quot;&gt;http://github.com/vietlq/PySmile&lt;/a&gt; and give me suggestions, even join me :) . If you have not installed PIL, visit my previous post: &lt;a title=&quot;/tutorial/mac/python/2010/02/25/installing-pil-python-image-library-on-leopard&quot; href=&quot;/tutorial/mac/python/2010/02/25/installing-pil-python-image-library-on-leopard&quot;&gt;/tutorial/mac/python/2010/02/25/installing-pil-python-image-library-on-leopard&lt;/a&gt;.&lt;/p&gt;
+</description>
+                <link>http://blog.simpleit.us/python/2010/02/25/my-first-github-project-pysmile</link>
+                <guid>http://blog.simpleit.us/python/2010/02/25/my-first-github-project-pysmile</guid>
+                <pubDate>Thu, 25 Feb 2010 13:36:12 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Installing PIL (Python Image Library) on Leopard</title>
+                <description>&lt;p&gt;PIL is a simple yet powerful image processing library for Python which has both low level and high-level features. In this tutorial I will demonstrate installation of PIL on for Python 2.5 and 2.6 on Leopard. Below are steps:&lt;/p&gt;
+&lt;p&gt;0. Set up folder for installation&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+mkdir -p simpleit/temp
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;simpleit/temp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;1. Install Python 2.6&lt;/p&gt;
+&lt;p&gt;By default Leopard comes with Python 2.5.1 so we need to install Python 2.6. Let&#39;s download Python 2.6 from ActiveState website: &lt;a title=&quot;http://www.activestate.com/activepython/downloads/&quot; href=&quot;http://www.activestate.com/activepython/downloads/&quot;&gt;http://www.activestate.com/activepython/downloads/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -C - -O http://downloads.activestate.com/ActivePython/releases/2.6.4.10/ActivePython-2.6.4.10-macosx.dmg
+open ActivePython-2.6.4.10-macosx.dmg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Proceed with normal installation (don&#39;t change any default configurations).&lt;/p&gt;
+&lt;p&gt;2. Install ZLIB&lt;/p&gt;
+&lt;p&gt;Grab ZLIB from its website &lt;a title=&quot;http://www.zlib.net/&quot; href=&quot;http://www.zlib.net/&quot;&gt;http://www.zlib.net/&lt;/a&gt; and do simple installation (both static &amp;amp; dynamic):&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -C - -O http://www.zlib.net/zlib-1.2.3.tar.gz
+tar zxvf zlib-1.2.3.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;zlib-1.2.3
+./configure
+make
+sudo make install
+./configure --shared
+make
+sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;3. Install FreeType2&lt;/p&gt;
+&lt;p&gt;Get FreeType2 from its main site: &lt;a title=&quot;http://www.freetype.org/&quot; href=&quot;http://www.freetype.org/&quot;&gt;http://www.freetype.org/&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -L -C - -O http://downloads.sourceforge.net/project/freetype/freetype2/2.3.12/freetype-2.3.12.tar.gz
+tar zxvf freetype-2.3.12.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;freetype-2.3.12
+./configure --with-zlib&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local
+make
+sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;4. Install jpeg&lt;/p&gt;
+&lt;p&gt;Get JPEG (now it&#39;s version 8) from its main site: &lt;a title=&quot;http://www.ijg.org/&quot; href=&quot;http://www.ijg.org/&quot;&gt;http://www.ijg.org/&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -L -C - -O http://www.ijg.org/files/jpegsrc.v8.tar.gz
+tar zxvf jpegsrc.v8.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jpeg-8
+./configure --enable-shared --enable-static
+make
+sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;5. Install TIFF&lt;/p&gt;
+&lt;p&gt;Get TIFF from its main site: &lt;a title=&quot;http://www.libtiff.org/&quot; href=&quot;http://www.libtiff.org/&quot;&gt;http://www.libtiff.org/&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -L -C - -O ftp://ftp.remotesensing.org/pub/libtiff/tiff-3.9.2.tar.gz
+tar zxvf tiff-3.9.2.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;tiff-3.9.2
+./configure --with-zlib-include-dir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/include --with-zlib-lib-dir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/lib --with-jpeg-include-dir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/include --with-jpeg-lib-dir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/lib --enable-cxx   --enable-jpeg  --enable-zlib
+make
+sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;6. Amend Python config Makefile&lt;/p&gt;
+&lt;p&gt;The easy part is over. Now read carefully. By default ActiveState Python assumes that you can build Universal binaries (x86 + PPC), which is wrong in most of cases. There is high chance that you are running Leopard on Intel Mac (x86). So you need to amend this file: /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile. You need to remove 3 occurrences of &#39;-arch ppc&#39; to build smoothly (or leave it to try your luck):&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile.BAK
+sudo sed -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;/-arch ppc//g&amp;#39;&lt;/span&gt; /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile.BAK &amp;gt; /Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/config/Makefile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;7. Install PIL&lt;/p&gt;
+&lt;p&gt;Now you are ready to download PIL. There is a bit of configuration involved but you can do it quickly. Grab latest stable PIL source package from &lt;a title=&quot;http://www.pythonware.com/products/pil/&quot; href=&quot;http://www.pythonware.com/products/pil/&quot;&gt;http://www.pythonware.com/products/pil/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -L -C - -O http://effbot.org/media/downloads/Imaging-1.1.7.tar.gz
+tar zxvf Imaging-1.1.7.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Imaging-1.1.7
+emacs setup.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Replace the following chunk with the one below:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;TCL_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;JPEG_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ZLIB_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;TIFF_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;FREETYPE_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;LCMS_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;TCL_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;JPEG_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libinclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/usr/local&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ZLIB_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libinclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/usr/local&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;TIFF_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libinclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/usr/local&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;FREETYPE_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libinclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/usr/local&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;LCMS_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Save and close the emacs and run the commands:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo python2.6 setup.py install
+sudo python2.5 setup.py install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Congrats! Now you have the latest PIL installed for both Python 2.5 and 2.6.&lt;/p&gt;
+&lt;p&gt;8. Test PIL for fun :D&lt;/p&gt;
+&lt;p&gt;You can test your PIL by following this awesome tutorial written by a very beautiful Python engineer: &lt;a title=&quot;http://nadiana.com/pil-tutorial-basic-advanced-drawing&quot; href=&quot;http://nadiana.com/pil-tutorial-basic-advanced-drawing&quot;&gt;http://nadiana.com/pil-tutorial-basic-advanced-drawing&lt;/a&gt;.&lt;/p&gt;
+</description>
+                <link>http://blog.simpleit.us/tutorial/mac/python/2010/02/25/installing-pil-python-image-library-on-leopard</link>
+                <guid>http://blog.simpleit.us/tutorial/mac/python/2010/02/25/installing-pil-python-image-library-on-leopard</guid>
+                <pubDate>Thu, 25 Feb 2010 00:49:59 +0000</pubDate>
         </item>
 
 
