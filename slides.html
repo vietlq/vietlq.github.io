@@ -122,83 +122,6 @@ layout: true
 class: center, middle, inverse
 ---
 # Dev Viet Ra Khơi: Singapore và UK
----
-#remark
-[ri-mahrk]
-.footnote[Go directly to [project site](https://github.com/gnab/remark)]
----
-layout: false
-class: middle, inverse
-# Agenda
-
-1. Introduction
-2. Deep-dive
-3. ...
----
-layout: false
-.left-column[
-  ## What is it?
-  ## Why use it?
-]
----
-name: inverse
-layout: false
-class: top, inverse
-# Code for fun & profit
-
-```python
-def add(a, b):
-  return (a + b)
-```
---
-```python
-def add(a, b):
-* return (a + b)
-```
---
-```c++
-*std::ostream& operator<<(std::ostream& ostr, const Input& input)
-{
-  return input.print(ostr);
-}
-```
----
-name: how
-
-.left-column[
-  ## How does it work?
-### - Markdown
-]
-.right-column[
-A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
-
-```remark
-# Slide 1
-This is slide 1
-
----
-# Slide 2
-This is slide 2
-```
-
-.slides[
-  .first[
-  ### Slide 1
-  This is slide 1
-  ]
-  .second[
-  ### Slide 2
-  This is slide 2
-  ]
-]
-
-Regular Markdown rules apply with only a single exception:
-
-  - A line containing three dashes constitutes a new slide
-  (not a horizontal rule, `&lt;hr /&gt;`)
-
-Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
-]
     </textarea>
     <script src="js/remark-latest.min.js"></script>
     <script>
@@ -222,7 +145,7 @@ Have a look at the [Markdown website](http://daringfireball.net/projects/markdow
           // Enable or disable navigation using touch
           // Default: true
           // Alternatives: false
-          touch: false,
+          touch: true,
 
           // Enable or disable navigation using click
           // Default: false
@@ -241,7 +164,7 @@ Have a look at the [Markdown website](http://daringfireball.net/projects/markdow
         countIncrementalSlides: true
       });
       //slideshow.pause();
-      slideshow.gotoSlide(5);
+      //slideshow.gotoSlide(5);
     </script>
   </body>
 </html>
