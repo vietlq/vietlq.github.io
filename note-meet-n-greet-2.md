@@ -1,0 +1,16 @@
+# Năm 2017 bạn sẽ làm ở công ty mơ ước chứ?
+
+#### Le Quoc Viet - 23 Tháng 12 2016
+#### 307 lượt đọc
+
+Khoảng thời gian nay 4 năm trước là lúc tôi đang đi nghỉ ở Langkawi. Đó cũng là lúc tôi bắt đầu nhận được email và các cuộc gọi từ Google, Facebook, Amazon và PayPal. Mọi thứ đến rất bất ngờ và tim tôi đập nhanh mỗi khi thấy có email và khi đọc từng dòng họ viết. Bạn biết họ tìm thấy tôi nhờ đâu không? Nếu bạn hay code trên https://github.com/ thì  bạn cũng sẽ có may mắn tương tự. Đến tháng 7/2013 khi tôi mở account LinkedIn thì có rất nhiều headhunters từ Mỹ, Anh, Hong Kong và Singapore cũng bắt liên lạc.
+Đến thời điểm này tôi đã làm Senior Software Engineer ở Bloomberg 3 năm và đã trả qua cả hai tư cách của quá trình tuyển dụng: Ứng viên và người phỏng vấn. Tôi có một số kinh nghiệm xương máu chia sẻ với các bạn nhân dịp cuối năm để các bạn có thể định hướng cho năm 2017. Phần này khá dài nên khó viết chi tiết ở một note được. Tôi vẫn đang làm slides.
+
+Đợt này tôi về ngắn ngày nên tranh thủ giao lưu với các anh chị em dev ở Hà Nội ngày 27/12 này. Các bạn có thể đến nghe phần trình bày về các kinh nghiệm phỏng vấn và cách đánh giá một ứng viên cho vị trí software engineer của các công ty hàng đầu trong những lĩnh vực công nghệ và tài chính ngân hàng. Các bạn không ở Hà Nội và không thể đến sự kiện thì sẽ có thể xem slides sau. Nếu viết ra note thì sẽ rất dài và giao lưu sẽ tiện hơn để mọi người cùng đặt câu hỏi.
+
+Với các bạn làm ngành công nghệ thông tin, các công ty trên là mơ ước. Ai cũng muốn một lần trong đời đến chơi và làm việc ở các công ty đó. Ngoài những tên tuổi trên bạn có biết những công ty trong lĩnh vực tài chính cũng có nhân tài xuất sắc và thường xuyên cạnh tranh với các công ty trên không? Nếu không biết là một thiếu sót lớn vì họ không quảng cáo cho bình dân như Google, Facebook, Amazon do khách hàng của họ thuộc nhóm thượng lưu và họ cũng ưu tiên tuyển từ những trường tốt nhất. Tôi có thể liệt kê vài tên tuổi trong nhóm ngân hàng đầu tư cho các bạn: Credit Suisse, JP Morgan, Morgan Stanley, Goldman Sachs, ...
+
+Trong lĩnh vực tài chính không thể không kể đến Bloomberg và Thomson Reuters, đặc biệt là Bloomberg là công ty công nghệ trong lĩnh vực thông tin tài chính. Các bạn khát khao thử sức ở các công ty giao dịch chứng khoán, thị trường chứng khoán, quỹ đầu cơ, asset management, trading companies thì có thể gõ cửa: BATS, London Stock Exchange, Deutsche Börse, Jump Trading, Jane Street, BlackRock, Marshall Wace, ...
+Ngoài Google, Facebook, Amazon, LinkedIn, Quora, Uber, PayPal, ... các bạn có rất nhiều công ty khác để vươn tới và đừng tự giới hạn ước mơ của mình. Các công ty trong lĩnh vực tài chính có lương bổng tốt hơn các công ty nói trên và họ cũng đòi hỏi cao hơn về khả năng giao tiếp.
+
+Các bạn đã bao giờ nghe về psychometric tests? Các công ty Google, Facebook tuyển khác Bloomberg như thế nào? Các công ty Credit Suisse có cách thi tuyển ra sao? Jump Trading và các công ty trong nhóm đầu tư, đầu cơ lại hay giao homework cho ứng viên, vì sao vậy? Vì sao thuật toán lại đề cao và làm sao bạn luyện được những thuật toán phù hợp với từng nhóm công ty để có thể trúng tuyển? Vượt qua các câu hỏi design như thế nào và thăm dò lương bổng, công nghệ của công ty ra sao?
