@@ -14,6 +14,14 @@ theme = "hugo-geo"
   Author = "Viet Le"
   # To satisfy hugo-geo theme
   header = "Viet's Blog"
+  showglobe = true
+  github = "https://github.com/vietlq"
+  twitter = "https://twitter.com/vietlq"
+  email = "viet@code2.pro"
+  subtitle = "Food, photos and code"
+  [[params.navlinks]]
+    name = "About"
+    url = "about"
   # To satisfy hyde theme
   description = "Food, photos and code"
   themeColor = "theme-base-08"
