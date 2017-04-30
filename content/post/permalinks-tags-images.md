@@ -6,7 +6,7 @@ draft = false
 highlight = true
 scripts = []
 tags = ["hugo", "blog", "config", "tips"]
-title = "Permalinks, Tags, Images, RSS"
+title = "Permalinks, Tags, Images, RSS, Sitemap"
 
 +++
 
@@ -64,9 +64,9 @@ Use normal Markdown syntax to embed images. Note that as of this moment, Hugo do
 
 That's something Hugo maintainers need to work on to make it more usable. Fortunately, the situation forced me to revive my old project [PySmile](https://github.com/vietlq/PySmile) that can process images in batches: Resize, convert between image formats. I plan to add more functionalities to make it even more usable.
 
-## RSS Feeds
+## RSS Feeds & Sitemap
 
-Hugo provides default RSS feeds at [/index.xml](/index.xml). You can bookmark and use for your RSS reader.
+Hugo provides default RSS feeds at [/index.xml](/index.xml). You can bookmark and use for your RSS reader. The Sitemap link is available at [/sitemap.xml](/sitemap.xml).
 
 ## References
 
