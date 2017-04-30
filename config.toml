@@ -10,12 +10,14 @@ theme = "hugo-geo"
   category = "categories"
   tag = "tags"
 
+[social]
+  twitter = "vietlq"
+
 [params]
   Author = "Viet Le"
   # To satisfy hugo-geo theme
   header = "Viet's Blog"
   subtitle = "Food, photos and code"
-  showglobe = true
   # Email
   email = "viet@code2.pro"
   # Twitter
