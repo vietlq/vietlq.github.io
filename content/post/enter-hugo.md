@@ -71,6 +71,16 @@ Now you need to do proper git config to publish to GitHub pages (feel free to pu
 cd public
 git init .
 
+git remote add origin git@github.com:vietlq/vietlq.github.io.git
+git pull origin master
+
+rm -rf *
+cd ..
+hugo -d public
+
+cd public
+git add .
+git push --set-upstream origin master
 ```
 
 ## Themes
