@@ -1,13 +1,14 @@
 +++
 css = []
 date = "2017-04-30T11:52:14+01:00"
-description = ""
+description = "Intermediate Hugo Blogging: Permalinks, Tags, Images, RSS, Sitemap"
 draft = false
 highlight = true
 scripts = []
 tags = ["hugo", "blog", "config", "tips"]
 title = "Permalinks, Tags, Images, RSS, Sitemap"
 Aliases = ["/post/permalinks-tags-images", "permalinks-tags-images", "/2017/04/30/permalinks-tags-images"]
+thumbnail = "pimages/00002-travel-mountain-top.jpg"
 +++
 
 ![Travel](/pimages/00002-travel-mountain-top.jpg)

@@ -1,13 +1,13 @@
 +++
 css = []
 date = "2017-04-29T08:55:36+01:00"
-description = ""
+description = "Static Site Generator: Octopress"
 draft = false
 highlight = true
 scripts = []
 tags = ["git", "ruby", "blog", "config", "setup"]
 title = "Hello, Octopress"
-
+thumbnail = "pimages/00001-1280-octopus.jpg"
 +++
 
 ![Octopress](/pimages/00001-1280-octopus.jpg)
