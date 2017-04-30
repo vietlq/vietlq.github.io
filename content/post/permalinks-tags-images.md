@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = ["hugo", "blog", "config", "tips"]
 title = "Permalinks, Tags, Images, RSS, Sitemap"
-Aliases = ["permalinks-tags-images"]
+Aliases = ["/post/permalinks-tags-images"]
 +++
 
 ![Travel](/pimages/00002-travel-mountain-top.jpg)
