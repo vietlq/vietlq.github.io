@@ -23,6 +23,9 @@ theme = "hugo-geo"
   subtitle = "Food, photos and code"
   # Email
   email = "viet@code2.pro"
+  # Confirm if your site is whitelisted for twitter:card
+  # It's false by default to pass https://cards-dev.twitter.com/validator
+  twitter_card_whitelisted = false
 
 # Twitter
 [[params.socialbuttons]]

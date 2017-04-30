@@ -24,15 +24,15 @@
     {{ end }}
     <!-- End of Open Graph -->
     <!-- Start of Twitter -->
-    <!--
-    {{ if .Params.twitter_summary }}
+    {{ if .Site.Params.twitter_card_whitelisted }}
+        {{ if .Params.twitter_summary }}
     <meta property="twitter:card" content="{{ .Params.twitter_summary }}">
-    {{ else if .Description }}
+        {{ else if .Description }}
     <meta property="twitter:card" content="{{ .Description }}">
-    {{ else }}
+        {{ else }}
     <meta property="twitter:card" content="{{ .Title }}">
+        {{ end }}
     {{ end }}
-    -->
     <meta property="twitter:description" content="{{ .Description }}">
     <meta property="twitter:title" content="{{ .Title }}">
     {{ if .Params.thumbnail }}
