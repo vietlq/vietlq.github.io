@@ -107,36 +107,6 @@ theme = "hugo-geo"
 header = "Viet's Blog"
 ```
 
-## Add Permalinks
-
-By default Hugo does not give you tags, categories and permalinks. This can be quickly remedied by updating your `config.toml` file:
-
-```
-baseURL = "http://vietlq.github.io/"
-languageCode = "en-us"
-title = "Viet's Blog"
-theme = "hugo-geo"
-
-[permalinks]
-  post = "/:year/:month/:day/:title/"
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-
-[params]
-  # To satisfy hugo-geo theme
-  header = "Viet's Blog"
-  Author = "Viet Le"
-```
-
-Now add `tags = ["go", "hugo", "git", "blog", "config", "setup"]` to front matter of your entry. Remember to restart the server after changing the config file. If you worry about losing old links, add `Aliases` to the front matter after tags:
-
-```
-tags = ["go", "hugo", "git", "blog", "config", "setup"]
-Aliases = ["/post/enter-hugo"]
-```
-
 Happy writing & hacking with Hugo!
 
 ## References

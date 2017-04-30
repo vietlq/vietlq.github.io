@@ -10,7 +10,7 @@ title = "Hello, Octopress"
 
 +++
 
-![Octopress](/pimages/00001-1280-octopus.jpg =480x960)
+![Octopress](/pimages/00001-1280-octopus.jpg)
 
 ## The Story
 
