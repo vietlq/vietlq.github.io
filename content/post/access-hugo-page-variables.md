@@ -74,7 +74,7 @@ thumbnail = "pimages/00005-good-twitter-card-validator.jpg"
 ---
 ```
 
-To see concrete implementation of the partial template `head.html`, check [my gist](https://gist.github.com/vietlq/d1c7ecfb20ce7beac4a7f4df746c797c).
+To see concrete implementation of the partial template `head.html`, check [my gist](https://gist.github.com/vietlq/d1c7ecfb20ce7beac4a7f4df746c797c). I created a pull request for `hugo-neo` and hope that the author will accept it: [https://github.com/alexurquhart/hugo-geo/pull/27](https://github.com/alexurquhart/hugo-geo/pull/27)
 
 Now Twitter and Facebook give us good validation results:
 
