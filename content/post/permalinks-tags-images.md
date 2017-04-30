@@ -10,6 +10,8 @@ title = "Permalinks, Tags, Images"
 
 +++
 
+![Travel](/pimages/00002-travel-mountain-top.jpg)
+
 From [the previous post]({{< relref "post/enter-hugo.md" >}}), you already know how to use a Hugo theme, write a new entry. Now you want to add tags, permalinks and images for better reading experience.
 
 ## Add Permalinks & Tags
@@ -57,7 +59,7 @@ From [the previous post](\{\{< relref "post/enter-hugo.md" >\}\}), you already k
 Use normal Markdown syntax to embed images. Note that as of this moment, Hugo does not support custom image sizes:
 
 ```
-![Octopress](/pimages/00001-1280-octopus.jpg)
+![Octopress](/pimages/00002-travel-mountain-top.jpg)
 ```
 
 That's something Hugo maintainers need to work on to make it more usable. Fortunately, the situation forced me to revive my old project [PySmile](https://github.com/vietlq/PySmile) that can process images in batches: Resize, convert between image formats. I plan to add more functionalities to make it even more usable.
