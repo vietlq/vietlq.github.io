@@ -15,22 +15,25 @@ theme = "hugo-geo"
 
 [params]
   Author = "Viet Le"
+  # To satisfy hyde theme
+  description = "Food, photos and code"
+  themeColor = "theme-base-08"
   # To satisfy hugo-geo theme
   header = "Viet's Blog"
   subtitle = "Food, photos and code"
   # Email
   email = "viet@code2.pro"
-  # Twitter
-  [[params.socialbuttons]]
-  faicon = "twitter"
-  url = "https://twitter.com/vietlq"
-  # GitHub
-  [[params.socialbuttons]]
-  faicon = "github"
-  url = "https://github.com/vietlq"
-  [[params.navlinks]]
-    name = "About"
-    url = "about"
-  # To satisfy hyde theme
-  description = "Food, photos and code"
-  themeColor = "theme-base-08"
+
+# Twitter
+[[params.socialbuttons]]
+faicon = "twitter"
+url = "https://twitter.com/vietlq"
+
+# GitHub
+[[params.socialbuttons]]
+faicon = "github"
+url = "https://github.com/vietlq"
+
+[[params.navlinks]]
+name = "About"
+url = "about"
