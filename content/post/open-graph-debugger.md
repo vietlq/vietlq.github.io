@@ -1,7 +1,7 @@
 +++
 css = []
 date = "2017-04-30T13:12:11+01:00"
-description = ""
+description = "Social Media Friendly Posts: Facebook Open Graph Debugger & Twitter Cards Validator"
 draft = false
 highlight = true
 scripts = []

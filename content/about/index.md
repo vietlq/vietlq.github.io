@@ -1,7 +1,7 @@
 +++
 css = []
 date = "2017-04-30T14:23:49+01:00"
-description = ""
+description = "About"
 draft = false
 highlight = true
 scripts = []
