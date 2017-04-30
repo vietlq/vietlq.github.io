@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = ["fb", "opengraph", "dev", "meta", "blog", "hugo", "twitter", "social-media"]
 title = "Facebook Open Graph Debugger & Twitter Cards Validator"
-
+thumbnail = "pimages/00004-twitter-card-validator.jpg"
 +++
 
 Blogging engines such as WordPress and Ghost should take care of images and [Facebook Open Graph](https://developers.facebook.com/docs/sharing/opengraph) integration for you. Unfortunately, that's not the case with Hugo and Octopress. I did a bit of googling and found that we need to have a meta tag `og:image` in the header for Facebook to show your image when posting.
