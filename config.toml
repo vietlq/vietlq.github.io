@@ -1,7 +1,7 @@
 baseURL = "http://vietlq.github.io/"
 languageCode = "en-us"
 title = "Viet's Blog"
-theme = "hugo-geo"
+theme = "hyde"
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
@@ -11,6 +11,9 @@ theme = "hugo-geo"
   tag = "tags"
 
 [params]
+  Author = "Viet Le"
   # To satisfy hugo-geo theme
   header = "Viet's Blog"
-  Author = "Viet Le"
+  # To satisfy hyde theme
+  description = "Food, photos and code"
+  themeColor = "theme-base-08"

@@ -88,11 +88,13 @@ git add .
 git push --set-upstream origin master
 ```
 
+To make generation and deployment easier, check my `Makefile`: [https://github.com/vietlq/vietlq.github.io/blob/source/Makefile](https://github.com/vietlq/vietlq.github.io/blob/source/Makefile)
+
 ## Themes
 
 Hugo has collection of themes and you can check them out at: [https://themes.gohugo.io/](https://themes.gohugo.io/)
 
-I found the themes [Solit](https://github.com/dim0627/hugo_theme_solit) and [Hugo Geo](https://themes.gohugo.io/theme/hugo-geo/) quite attractive for blogging. Note that Hugo Geo forces you to set `.Site.Params.header` otherwise it will display "What I'm Thinking". Simply modify your `config.toml` like this:
+I found the themes [Solit](https://github.com/dim0627/hugo_theme_solit), [Hugo Geo](https://themes.gohugo.io/theme/hugo-geo/), and [Hyde](https://github.com/spf13/hyde) quite attractive for blogging. Note that Hugo Geo forces you to set `.Site.Params.header` otherwise it will display "What I'm Thinking". Simply modify your `config.toml` like this:
 
 ```
 baseURL = "http://vietlq.github.io/"
