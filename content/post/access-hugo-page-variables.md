@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = []
 title = "Access Hugo Page Variables"
-
+thumbnail = "pimages/00005-good-twitter-card-validator.jpg"
 +++
 
 ## Challenge

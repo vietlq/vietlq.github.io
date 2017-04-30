@@ -40,6 +40,10 @@ The [Twitter Card Validator](https://cards-dev.twitter.com/validator) won't do t
 
 ![Twitter Card Validator](/pimages/00004-twitter-card-validator.jpg)
 
+### Update: I Added a New Theme Override
+
+Working with Hugo blogging engine is so fun. After 2 hours of digging, I finally create my own template override that solves problem for [Open Graph & Twitter Card]({{< relref "access-hugo-page-variables.md" >}}).
+
 ## References
 
 * [Brendan Quinn on Hugo & Facebook Open Graph](http://brendan-quinn.xyz/post/working-with-hugos-internal-partial-templates-facebook-and-open-graph/).
