@@ -14,11 +14,18 @@ theme = "hugo-geo"
   Author = "Viet Le"
   # To satisfy hugo-geo theme
   header = "Viet's Blog"
-  showglobe = true
-  github = "https://github.com/vietlq"
-  twitter = "https://twitter.com/vietlq"
-  email = "viet@code2.pro"
   subtitle = "Food, photos and code"
+  showglobe = true
+  # Email
+  email = "viet@code2.pro"
+  # Twitter
+  [[params.socialbuttons]]
+  faicon = "twitter"
+  url = "https://twitter.com/vietlq"
+  # GitHub
+  [[params.socialbuttons]]
+  faicon = "github"
+  url = "https://github.com/vietlq"
   [[params.navlinks]]
     name = "About"
     url = "about"
