@@ -5,7 +5,7 @@ description = ""
 draft = false
 highlight = true
 scripts = []
-tags = ["fb", "opengraph", "dev", "meta", "blog", "hugo"]
+tags = ["fb", "opengraph", "dev", "meta", "blog", "hugo", "twitter", "social-media"]
 title = "Facebook Open Graph Debugger & Twitter Cards Validator"
 
 +++
