@@ -5,8 +5,5 @@ static:
 	hugo -d _deploy
 
 deploy:
-	cd _deploy
-	git add .
 	timestamp=$(date +"+%FT%T%z")
-	git commit -a -m "Commited at ${timestamp}"
-	git push
+	cd _deploy && git add . && git commit -a -m "Commited at ${timestamp}" && git push

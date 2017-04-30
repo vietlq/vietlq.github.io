@@ -2,6 +2,10 @@
 date = "2017-04-30T08:52:14+01:00"
 draft = false
 title = "Enter, Hugo"
+description = ""
+highlight = true
+scripts = []
+tags = ["go", "hugo", "git", "blog", "config", "setup"]
 
 +++
 
