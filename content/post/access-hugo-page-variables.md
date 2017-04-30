@@ -80,6 +80,8 @@ Now Twitter and Facebook give us good validation results:
 
 ![Validated Twitter Card](/pimages/00005-good-twitter-card-validator.jpg)
 
+![Facebook Post with Preview](/pimages/00006-good-facebook-open-graph.jpg)
+
 ## References
 
 * [Hugo Page Variables](https://hugodocs.info/variables/page/)
