@@ -1,7 +1,7 @@
 +++
 css = []
 date = "2017-05-01T11:05:17+01:00"
-description = ""
+description = "Learn Python by Doing - Image Processing - PySmile: Transparency Preservation"
 draft = false
 highlight = true
 scripts = []
