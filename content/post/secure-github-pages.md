@@ -5,7 +5,7 @@ description = "Hugo Blogging on GitHub Pages: Secure Your Blog With HTTPS"
 draft = false
 highlight = true
 scripts = []
-tags = ["hugo", "blog", "gh-pages", "https", "secure"]
+tags = ["hugo", "blog", "gh-pages", "https", "security"]
 title = "Secure GitHub Pages"
 thumbnail = "pimages/00019-secure-settings-pexels-photo-270700.jpeg"
 +++
