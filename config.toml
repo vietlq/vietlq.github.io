@@ -37,6 +37,11 @@ url = "https://twitter.com/vietlq"
 faicon = "github"
 url = "https://github.com/vietlq"
 
+# GitHub
+[[params.socialbuttons]]
+faicon = "rss"
+url = "/index.xml"
+
 [[params.navlinks]]
 name = "About"
 url = "about"
