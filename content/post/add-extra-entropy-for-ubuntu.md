@@ -2,7 +2,7 @@
 categories = []
 date = "2017-05-01T15:18:29+01:00"
 draft = false
-tags = []
+tags = ["ubuntu", "debian", "crypto", "security", "guide", "entropy"]
 thumbnail = "pimages/00021-security.jpg"
 title = "Add Extra Entropy for Ubuntu and Debian"
 description = "Cryptography & Security: Add Extra Entropy for Ubuntu and Debian"
