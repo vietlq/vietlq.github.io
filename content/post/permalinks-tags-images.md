@@ -5,7 +5,7 @@ description = "Intermediate Hugo Blogging: Permalinks, Tags, Images, RSS, Sitema
 draft = false
 highlight = true
 scripts = []
-tags = ["hugo", "blog", "config", "tips"]
+tags = ["hugo", "blog", "config", "tips", "rss", "sitemap", "social-media", "seo"]
 title = "Permalinks, Tags, Images, RSS, Sitemap"
 Aliases = ["/post/permalinks-tags-images", "permalinks-tags-images", "/2017/04/30/permalinks-tags-images"]
 thumbnail = "pimages/00002-travel-mountain-top.jpg"
@@ -67,7 +67,9 @@ That's something Hugo maintainers need to work on to make it more usable. Fortun
 
 ## RSS Feeds & Sitemap
 
-Hugo provides default RSS feeds at [/index.xml](/index.xml). You can bookmark and use for your RSS reader. The Sitemap link is available at [/sitemap.xml](/sitemap.xml).
+Hugo provides default RSS feeds at [/index.xml](/index.xml). There's a RSS feed for each section as well. Section is the folder on the disk inside the folder `content` of your Hugo source. See RSS for the section `post`: [/post/index.xml](/post/index.xml). The same applies for taxonomies: [/tags/social-media//index.xml](/tags/social-media//index.xml). You can bookmark and use for your RSS reader.
+
+Another useful XML for search engines and for your visibility is Sitemap XML. The Sitemap link is available at [/sitemap.xml](/sitemap.xml).
 
 ## References
 
