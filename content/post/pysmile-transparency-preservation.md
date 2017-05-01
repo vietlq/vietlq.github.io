@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = ["pysmile", "python", "dev", "image-processing", "pillow", "gif", "png", "transparency"]
 title = "PySmile: Transparency Preservation"
-
+thumbnail = "pimages/00011-best-jpeg-from-transparent-png.jpg"
 +++
 
 I have been writing [PySmile](https://github.com/vietlq/PySmile) - a tool for batch processing (resize, convert) images. Resizing by ratio, to fixed width, fixed height was easy-peasy. So was conversion from non-transparent formats to any format (from JPG, BMP to JPG, BMP, PDF, PNG, GIF). However, there was a challenge converting transparent PNG to other formats: JPG, BMP, GIF, PDF. Have a look at the output:
