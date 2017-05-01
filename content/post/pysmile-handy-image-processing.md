@@ -7,8 +7,10 @@ highlight = true
 scripts = []
 tags = ["pysmile", "social-media", "python", "dev", "image-processing", "pillow", "gif", "png", "transparency"]
 title = "PySmile: Handy Image Processing"
-
+thumbnail = "pimages/00016-peter-john-maridable-53936.jpg"
 +++
+
+![Unsplash - Spin - Peter John - Maridable](/pimages/00016-peter-john-maridable-53936.jpg)
 
 If you are an active blogger or creating lots marketing material, you probably use a huge number of images and photos to keep your audience engaged. If you share on Facebook and Twitter, you may want to have suitable thumbnails. It's a hell lot of work to have so many images and their derivatives. Some common tasks:
 
