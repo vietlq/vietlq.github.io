@@ -82,8 +82,15 @@ Now Twitter and Facebook give us good validation results:
 
 ![Facebook Post with Preview](/pimages/00006-good-facebook-open-graph.jpg)
 
+If you want large image in the summary, [simply add](https://dev.twitter.com/cards/types/summary-large-image):
+
+```
+<meta name="twitter:card" content="summary_large_image">
+```
+
 ## References
 
 * [Hugo Page Variables](https://hugodocs.info/variables/page/)
 * [Hugo Scratch](https://hugodocs.info/functions/scratch/)
 * [Hugo Shortcodes](https://hugodocs.info/content-management/shortcodes/)
+* [Twitter Summary Large Image](https://dev.twitter.com/cards/types/summary-large-image)

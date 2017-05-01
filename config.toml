@@ -1,7 +1,8 @@
 baseURL = "https://vietlq.github.io/"
 languageCode = "en-us"
 title = "Viet's Blog"
-theme = "hugo-geo"
+#theme = "hugo-geo"
+theme = "hugo_theme_robust"
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
