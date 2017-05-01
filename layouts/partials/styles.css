@@ -281,7 +281,8 @@ article.sn > .article-header .facts {
 
 article.sn > .article-body {
   margin-bottom: 1.5rem;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  /* word-break: break-word; */
 }
 
 article.sn > .article-body h2 {
