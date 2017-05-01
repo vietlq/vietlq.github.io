@@ -5,7 +5,7 @@ description = "Hugo Blogging Series: Access Hugo Page Variables"
 draft = false
 highlight = true
 scripts = []
-tags = ["hugo", "theme", "fb", "opengraph", "twitter", "social-media"]
+tags = ["hugo", "theme", "fb", "opengraph", "twitter", "social-media", "meta", "image"]
 title = "Access Hugo Page Variables"
 thumbnail = "pimages/00005-good-twitter-card-validator.jpg"
 +++
