@@ -88,6 +88,8 @@ If you want large image in the summary, [simply add](https://dev.twitter.com/car
 <meta name="twitter:card" content="summary_large_image">
 ```
 
+![Twitter Card: Summary Large Image](/pimages/00020-twitter-card-summary-large-image.jpg)
+
 ## References
 
 * [Hugo Page Variables](https://hugodocs.info/variables/page/)
