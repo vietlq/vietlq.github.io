@@ -19,4 +19,11 @@ which will make copies of objects from static memory to heap. Is there any way e
 
 ```
 You can create a clone and override it for each class.
+
+Copy constructor. Deep clone vs shallow copy.
+
+T *BasePet::clone() const
+{
+    return new BasePet(*this);
+}
 ```
