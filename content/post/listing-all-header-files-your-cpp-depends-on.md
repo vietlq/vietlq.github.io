@@ -1,18 +1,18 @@
 +++
 css = []
-scripts = []
 date = "2013-06-17T18:04:22+01:00"
+description = "Listing all header files your cpp depends on"
+scripts = []
 draft = false
 highlight = true
 tags = ["c++", "development", "tips", "tools", "tutorial"]
 categories = []
-description = "Listing all header files your cpp depends on"
 title = "Listing all header files your cpp depends on"
 thumbnail = ""
 
 +++
 
-I needed to extract certain Boost headers from its huge code base for memory mapped file & shared memory containers. The first idea came to my mind was a simple grep command for ‘#include’ statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:
+I needed to extract certain Boost headers from its huge code base for memory mapped file & shared memory containers. The first idea came to my mind was a simple grep command for `#include` statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:
 
 ```c++
 #ifndef NO_STL
