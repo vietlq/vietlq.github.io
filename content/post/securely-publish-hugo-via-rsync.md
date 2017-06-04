@@ -92,7 +92,7 @@ Connection to code2.pro closed.
 
 ### 4. Set up SSH alias in config
 
-Now edit the file `~/.ssh/config` on your local folder:
+Now edit the file `~/.ssh/config` on your local machine:
 
 ```bash
 # To publish Hugo posts
