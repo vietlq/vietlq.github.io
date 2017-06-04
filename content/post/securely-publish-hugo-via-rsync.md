@@ -10,8 +10,6 @@ description = "Securely Publish Hugo via rsync"
 
 +++
 
-
-
 ## Steps
 
 ### 1. Install rssh
