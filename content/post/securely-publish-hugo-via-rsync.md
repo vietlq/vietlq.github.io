@@ -43,7 +43,7 @@ sudo useradd --home-dir /home/publisher1 --create-home --shell /usr/bin/rssh pub
 sudo mkdir /home/publisher1/.ssh/
 sudo touch /home/publisher1/.ssh/authorized_keys
 sudo chown -R publisher1:publisher1 /home/publisher1/.ssh
-sudo chmod go-w /home/user
+sudo chmod go-w /home/publisher1
 sudo chmod 700 /home/publisher1/.ssh
 sudo chmod 644 /home/publisher1/.ssh/authorized_keys
 # chmod for private keys: 600
