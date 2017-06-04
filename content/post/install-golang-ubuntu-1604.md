@@ -3,7 +3,7 @@ categories = []
 date = "2017-06-04T20:55:33+01:00"
 draft = false
 tags = ["dev", "go", "tips", "ubuntu"]
-thumbnail = ""
+thumbnail = "pimages/00024-twitter-gopher-banner-small.jpg"
 title = "Install Golang on Ubuntu 16.04 LTS"
 description = "Install Golang on Ubuntu 16.04 LTS"
 
