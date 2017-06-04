@@ -52,7 +52,7 @@ sudo chmod 644 /home/publisher1/.ssh/authorized_keys
 
 Note that the permission must be set as above or your will not be able to `scp` or `rsync` correctly.
 
-Try to become `publisher1` and you won't be able to
+Try to become `publisher1` and you won't be able to:
 
 ```
 sudo su publisher1
