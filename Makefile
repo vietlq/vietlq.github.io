@@ -1,6 +1,6 @@
 .PHONY: all static deploy
 
-all: static deploy
+all: static site deploy
 
 static:
 	rm -rf _deploy/*
