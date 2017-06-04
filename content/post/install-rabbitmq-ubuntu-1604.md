@@ -61,7 +61,7 @@ To                         Action      From
 443/tcp (v6)               ALLOW       Anywhere (v6)
 ```
 
-To access from the local folder, better create a temporary SSH tunnel to your server:
+I understand you are tempted to punch a hole to allow access to the port `15672`. There is a better way without lifting your firewall. To access from the local machine, better create a temporary SSH tunnel to your server:
 
 ```
 ssh -N -L 15672:localhost:15672 code2.pro
