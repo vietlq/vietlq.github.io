@@ -4,7 +4,7 @@ date = "2017-06-04T21:07:05+01:00"
 draft = false
 tags = ["dev", "rabbitmq", "tips", "ubuntu", "mq"]
 thumbnail = "pimages/00025-skin-tone-rabbits-background.jpg"
-title = "install rabbitmq ubuntu 1604"
+title = "Install RabbitMQ on Ubuntu 16.04 LTS"
 
 +++
 
