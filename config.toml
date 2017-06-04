@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Viet's Blog"
 #theme = "hugo-geo"
 theme = "hugo_theme_robust"
+googleAnalytics = "UA-1440926-3"
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
