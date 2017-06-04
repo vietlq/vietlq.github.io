@@ -4,7 +4,7 @@ date = "2017-06-04T18:19:05+01:00"
 draft = false
 highlight = true
 tags = ["dev", "ssh", "rsync", "hugo", "ubuntu"]
-thumbnail = ""
+thumbnail = "pimages/00023-publish-edvinas-bruzas-114174.jpg"
 title = "Securely Publish Hugo via rsync"
 description = "Securely Publish Hugo via rsync"
 
