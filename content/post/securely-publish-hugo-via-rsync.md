@@ -24,10 +24,10 @@ Now edit the config file `/etc/rssh.conf` to allow `scp` and `rsync`:
 
 ```
 allowscp
+allowrsync
 #allowsftp
 #allowcvs
 #allowrdist
-allowrsync
 #allowsvnserve
 ```
 
