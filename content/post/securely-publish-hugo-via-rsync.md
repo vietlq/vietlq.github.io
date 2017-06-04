@@ -55,7 +55,7 @@ Note that the permission must be set as above or your will not be able to `scp` 
 Try to become `publisher1` and you won't be able to:
 
 ```
-sudo su publisher1
+$ sudo su publisher1
 
 This account is restricted by rssh.
 This user is locked out.
