@@ -9,3 +9,8 @@ static:
 timestamp := $(shell /bin/date "+%FT%T%z")
 deploy:
 	cd _deploy && git add . && git commit -a -m "Committed at ${timestamp}" && git push
+
+site:
+	rm -rf _dsite/*
+	hugo -b 'https://simpleit.us/' --canonifyURLs -d _dsite
+	rsync -avz --delete _dsite/ vietlq@simpleit.us:~/test-blog/
