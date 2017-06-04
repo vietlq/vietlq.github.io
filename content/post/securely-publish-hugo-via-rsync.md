@@ -10,9 +10,30 @@ description = "Securely Publish Hugo via rsync"
 
 +++
 
+
+
 ## Steps
 
-### 1. Create a new user for publishing only
+### 1. Install rssh
+
+Install `rssh` to limit shell activity for users using the shell `rssh`:
+
+```bash
+sudo apt-get install rssh
+```
+
+Now edit the config file `/etc/rssh.conf` to allow `scp` and `rsync`:
+
+```
+allowscp
+#allowsftp
+#allowcvs
+#allowrdist
+allowrsync
+#allowsvnserve
+```
+
+### 2. Create a new user for publishing only
 
 First, create a new user `publisher1` that is in charge of publishing on your Linux server:
 
@@ -44,7 +65,7 @@ This user is locked out.
 If you believe this is in error, please contact your system administrator.
 ```
 
-### 2. Generate a key pair to publish
+### 3. Generate a key pair to publish
 
 On your local machine:
 
@@ -71,7 +92,7 @@ If you believe this is in error, please contact your system administrator.
 Connection to code2.pro closed.
 ```
 
-### 3. Set up SSH alias in config
+### 4. Set up SSH alias in config
 
 Now edit the file `~/.ssh/config` on your local folder:
 
@@ -83,8 +104,40 @@ Host blog01
     IdentityFile ~/.ssh/publisher1
 ```
 
+### 5. Now publish with SSH alias
+
+Use the SSH alias `blog01` above to publish your Hugo blog:
+
+```bash
+rm -rf _dsite/*
+hugo -b 'https://code2.pro/' --canonifyURLs -d _dsite
+rsync -avz --partial --progress --delete _dsite/ blog01:~/blog-deep-thoughts/
+```
+
+Expect the output like this:
+
+```
+building file list ...
+359 files to consider
+
+sent 7101 bytes  received 20 bytes  4747.33 bytes/sec
+total size is 5654674  speedup is 794.08
+```
+
+### 6. Config web server
+
+I will leave this to you. Just remember to set soft link or publish directly to the public dir:
+
+```bash
+cd /var/www/code2.pro
+sudo ln -s -f /home/publisher1/blog-deep-thoughts public
+```
+
+Congrats! Now you can safely publish your Hugo blog via `scp` and `rsync`!
+
 ## References
 
+* [Easy deployments with rsync](https://gohugo.io/tutorials/deployment-with-rsync/)
 * [Permitting scp but not ssh - without scponly](https://askubuntu.com/questions/795649/permitting-scp-but-not-ssh-without-scponly)
 * [How do you create an ssh key for another user?](https://serverfault.com/questions/323958/how-do-you-create-an-ssh-key-for-another-user)
 * [Permissions on private key in .ssh folder?](https://superuser.com/questions/215504/permissions-on-private-key-in-ssh-folder)
