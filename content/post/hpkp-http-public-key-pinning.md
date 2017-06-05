@@ -66,6 +66,12 @@ PRIV_KEY=/path/to/private/key/code2.pro.key; echo -n "secret" | openssl dgst -sh
 
 http://simpleit.us/.well-known/acme-challenge/5i8iV4Z5annluGwlWxwexKC6AHNtbNUwr_sHTyn44cg
 
+Content for the file so your ownership can be verified:
+
+```
+5i8iV4Z5annluGwlWxwexKC6AHNtbNUwr_sHTyn44cg.SMfro_ui4U8blO-_wv9hsDIoJZOHCwyUPAgJUh-lYUs
+```
+
 Update Apache config file for your `VirtualHost`:
 
 ```
