@@ -104,6 +104,8 @@ https://scotthelme.co.uk/guidance-on-setting-up-hpkp/
 
 https://gethttpsforfree.com/
 
+https://github.com/diafygi/gethttpsforfree
+
 https://support.rackspace.com/how-to/generate-a-csr-with-openssl/
 
 https://community.letsencrypt.org/t/how-to-obtain-a-ssl-certificate-from-lets-encrypt-with-a-csr/15942/10
