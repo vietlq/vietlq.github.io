@@ -25,3 +25,5 @@ sudo setfacl -m u:user1:r .ssh/authorized_keys
 ```
 
 https://help.ubuntu.com/community/FilePermissionsACLs
+
+https://vietlq.github.io/2017/06/04/securely-publish-hugo-via-rsync/
