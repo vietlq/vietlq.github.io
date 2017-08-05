@@ -60,5 +60,19 @@ int main()
             std::cout << "d1 does not almost equal d2\n";
         }
     }
+
+    int num1 = 0x42f6e9d7;
+    int num2 = 0x42f6e9d4;
+    const float* f1 = reinterpret_cast<float*>(&num1);
+    const float* f2 = reinterpret_cast<float*>(&num2);
+    const float& float1 = *f1;
+    const float& float2 = *f2;
+
+    std::cout << "num1 = " << num1 << std::endl;
+    std::cout << "num2 = " << num2 << std::endl;
+
+    std::cout << "float1 = " << float1 << std::endl;
+    std::cout << "float2 = " << float2 << std::endl;
+    std::cout << "(float1 == float2) = " << (float1 == float2) << std::endl;
 }
 ```
