@@ -61,18 +61,23 @@ int main()
         }
     }
 
-    int num1 = 0x42f6e9d7;
-    int num2 = 0x42f6e9d4;
+    int num1 = 0x3f9e0652;
+    int num2 = 0x3f9e0651;
     const float* f1 = reinterpret_cast<float*>(&num1);
     const float* f2 = reinterpret_cast<float*>(&num2);
     const float& float1 = *f1;
     const float& float2 = *f2;
+    const float diff = std::abs(float1 - float2);
+    const float float_epsilon = std::numeric_limits<float>::epsilon();
 
     std::cout << "num1 = " << num1 << std::endl;
     std::cout << "num2 = " << num2 << std::endl;
 
+    std::cout << std::setprecision(20);
+
     std::cout << "float1 = " << float1 << std::endl;
     std::cout << "float2 = " << float2 << std::endl;
-    std::cout << "(float1 == float2) = " << (float1 == float2) << std::endl;
+    std::cout << "diff = " << diff << std::endl;
+    std::cout << "(diff == float_epsilon) is " << (diff == float_epsilon) << std::endl;
 }
 ```
