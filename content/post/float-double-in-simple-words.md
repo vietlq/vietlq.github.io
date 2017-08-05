@@ -28,6 +28,28 @@ typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type
     // unless the result is subnormal
            || (std::abs(x-y) < std::numeric_limits<T>::min());
 }
+
+void explore_ulp(int num1)
+{
+    const int num2 = num1 + 1;
+    const float* f1 = reinterpret_cast<const float*>(&num1);
+    const float* f2 = reinterpret_cast<const float*>(&num2);
+    const float& float1 = *f1;
+    const float& float2 = *f2;
+    const float diff = std::abs(float1 - float2);
+    const float float_epsilon = std::numeric_limits<float>::epsilon();
+
+    std::cout << "num1 = " << num1 << std::endl;
+    std::cout << "num2 = " << num2 << std::endl;
+
+    std::cout << std::setprecision(20);
+
+    std::cout << "float1 = " << float1 << std::endl;
+    std::cout << "float2 = " << float2 << std::endl;
+    std::cout << "diff = " << diff << std::endl;
+    std::cout << "(diff == float_epsilon) is " << (diff == float_epsilon) << std::endl;
+}
+
 int main()
 {
     double d1 = 0.2;
@@ -61,23 +83,9 @@ int main()
         }
     }
 
-    int num1 = 0x3f9e0652;
-    int num2 = 0x3f9e0651;
-    const float* f1 = reinterpret_cast<float*>(&num1);
-    const float* f2 = reinterpret_cast<float*>(&num2);
-    const float& float1 = *f1;
-    const float& float2 = *f2;
-    const float diff = std::abs(float1 - float2);
-    const float float_epsilon = std::numeric_limits<float>::epsilon();
+    explore_ulp(0x3f9e0651);
+    explore_ulp(0x4ceb79a2);
 
-    std::cout << "num1 = " << num1 << std::endl;
-    std::cout << "num2 = " << num2 << std::endl;
-
-    std::cout << std::setprecision(20);
-
-    std::cout << "float1 = " << float1 << std::endl;
-    std::cout << "float2 = " << float2 << std::endl;
-    std::cout << "diff = " << diff << std::endl;
-    std::cout << "(diff == float_epsilon) is " << (diff == float_epsilon) << std::endl;
+    return 0;
 }
 ```
