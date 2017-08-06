@@ -1,0 +1,3 @@
+[submodule "code/floating-point/googletest"]
+	path = code/floating-point/googletest
+	url = git@github.com:google/googletest.git
