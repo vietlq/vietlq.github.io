@@ -50,20 +50,51 @@ void explore_ulp(int num1)
     std::cout << "(diff == float_epsilon) is " << (diff == float_epsilon) << std::endl;
 }
 
+template<typename T>
+struct name_trait
+{
+    constexpr static auto name = "undefined name_trait";
+};
+
+template<>
+struct name_trait<float>
+{
+    constexpr static auto name = "float";
+};
+
+template<>
+struct name_trait<double>
+{
+    constexpr static auto name = "double";
+};
+
+template<>
+struct name_trait<long double>
+{
+    constexpr static auto name = "long double";
+};
+
+template<typename T>
+void inspect_type()
+{
+    constexpr auto name = name_trait<T>::name;
+
+    std::cout << "std::numeric_limits<" << name << ">::min() = "
+        << std::numeric_limits<long double>::min() << std::endl;
+    std::cout << "std::numeric_limits<" << name << ">::max() = "
+        << std::numeric_limits<long double>::max() << std::endl;
+    std::cout << "std::numeric_limits<" << name << ">::epsilon() = "
+        << std::numeric_limits<long double>::epsilon() << std::endl;
+}
+
 int main()
 {
     double d1 = 0.2;
     double d2 = 1 / std::sqrt(5) / std::sqrt(5);
 
-    std::cout << "std::numeric_limits<float>::min() = "
-        << std::numeric_limits<float>::min() << std::endl;
-    std::cout << "std::numeric_limits<float>::epsilon() = "
-        << std::numeric_limits<float>::epsilon() << std::endl;
-
-    std::cout << "std::numeric_limits<double>::min() = "
-        << std::numeric_limits<double>::min() << std::endl;
-    std::cout << "std::numeric_limits<double>::epsilon() = "
-        << std::numeric_limits<double>::epsilon() << std::endl;
+    inspect_type<float>();
+    inspect_type<double>();
+    inspect_type<long double>();
 
     if(d1 == d2) {
         std::cout << "d1 == d2\n";
