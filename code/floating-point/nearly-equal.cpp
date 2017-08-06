@@ -230,3 +230,26 @@ TEST(NearlyEqual, Float7UlpUpperMid2)
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7, 0.001));
     EXPECT_TRUE(nearlyEqualAbsUlp(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7));
 }
+
+TEST(NearlyEqual, DoubleIllustrate)
+{
+    const double DBL_2_53         = 1L << 53;
+    const double DBL_2_53_PLUS1   = DBL_2_53 + 1;
+    const double DBL_2_53_PLUS1_4 = DBL_2_53 + 1.4;
+    const double DBL_2_53_PLUS2   = DBL_2_53 + 2;
+    const double DBL_2_53_PLUS4   = DBL_2_53 + 4;
+    const double DBL_2_53_PLUS5   = DBL_2_53 + 5;
+    const double DBL_2_53_PLUS7   = DBL_2_53 + 7;
+    const double DBL_2_53_PLUS9   = DBL_2_53 + 9;
+    EXPECT_EQ(DBL_2_53, DBL_2_53_PLUS1);
+    EXPECT_NE(DBL_2_53, DBL_2_53_PLUS1_4);
+    EXPECT_EQ(DBL_2_53_PLUS2, DBL_2_53_PLUS1_4);
+    EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53_PLUS1);
+    EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53_PLUS4);
+    EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53_PLUS5);
+    EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53_PLUS7);
+    // This passes as 9.0d is rounded down to 4*ULP = 8.0d
+    EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53_PLUS9);
+    // This will fail as 10.0d > 4*ULP = 8.0d
+    //EXPECT_DOUBLE_EQ(DBL_2_53, DBL_2_53 + 10);
+}
