@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * Test suite to demonstrate a good method for comparing floating-point values
- * using an epsilon. Run via JUnit 4.
+ * using an maxDiff. Run via JUnit 4.
  *
  * Note: this function attempts a "one size fits all" solution. There may be
  * some edge cases for which it still produces unexpected results, and some of
@@ -20,23 +20,28 @@ import org.junit.Test;
  * @author Michael Borgwardt
  */
 public class NearlyEqualsTest {
-    public static boolean nearlyEqual(float a, float b, float epsilon) {
+    public static boolean nearlyEqual(float a, float b, float maxDiff) {
+        final float MACH_EPSILON = Float.intBitsToFloat(0x34000000);
         final float absA = Math.abs(a);
         final float absB = Math.abs(b);
         final float diff = Math.abs(a - b);
 
-        System.out.printf("a = %.9f, b = %.9f\n", a, b);
+        System.out.printf("a = %.9f, b = %.9f, diff = %.9f\n", a, b, diff);
 
         if (a == b) { // shortcut, handles infinities
             return true;
         } else if (a == 0 || b == 0 || (absA + absB < Float.MIN_NORMAL)) {
             // a or b is zero or both are extremely close to it
             // relative error is less meaningful here
-            return diff < (epsilon * Float.MIN_NORMAL);
-        } else { // use relative error
+            return diff < (maxDiff * Float.MIN_NORMAL);
+        } else if (diff > MACH_EPSILON && diff < maxDiff) {
+            // use absolute error
+            return true;
+        } else {
+            // use relative error
             final float res = diff / Math.min((absA + absB), Float.MAX_VALUE);
-            System.out.printf("res = %.9f, epsilon = %.9f\n", res, epsilon);
-            return res < epsilon;
+            System.out.printf("res = %.9f, maxDiff = %.9f\n", res, maxDiff);
+            return res < maxDiff;
         }
     }
 
@@ -211,7 +216,7 @@ public class NearlyEqualsTest {
         System.out.println("--------");
         System.out.println("simpleValues");
         // This should be TRUE in the math world
-        assertFalse(nearlyEqual(0.200000f, 0.199999f, 1e-6f));
+        assertTrue(nearlyEqual(0.200000f, 0.199999f, 1e-6f));
         assertTrue(nearlyEqual(0.200000f, 0.1999999f, 1e-6f));
         System.out.println("--------");
     }
