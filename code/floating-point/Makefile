@@ -1,7 +1,9 @@
 .PHONY: all cpp java test test_java test_cpp
 .PHONY: build_java build_cpp
 
-all: cpp java
+all:
+	make cpp
+	make java
 
 test: test_java test_cpp
 

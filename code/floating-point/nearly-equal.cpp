@@ -28,27 +28,42 @@ using Float64 = ::testing::internal::FloatingPoint<double>;
 // Utility functions
 ////////////////////////////////////////////////////////////////
 
-inline Float32::Bits dist_ulp(const Float32& f1, const Float32& f2)
+inline uint32_t dist_ulp(const Float32& f1, const Float32& f2)
 {
     return Float32::getUlpDistance(f1, f2);
 }
 
-inline Float32::Bits dist_ulp(float fv1, float fv2)
+inline uint32_t dist_ulp(float fv1, float fv2)
 {
     const Float32 f1(fv1);
     const Float32 f2(fv2);
     return dist_ulp(f1, f2);
 }
 
-Float32::Bits exponent_bits(float fv)
+inline bool nearlyEqualUlp(
+        float fv1, float fv2, uint32_t maxUlpDist = 4)
+{
+    return (dist_ulp(fv1, fv2) <= maxUlpDist);
+}
+
+inline int exponent_bits(float fv)
 {
     const Float32 f(fv);
-    const Float32::Bits biased_bits = (f.exponent_bits() >> Float32::kFractionBitCount);
-    const long unbiased_bits = long(biased_bits) - 127;
+    const int biased_bits = int(f.exponent_bits() >> Float32::kFractionBitCount);
+    const int unbiased_bits = biased_bits - 127;
     std::cout << "exponent_bits for " << fv << std::endl;
     std::cout << "biased_bits = " << biased_bits << std::endl;
     std::cout << "unbiased_bits = " << unbiased_bits << std::endl;
     return biased_bits;
+}
+
+inline uint32_t absDiffToUlp(float fv1, float absDiff)
+{
+    const int biased_bits = exponent_bits(fv1);
+    const int unbiased_bits = biased_bits - 127;
+    const float ulp = FLOAT_EPSILON * std::powf(2, unbiased_bits);
+    const float ulps = absDiff / ulp;
+    return std::ceil(ulps);
 }
 
 void report_ulp(float fv1, float fv2)
@@ -63,7 +78,44 @@ void report_ulp(float fv1, float fv2)
         << " and " << fv2 << std::endl;
 }
 
-bool nearlyEqualRelative(
+inline bool nearlyEqualAbsUlp(float fv1, float fv2, float absDiff)
+{
+    // Forget about NaN
+    if (std::isnan(fv1) || std::isnan(fv2))
+    {
+        return false;
+    }
+
+    // Works for Infinities as well
+    if (fv1 == fv2)
+    {
+        return true;
+    }
+
+    const float diff = std::abs(fv1 - fv2);
+    const float absA = std::abs(fv1);
+    const float absB = std::abs(fv2);
+    const float maxVal = std::max(absA, absB);
+
+    if (maxVal < FLOAT_EPSILON)
+    {
+        const uint32_t ulps = absDiffToUlp(maxVal, absDiff);
+        return nearlyEqualUlp(fv1, fv2, ulps);
+    }
+    else
+    {
+        if (diff < absDiff)
+        {
+            return true;
+        }
+
+        const uint32_t ulps = absDiffToUlp(maxVal, absDiff);
+        std::cout << "ulps = " << ulps << std::endl;
+        return nearlyEqualUlp(fv1, fv2, ulps);
+    }
+}
+
+inline bool nearlyEqualRelative(
         float fv1, float fv2, float absDiff, float relDiff = 0.0f)
 {
     // Forget about NaN
@@ -108,6 +160,7 @@ TEST(NearlyEqual, Float6AbsUpperMid)
     std::cout << "Float6AbsUpperMid: diff = " << diff << std::endl;
     EXPECT_TRUE(diff < FLOAT_MAX_DIFF6) << "diff = " << diff
         << " is greater than FLOAT_MAX_DIFF6 = " << FLOAT_MAX_DIFF6;
+    EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6));
 }
 
 TEST(NearlyEqual, Double6AbsUpperMid)
@@ -123,6 +176,7 @@ TEST(NearlyEqual, Float6UlpUpperMid)
     //EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID);
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6, 0.001));
+    EXPECT_TRUE(nearlyEqualAbsUlp(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6));
 }
 
 TEST(NearlyEqual, Float6AbsLowerMid)
@@ -131,6 +185,7 @@ TEST(NearlyEqual, Float6AbsLowerMid)
     std::cout << "Float6AbsLowerMid : diff = " << diff << std::endl;
     EXPECT_TRUE(diff < FLOAT_MAX_DIFF6) << "diff = " << diff
         << " is greater than FLOAT_MAX_DIFF6 = " << FLOAT_MAX_DIFF6;
+    EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6));
 }
 
 TEST(NearlyEqual, Double6AbsLowerMid)
@@ -146,6 +201,7 @@ TEST(NearlyEqual, Float6UlpLowerMid)
     //EXPECT_FLOAT_EQ(FLOAT_LOWER, FLOAT_MID);
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6, 0.001));
+    EXPECT_TRUE(nearlyEqualAbsUlp(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6));
 }
 
 TEST(NearlyEqual, Float7AbsUpperMid2)
@@ -172,4 +228,5 @@ TEST(NearlyEqual, Float7UlpUpperMid2)
     //EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID2);
     EXPECT_FALSE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7, 0.001));
+    EXPECT_TRUE(nearlyEqualAbsUlp(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7));
 }
