@@ -25,6 +25,8 @@ public class NearlyEqualsTest {
         final float absB = Math.abs(b);
         final float diff = Math.abs(a - b);
 
+        System.out.printf("a = %.9f, b = %.9f\n", a, b);
+
         if (a == b) { // shortcut, handles infinities
             return true;
         } else if (a == 0 || b == 0 || (absA + absB < Float.MIN_NORMAL)) {
@@ -32,7 +34,9 @@ public class NearlyEqualsTest {
             // relative error is less meaningful here
             return diff < (epsilon * Float.MIN_NORMAL);
         } else { // use relative error
-            return diff / Math.min((absA + absB), Float.MAX_VALUE) < epsilon;
+            final float res = diff / Math.min((absA + absB), Float.MAX_VALUE);
+            System.out.printf("res = %.9f, epsilon = %.9f\n", res, epsilon);
+            return res < epsilon;
         }
     }
 
@@ -200,5 +204,15 @@ public class NearlyEqualsTest {
         assertFalse(nearlyEqual(0.000000001f, Float.MIN_VALUE));
         assertFalse(nearlyEqual(Float.MIN_VALUE, 0.000000001f));
         assertFalse(nearlyEqual(-Float.MIN_VALUE, 0.000000001f));
+    }
+
+    @Test
+    public void simpleValues() {
+        System.out.println("--------");
+        System.out.println("simpleValues");
+        // This should be TRUE in the math world
+        assertFalse(nearlyEqual(0.200000f, 0.199999f, 1e-6f));
+        assertTrue(nearlyEqual(0.200000f, 0.1999999f, 1e-6f));
+        System.out.println("--------");
     }
 }
