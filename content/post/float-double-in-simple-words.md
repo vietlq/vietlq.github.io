@@ -116,6 +116,7 @@ int main()
 
     explore_ulp(0x3f9e0651);
     explore_ulp(0x4ceb79a2);
+    explore_ulp(0x7f7fffff);
 
     return 0;
 }
