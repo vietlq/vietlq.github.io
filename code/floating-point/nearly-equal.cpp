@@ -1,13 +1,18 @@
 #include <gtest/gtest.h>
 #include <iostream>
 #include <cmath>
+#include <limits>
 
 const float FLOAT_UPPER = 0.2000000f;
 const float FLOAT_MID2  = 0.1999999f;
 const float FLOAT_MID   = 0.1999990f;
 const float FLOAT_LOWER = 0.1999980f;
 const float FLOAT_EPS6  = 1e-6f;
-const float FLOAT_EPS7  = 1e-7f;
+// Note that 1e-7f is smaller than machine epsilon for floats.
+// So one cannot reliable use 1e-7f for epsilon between 2 floats.
+// One must use minimum epsilon = 2.**-23 = 1.1920928955078125e-07
+// when comparing 2 floats
+const float FLOAT_EPS7  = std::numeric_limits<float>::epsilon();
 
 TEST(NearlyEqual, Float6AbsUpperMid)
 {
