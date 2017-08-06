@@ -87,36 +87,51 @@ void inspect_type()
         << std::numeric_limits<T>::epsilon() << std::endl;
 }
 
+void near_equal_example()
+{
+    const float d1 = 0.2000001;
+    const float d2 = 1 / std::sqrt(5) / std::sqrt(5);
+    const float diff = std::abs(d1 - d2);
+
+    std::cout << std::setprecision(20) << "d1 = " << d1
+        << "; d2 = " << d2 << std::endl;
+    std::cout << "diff = " << diff << std::endl;
+
+    if(d1 == d2)
+    {
+        std::cout << "d1 == d2\n";
+    }
+    else
+    {
+        std::cout << "d1 != d2\n";
+    }
+
+    for (int ulp = 0; ulp < 4; ++ulp)
+    {
+        std::cout << "ulp = " << ulp << ": ";
+
+        if(almost_equal(d1, d2, ulp))
+        {
+            std::cout << "d1 almost equals d2\n";
+        }
+        else
+        {
+            std::cout << "d1 does not almost equal d2\n";
+        }
+    }
+}
+
 int main()
 {
-    double d1 = 0.2;
-    double d2 = 1 / std::sqrt(5) / std::sqrt(5);
-
     inspect_type<float>();
     inspect_type<double>();
     inspect_type<long double>();
 
-    if(d1 == d2) {
-        std::cout << "d1 == d2\n";
-    }
-    else {
-        std::cout << "d1 != d2\n";
-    }
-
-    for (int ulp = 0; ulp < 6; ++ulp) {
-        std::cout << "ulp = " << ulp << std::endl;
-
-        if(almost_equal(d1, d2, ulp)) {
-            std::cout << "d1 almost equals d2\n";
-        }
-        else {
-            std::cout << "d1 does not almost equal d2\n";
-        }
-    }
-
     explore_ulp(0x3f9e0651);
     explore_ulp(0x4ceb79a2);
     explore_ulp(0x7f7fffff);
+
+    near_equal_example();
 
     return 0;
 }
