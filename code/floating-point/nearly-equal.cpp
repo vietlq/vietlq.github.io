@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <gtest/internal/gtest-internal.h>
 #include <iostream>
 #include <cmath>
 #include <limits>
@@ -13,6 +14,9 @@ const float FLOAT_EPS6  = 1e-6f;
 // One must use minimum epsilon = 2.**-23 = 1.1920928955078125e-07
 // when comparing 2 floats
 const float FLOAT_EPS7  = std::numeric_limits<float>::epsilon();
+
+using Float32 = ::testing::internal::FloatingPoint<float>;
+using Float64 = ::testing::internal::FloatingPoint<double>;
 
 TEST(NearlyEqual, Float6AbsUpperMid)
 {
@@ -31,6 +35,11 @@ TEST(NearlyEqual, Double6AbsUpperMid)
 
 TEST(NearlyEqual, Float6UlpUpperMid)
 {
+    const Float32 f1(FLOAT_UPPER);
+    const Float32 f2(FLOAT_MID);
+    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
+        << " for " << FLOAT_UPPER
+        << " and " << FLOAT_MID << std::endl;
     EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID);
 }
 
@@ -51,6 +60,11 @@ TEST(NearlyEqual, Double6AbsLowerMid)
 
 TEST(NearlyEqual, Float6UlpLowerMid)
 {
+    const Float32 f1(FLOAT_LOWER);
+    const Float32 f2(FLOAT_MID);
+    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
+        << " for " << FLOAT_LOWER
+        << " and " << FLOAT_MID << std::endl;
     EXPECT_FLOAT_EQ(FLOAT_LOWER, FLOAT_MID);
 }
 
@@ -71,5 +85,10 @@ TEST(NearlyEqual, Double7AbsUpperMid2)
 
 TEST(NearlyEqual, Float7UlpUpperMid2)
 {
+    const Float32 f1(FLOAT_UPPER);
+    const Float32 f2(FLOAT_MID2);
+    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
+        << " for " << FLOAT_UPPER
+        << " and " << FLOAT_MID2 << std::endl;
     EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID2);
 }
