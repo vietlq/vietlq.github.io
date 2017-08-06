@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <gtest/internal/gtest-internal.h>
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 #include <limits>
 
@@ -17,6 +18,29 @@ const float FLOAT_EPS7  = std::numeric_limits<float>::epsilon();
 
 using Float32 = ::testing::internal::FloatingPoint<float>;
 using Float64 = ::testing::internal::FloatingPoint<double>;
+
+Float32::Bits exponent_bits(float fv)
+{
+    const Float32 f(fv);
+    const Float32::Bits biased_bits = (f.exponent_bits() >> Float32::kFractionBitCount);
+    const long unbiased_bits = long(biased_bits) - 127;
+    std::cout << "exponent_bits for " << fv << std::endl;
+    std::cout << "biased_bits = " << biased_bits << std::endl;
+    std::cout << "unbiased_bits = " << unbiased_bits << std::endl;
+    return biased_bits;
+}
+
+void report_ulp(float fv1, float fv2)
+{
+    const Float32 f1(fv1);
+    const Float32 f2(fv2);
+    std::cout << std::setprecision(20) << std::endl;
+    exponent_bits(fv1);
+    exponent_bits(fv2);
+    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
+        << " for " << fv1
+        << " and " << fv2 << std::endl;
+}
 
 TEST(NearlyEqual, Float6AbsUpperMid)
 {
@@ -35,11 +59,7 @@ TEST(NearlyEqual, Double6AbsUpperMid)
 
 TEST(NearlyEqual, Float6UlpUpperMid)
 {
-    const Float32 f1(FLOAT_UPPER);
-    const Float32 f2(FLOAT_MID);
-    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
-        << " for " << FLOAT_UPPER
-        << " and " << FLOAT_MID << std::endl;
+    report_ulp(FLOAT_UPPER, FLOAT_MID);
     EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID);
 }
 
@@ -60,11 +80,7 @@ TEST(NearlyEqual, Double6AbsLowerMid)
 
 TEST(NearlyEqual, Float6UlpLowerMid)
 {
-    const Float32 f1(FLOAT_LOWER);
-    const Float32 f2(FLOAT_MID);
-    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
-        << " for " << FLOAT_LOWER
-        << " and " << FLOAT_MID << std::endl;
+    report_ulp(FLOAT_LOWER, FLOAT_MID);
     EXPECT_FLOAT_EQ(FLOAT_LOWER, FLOAT_MID);
 }
 
@@ -85,10 +101,6 @@ TEST(NearlyEqual, Double7AbsUpperMid2)
 
 TEST(NearlyEqual, Float7UlpUpperMid2)
 {
-    const Float32 f1(FLOAT_UPPER);
-    const Float32 f2(FLOAT_MID2);
-    std::cout << "ULP distance = " << Float32::getUlpDistance(f1, f2)
-        << " for " << FLOAT_UPPER
-        << " and " << FLOAT_MID2 << std::endl;
+    report_ulp(FLOAT_UPPER, FLOAT_MID2);
     EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID2);
 }
