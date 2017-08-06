@@ -20,13 +20,12 @@ import org.junit.Test;
  * @author Michael Borgwardt
  */
 public class NearlyEqualsTest {
+    static final float MACH_EPSILON = Float.intBitsToFloat(0x34000000);
+
     public static boolean nearlyEqual(float a, float b, float maxDiff) {
-        final float MACH_EPSILON = Float.intBitsToFloat(0x34000000);
         final float absA = Math.abs(a);
         final float absB = Math.abs(b);
         final float diff = Math.abs(a - b);
-
-        System.out.printf("a = %.9f, b = %.9f, diff = %.9f\n", a, b, diff);
 
         if (a == b) { // shortcut, handles infinities
             return true;
@@ -40,9 +39,24 @@ public class NearlyEqualsTest {
         } else {
             // use relative error
             final float res = diff / Math.min((absA + absB), Float.MAX_VALUE);
-            System.out.printf("res = %.9f, maxDiff = %.9f\n", res, maxDiff);
             return res < maxDiff;
         }
+    }
+
+    public static boolean nearlyEqualRelative(
+            float a, float b, float maxDiff, float relDiff) {
+        // Shortcut
+        if (nearlyEqual(a, b, maxDiff)) {
+            return true;
+        }
+
+        final float absA = Math.abs(a);
+        final float absB = Math.abs(b);
+        final float diff = Math.abs(a - b);
+
+        // Fall back to relative comparison
+        final float res = diff / (absA + absB);
+        return res < relDiff;
     }
 
     public static boolean nearlyEqual(float a, float b) {
@@ -213,11 +227,10 @@ public class NearlyEqualsTest {
 
     @Test
     public void simpleValues() {
-        System.out.println("--------");
-        System.out.println("simpleValues");
         // This should be TRUE in the math world
         assertTrue(nearlyEqual(0.200000f, 0.199999f, 1e-6f));
         assertTrue(nearlyEqual(0.200000f, 0.1999999f, 1e-6f));
-        System.out.println("--------");
+        assertFalse(nearlyEqual(0.200000f, 0.1999999f, 1e-7f));
+        assertTrue(nearlyEqualRelative(0.200000f, 0.1999999f, 1e-7f, 1e-3f));
     }
 }
