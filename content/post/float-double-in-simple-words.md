@@ -80,11 +80,11 @@ void inspect_type()
     constexpr auto name = name_trait<T>::name;
 
     std::cout << "std::numeric_limits<" << name << ">::min() = "
-        << std::numeric_limits<long double>::min() << std::endl;
+        << std::numeric_limits<T>::min() << std::endl;
     std::cout << "std::numeric_limits<" << name << ">::max() = "
-        << std::numeric_limits<long double>::max() << std::endl;
+        << std::numeric_limits<T>::max() << std::endl;
     std::cout << "std::numeric_limits<" << name << ">::epsilon() = "
-        << std::numeric_limits<long double>::epsilon() << std::endl;
+        << std::numeric_limits<T>::epsilon() << std::endl;
 }
 
 int main()
