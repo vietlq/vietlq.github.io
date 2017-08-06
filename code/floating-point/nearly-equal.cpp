@@ -50,10 +50,10 @@ inline int exponent_bits(float fv)
 {
     const Float32 f(fv);
     const int biased_bits = int(f.exponent_bits() >> Float32::kFractionBitCount);
-    const int unbiased_bits = biased_bits - 127;
-    std::cout << "exponent_bits for " << fv << std::endl;
-    std::cout << "biased_bits = " << biased_bits << std::endl;
-    std::cout << "unbiased_bits = " << unbiased_bits << std::endl;
+    //const int unbiased_bits = biased_bits - 127;
+    //std::cout << "exponent_bits for " << fv << std::endl;
+    //std::cout << "biased_bits = " << biased_bits << std::endl;
+    //std::cout << "unbiased_bits = " << unbiased_bits << std::endl;
     return biased_bits;
 }
 
@@ -110,7 +110,7 @@ inline bool nearlyEqualAbsUlp(float fv1, float fv2, float absDiff)
         }
 
         const uint32_t ulps = absDiffToUlp(maxVal, absDiff);
-        std::cout << "ulps = " << ulps << std::endl;
+        //std::cout << "ulps = " << ulps << std::endl;
         return nearlyEqualUlp(fv1, fv2, ulps);
     }
 }
@@ -157,7 +157,7 @@ inline bool nearlyEqualRelative(
 TEST(NearlyEqual, Float6AbsUpperMid)
 {
     const float diff = std::abs(FLOAT_UPPER - FLOAT_MID);
-    std::cout << "Float6AbsUpperMid: diff = " << diff << std::endl;
+    //std::cout << "Float6AbsUpperMid: diff = " << diff << std::endl;
     EXPECT_TRUE(diff < FLOAT_MAX_DIFF6) << "diff = " << diff
         << " is greater than FLOAT_MAX_DIFF6 = " << FLOAT_MAX_DIFF6;
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6));
@@ -172,7 +172,7 @@ TEST(NearlyEqual, Double6AbsUpperMid)
 
 TEST(NearlyEqual, Float6UlpUpperMid)
 {
-    report_ulp(FLOAT_UPPER, FLOAT_MID);
+    //report_ulp(FLOAT_UPPER, FLOAT_MID);
     //EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID);
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID, FLOAT_MAX_DIFF6, 0.001));
@@ -182,7 +182,7 @@ TEST(NearlyEqual, Float6UlpUpperMid)
 TEST(NearlyEqual, Float6AbsLowerMid)
 {
     const float diff = std::abs(FLOAT_LOWER - FLOAT_MID);
-    std::cout << "Float6AbsLowerMid : diff = " << diff << std::endl;
+    //std::cout << "Float6AbsLowerMid : diff = " << diff << std::endl;
     EXPECT_TRUE(diff < FLOAT_MAX_DIFF6) << "diff = " << diff
         << " is greater than FLOAT_MAX_DIFF6 = " << FLOAT_MAX_DIFF6;
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6));
@@ -197,7 +197,7 @@ TEST(NearlyEqual, Double6AbsLowerMid)
 
 TEST(NearlyEqual, Float6UlpLowerMid)
 {
-    report_ulp(FLOAT_LOWER, FLOAT_MID);
+    //report_ulp(FLOAT_LOWER, FLOAT_MID);
     //EXPECT_FLOAT_EQ(FLOAT_LOWER, FLOAT_MID);
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_LOWER, FLOAT_MID, FLOAT_MAX_DIFF6, 0.001));
@@ -207,7 +207,7 @@ TEST(NearlyEqual, Float6UlpLowerMid)
 TEST(NearlyEqual, Float7AbsUpperMid2)
 {
     const float diff = std::abs(FLOAT_UPPER - FLOAT_MID2);
-    std::cout << "Float7AbsUpperMid2: diff = " << diff << std::endl;
+    //std::cout << "Float7AbsUpperMid2: diff = " << diff << std::endl;
     EXPECT_FALSE(diff < FLOAT_MAX_DIFF7);
     EXPECT_FALSE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7, 0.001));
@@ -224,7 +224,7 @@ TEST(NearlyEqual, Double7AbsUpperMid2)
 
 TEST(NearlyEqual, Float7UlpUpperMid2)
 {
-    report_ulp(FLOAT_UPPER, FLOAT_MID2);
+    //report_ulp(FLOAT_UPPER, FLOAT_MID2);
     //EXPECT_FLOAT_EQ(FLOAT_UPPER, FLOAT_MID2);
     EXPECT_FALSE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7));
     EXPECT_TRUE(nearlyEqualRelative(FLOAT_UPPER, FLOAT_MID2, FLOAT_MAX_DIFF7, 0.001));

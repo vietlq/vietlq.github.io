@@ -12,9 +12,11 @@ cpp: build_cpp test_cpp
 java: build_java test_java
 
 build_cpp:
+	g++ -std=c++11 -Wall -pedantic -Werror -o simple-nearly-equal.exe simple-nearly-equal.cpp
 	g++ -std=c++11 -Wall -pedantic -Werror -o nearly-equal.exe -I googletest/googletest/include googletest/googlemock/gtest/libgtest.a googletest/googlemock/gtest/libgtest_main.a nearly-equal.cpp
 
 test_cpp:
+	./simple-nearly-equal.exe
 	./nearly-equal.exe
 
 build_java:
