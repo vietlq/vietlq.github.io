@@ -16,6 +16,7 @@ typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type
             (std::abs(x) + std::abs(y)) * ulp))
     // unless the result is subnormal
            || (std::abs(x-y) < std::numeric_limits<T>::min());
+    std::cout << "----" << std::endl;
 }
 
 void explore_ulp(int num1)
@@ -37,6 +38,7 @@ void explore_ulp(int num1)
     std::cout << "float2 = " << float2 << std::endl;
     std::cout << "diff = " << diff << std::endl;
     std::cout << "(diff == float_epsilon) is " << (diff == float_epsilon) << std::endl;
+    std::cout << "----" << std::endl;
 }
 
 template<typename T>
@@ -68,12 +70,15 @@ void inspect_type()
 {
     constexpr auto name = name_trait<T>::name;
 
+    std::cout << "std::numeric_limits<" << name << ">::denorm_min() = "
+        << std::numeric_limits<T>::denorm_min() << std::endl;
     std::cout << "std::numeric_limits<" << name << ">::min() = "
         << std::numeric_limits<T>::min() << std::endl;
     std::cout << "std::numeric_limits<" << name << ">::max() = "
         << std::numeric_limits<T>::max() << std::endl;
     std::cout << "std::numeric_limits<" << name << ">::epsilon() = "
         << std::numeric_limits<T>::epsilon() << std::endl;
+    std::cout << "----" << std::endl;
 }
 
 void near_equal_example()
