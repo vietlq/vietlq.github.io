@@ -1,6 +1,6 @@
 +++
 draft = false
-tags = ["p2p", "decentralisation", "beaker", "dat", "web", "secure"]
+tags = ["p2p", "decentralisation", "d16n", "beaker", "dat", "web", "secure"]
 categories = []
 date = "2018-03-31T21:24:15+01:00"
 title = "P2P Browsing Web With Beaker and Dat"
