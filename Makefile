@@ -13,4 +13,5 @@ deploy:
 site:
 	rm -rf _dsite/* _dsite/.DS_Store
 	hugo -b 'https://simpleit.us/' --canonifyURLs -d _dsite
-	rsync -avz --partial --progress --delete _dsite/ blog01:~/blog-deep-thoughts/
+	#rsync -avz --partial --progress --delete _dsite/ blog01:~/blog-deep-thoughts/
+	rsync -avz --partial --progress --delete _dsite/ simpleit.us:~/blog-deep-thoughts/
