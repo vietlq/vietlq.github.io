@@ -42,7 +42,10 @@ sudo useradd --home-dir /home/publisher1 --create-home --shell /usr/bin/rssh pub
 
 sudo mkdir /home/publisher1/.ssh/
 sudo touch /home/publisher1/.ssh/authorized_keys
+
+sudo addgroup publisher1
 sudo chown -R publisher1:publisher1 /home/publisher1/.ssh
+
 sudo chmod go-w /home/publisher1
 sudo chmod 700 /home/publisher1/.ssh
 sudo chmod 644 /home/publisher1/.ssh/authorized_keys
@@ -133,9 +136,19 @@ sudo ln -s -f /home/publisher1/blog-deep-thoughts public
 
 Congrats! Now you can safely publish your Hugo blog via `scp` and `rsync`!
 
+### 7. Remove the user
+
+If you decided that such setting is not for you and you need to remove user created, use commands:
+
+```
+$ sudo deluser newuser
+$ sudo deluser --remove-home newuser
+```
+
 ## References
 
 * [Easy deployments with rsync](https://gohugo.io/tutorials/deployment-with-rsync/)
 * [Permitting scp but not ssh - without scponly](https://askubuntu.com/questions/795649/permitting-scp-but-not-ssh-without-scponly)
 * [How do you create an ssh key for another user?](https://serverfault.com/questions/323958/how-do-you-create-an-ssh-key-for-another-user)
 * [Permissions on private key in .ssh folder?](https://superuser.com/questions/215504/permissions-on-private-key-in-ssh-folder)
+* [How to Add and Delete Users on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04)
