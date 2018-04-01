@@ -202,6 +202,8 @@ $ sudo usermod -e 2019-01-01 publisher1
 $ sudo chage publisher1
 ```
 
+Should you need to refer to actual working setup, check: https://github.com/vietlq/vietlq.github.io/tree/source
+
 ## References
 
 * [Easy deployments with rsync](https://gohugo.io/tutorials/deployment-with-rsync/)
