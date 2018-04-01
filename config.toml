@@ -2,6 +2,7 @@ baseURL = "https://vietlq.github.io/"
 languageCode = "en-us"
 title = "Viet's Blog"
 #theme = "hugo-geo"
+canonifyURLs = false
 theme = "hugo_theme_robust"
 googleAnalytics = "UA-1440926-3"
 
