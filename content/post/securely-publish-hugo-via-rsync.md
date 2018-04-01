@@ -31,6 +31,15 @@ allowrsync
 #allowsvnserve
 ```
 
+**NOTE:** Since you are going through SSH, you don't need to enable firewall rule for rsync.
+
+```
+# DO NOT RUN this: sudo ufw allow rsync
+
+# You can safely run this:
+$ sudo ufw delete allow rsync
+```
+
 ### 2. Create a new group & user for publishing only
 
 In this step we will create a new `publishers` group and a new user `publisher1`, whose sole responsibility is to rsync.
