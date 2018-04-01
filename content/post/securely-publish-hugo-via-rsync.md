@@ -163,8 +163,34 @@ Congrats! Now you can safely publish your Hugo blog via `scp` and `rsync`!
 If you decided that such setting is not for you and you need to remove user created, use commands:
 
 ```
-$ sudo deluser newuser
-$ sudo deluser --remove-home newuser
+$ sudo deluser publisher1
+$ sudo deluser --remove-home publisher1
+```
+
+### 9. Troubleshooting
+
+#### Expired account
+
+On certain servers, account expiration is strictly set and your account could have expired:
+
+```
+Your account has expired; please contact your system administrator
+
+Permission denied (keyboard-interactive).
+rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+```
+
+In that case you need to change expiration:
+
+```
+# List expiration information
+$ sudo chage -l publisher1
+
+# Change expiration date to Jan 01, 2019
+$ sudo usermod -e 2019-01-01 publisher1
+
+# Change expiration configuration interactively
+$ sudo chage publisher1
 ```
 
 ## References
