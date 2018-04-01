@@ -129,7 +129,7 @@ $ sudo /etc/init.d/ssh reload
 If you see this message when trying to SSH, you did things correctly:
 
 ```
-ssh -i ~/.ssh/publisher1 publisher1@code2.pro
+$ ssh -i ~/.ssh/publisher1 publisher1@code2.pro
 
 This account is restricted by rssh.
 This user is locked out.
