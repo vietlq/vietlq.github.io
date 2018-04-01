@@ -77,3 +77,6 @@ I hope this was useful and you can try hosting your own Dat websites. Get starte
 
 * https://beakerbrowser.com/docs/tutorials/create-a-blog.html
 * https://beakerbrowser.com/docs/apis/
+* dat://taravancil.com/
+* dat://taravancil.com/blog/how-i-publish-taravancil-com/
+* https://github.com/taravancil/taravancil.com
