@@ -78,26 +78,7 @@ This user is locked out.
 If you believe this is in error, please contact your system administrator.
 ```
 
-### 3. Allow publishers group to SSH
-
-Note that many servers with restricted access do require you to successfully pass through SSH before doing rsync. This step is not obvious as some servers with lax security don't require it.
-
-Open the SSH config: `/etc/ssh/sshd_config`
-
-Find the line containing `AllowGroups` and modify:
-
-```
-AllowGroups xxx yyy publishers
-```
-
-Save the file and reload SSH config (don't restart):
-
-```
-$ sudo /etc/init.d/ssh reload
-[ ok ] Reloading ssh configuration (via systemctl): ssh.service.
-```
-
-### 4. Generate a key pair to publish
+### 3. Generate a key pair to publish
 
 On your local machine:
 
@@ -116,6 +97,40 @@ ssh -i ~/.ssh/publisher1 publisher1@code2.pro
 You should see the following tail:
 
 ```
+This account is restricted by rssh.
+This user is locked out.
+
+If you believe this is in error, please contact your system administrator.
+
+Connection to code2.pro closed.
+```
+
+If you see the error `Permission denied(publickey)` then you should follow the next step.
+
+### 4. Allow publishers group to SSH
+
+Note that many servers with restricted access do require you to successfully pass through SSH before doing rsync. This step is not obvious as some servers with lax security don't require it.
+
+Open the SSH config: `/etc/ssh/sshd_config`
+
+Find the line containing `AllowGroups` and append the group `publishers`:
+
+```
+AllowGroups xxx yyy publishers
+```
+
+Save the file and reload SSH config (don't restart):
+
+```
+$ sudo /etc/init.d/ssh reload
+[ ok ] Reloading ssh configuration (via systemctl): ssh.service.
+```
+
+If you see this message when trying to SSH, you did things correctly:
+
+```
+ssh -i ~/.ssh/publisher1 publisher1@code2.pro
+
 This account is restricted by rssh.
 This user is locked out.
 
