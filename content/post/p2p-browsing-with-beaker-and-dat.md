@@ -73,6 +73,16 @@ This precious file allows you to access the public key above as `dat://beakerbro
 
 **There's a gotcha**: Your Dat website doesn't need to be in sync with your HTTPS version. There's no way to enforce it at the moment.
 
+**NOTE:** Make sure the folder of your Dat website always has its meta-data file `dat.json`:
+
+```
+{
+  "url": "dat://3fa25efcd82c180934b69503b718f56856385026279cdec5120a53c4eb48df6b/",
+  "title": "visc.network",
+  "description": "Vietnam's Initiative for Smart Contracts"
+}
+```
+
 **NOTE:** If you use Hugo to generate web pages to be hosted with HTTP server and Dat, make sure to:
 
   * Set `canonifyURLs` to `false` in `config.toml`
