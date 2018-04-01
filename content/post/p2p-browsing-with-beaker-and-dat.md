@@ -71,7 +71,15 @@ This precious file allows you to access the public key above as `dat://beakerbro
 
 * https://github.com/beakerbrowser/beaker/wiki/Authenticated-Dat-URLs-and-HTTPS-to-Dat-Discovery
 
-There's one gotcha: Your Dat website doesn't need to be in sync with your HTTPS version. There's no way to enforce it at the moment.
+**There's a gotcha**: Your Dat website doesn't need to be in sync with your HTTPS version. There's no way to enforce it at the moment.
+
+**NOTE:** If you use Hugo to generate web pages to be hosted with HTTP server and Dat, make sure to:
+
+  * Set `canonifyURLs` to `false` in `config.toml`
+  * Run command `hugo -b '/' -d _dsite` to set base URL to `/`
+  * Check https://github.com/vietlq/vietlq.github.io/tree/source for inspiration
+
+## References
 
 I hope this was useful and you can try hosting your own Dat websites. Get started with these links:
 
