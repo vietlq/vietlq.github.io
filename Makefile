@@ -15,5 +15,6 @@ site:
 	#hugo -b 'https://simpleit.us/' --canonifyURLs -d _dsite
 	#hugo -b 'https://simpleit.us/' -d _dsite
 	hugo -b '/' -d _dsite
+	cp -prf data/simpleit.us/.well-known _dsite/
 	rsync -avz --partial --progress --delete _dsite/ blog01:~/blog-deep-thoughts/
 	#rsync -avz --partial --progress --delete _dsite/ simpleit.us:~/blog-deep-thoughts/

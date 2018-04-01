@@ -80,3 +80,7 @@ I hope this was useful and you can try hosting your own Dat websites. Get starte
 * dat://taravancil.com/
 * dat://taravancil.com/blog/how-i-publish-taravancil-com/
 * https://github.com/taravancil/taravancil.com
+
+If you follow the above links carefully, you will be able to host your own Dat site with nice domain name like I did:
+
+dat://simpleit.us/
