@@ -63,4 +63,4 @@ int use_critical_func()
 }
 ```
 
-Unlike OCaml where you have to explicitly ignore function result, by default C/C++ just ignore function results, opening a can of worms. You will have to make conscious effort to detect the cases like above. However, if you work in financial industry where every single line of code carries weight and affects clients PnL, you will thank me and keep using this feature from now on.
+Unlike OCaml where you have to explicitly ignore function result, by default C/C++ just ignore function results, opening a can of worms. You will have to make conscious effort to detect the cases like above. However, if you work in financial industry where every single line of code carries weight and affects clients' PnL, you will thank me and keep using this feature from now on.
