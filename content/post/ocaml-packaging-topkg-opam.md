@@ -18,7 +18,35 @@ $ opam install topkg topkg-care topkg-jbuilder
 
 ## Boilerplate Code
 
-Given you have your library tested and ready for publishing, you need to add the file `pkg/pkg.ml` at the top:
+Given you have your library tested and ready for publishing, you need to add the files `ppx_getenv01.opam` and `pkg/pkg.ml` at the top:
+
+The OPAM file (`ppx_getenv01.opam`):
+
+```
+opam-version: "1.2"
+name: "ppx_getenv01"
+maintainer: "Viet Le <XXXX@gmail.com>"
+authors: "Viet Le <XXXX@gmail.com>"
+homepage: "https://github.com/vietlq/ppx_getenv01"
+bug-reports: "https://github.com/vietlq/ppx_getenv01/issues"
+license: "MIT"
+dev-repo: "https://github.com/vietlq/ppx_getenv01"
+tags: [ "syntax" ]
+build: [
+  make
+]
+build-test: [
+  "ocamlbuild" "-classic-display" "-use-ocamlfind" "./ppx_getenv01" "--"
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "ppx_getenv01"]
+depends: [
+  "ocamlfind" {build}
+]
+available: [ocaml-version >= "4.02.0"]
+```
+
+The Topkg file (`pkg/pkg.ml`):
 
 ```
 #!/usr/bin/env ocaml
