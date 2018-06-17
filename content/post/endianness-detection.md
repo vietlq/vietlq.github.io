@@ -12,7 +12,7 @@ Recently I have had a project that involves serialisation (again!). I have writt
 
 ## Background
 
-There are two most popular Endian systems: Little Endian and Big Endian. In plain English, Endianness means the convention to represent integral and floating point numbers and where the least significant byte is stored. Little Endian store the lowest byte at lower address space. Big Endian store the lowest byte at higher address space.
+There are two most popular Endian systems: Little Endian and Big Endian. In plain English, Endianness means the convention to represent integral and floating point numbers and where the least significant byte is stored. Little Endianness mandates that the least significant byte to be stored at the lowest byte address of 2/4/8/16 byte numbers. Big Endianness, on the contrary, requires the least significant byte to be stored at the highest byte address.
 
 There's also PDP Endianness that sounds like it was a mistake. Little Endian systems have taken over the world of laptops and PCs with popularity of Intel chips. Macintosh used to have PPC Big Endian chips but they were deprecated in favour of Intel chips, which are Little Endian.
 
