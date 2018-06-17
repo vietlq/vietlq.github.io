@@ -26,6 +26,32 @@ LITTLE ENDIAN => 0x01000000 => {1, 0, 0, 0}
 PDP ENDIAN    => 0x00010000 => {0, 1, 0, 0}
 ```
 
+Feel free to run this code on your system to witness byte order:
+
+```
+#include <iostream>
+#include <iomanip>
+
+int main()
+{
+    const unsigned int num = 0x12345678;
+    const char * pchar = reinterpret_cast<const char *>(&num);
+
+    std::cout << "Address of the uint32_t: " << &num << std::endl;
+    std::cout << "Value of the uint32_t: 0x" << std::hex << num << std::endl;
+
+    for (size_t c = 0; c < sizeof(num); ++c)
+    {
+        std::cout << "pchar[" << c << "]"
+                   << " address = 0x" << (unsigned long)(pchar + c)
+                   << " value = 0x" << short(pchar[c])
+                   << std::endl;
+    }
+
+    return 0;
+}
+```
+
 If you are writing code that need to serialise data over the write and communicate with other computers (IBM AIX, Sun/Oracle Solaris), you will have to worry about portability across Big & Little Endian machines.
 
 Engineers who worked with networked applications in C/C++ probably are acutely aware of the following functions:
