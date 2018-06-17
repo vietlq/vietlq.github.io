@@ -63,7 +63,7 @@ bool isBigEndianUnion()
 }
 ```
 
-Those functions work as expected and still backward compatible with C++03. However they are inefficient because you have to call them again and again just to detect Endianness. We need to cache/store their values.
+Those functions work as expected and still backward compatible with C++03. However, be mindful that you have to cache their values for greater efficiency. Don't call them repeatedly.
 
 ## Compile-time Endianness with a Twist
 
