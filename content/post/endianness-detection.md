@@ -94,7 +94,7 @@ struct EndianUtil
     static const bool IS_BIG_ENDIAN;
 };
 
-const bool EndianUtil::IS_BIG_ENDIAN = EndianUtil::isBigEndianCast;
+const bool EndianUtil::IS_BIG_ENDIAN = EndianUtil::isBigEndianCast();
 ```
 
 This is again C++03 backward compatible and can be used for AIX & Solaris. The obvious downside is we can't use `EndianUtil::IS_BIG_ENDIAN` for constructing templates because it's evaluated later.
