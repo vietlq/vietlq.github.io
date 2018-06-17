@@ -203,6 +203,15 @@ struct Endianness
 {
     const static std::string endianness()
     {
+        return "OS_BYTE_ORDER";
+    }
+};
+
+template<>
+struct Endianness<OS_LITTLE_ENDIAN>
+{
+    const static std::string endianness()
+    {
         return "OS_LITTLE_ENDIAN";
     }
 };
