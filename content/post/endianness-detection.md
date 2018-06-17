@@ -14,9 +14,9 @@ Recently I have had a project that involves serialisation (again!). I have writt
 
 There are two most popular Endian systems: Little Endian and Big Endian. In plain English, Endianness means the convention to represent integral and floating point numbers and where the least significant byte is stored. Little Endian store the lowest byte at lower address space. Big Endian store the lowest byte at higher address space.
 
-There's also PDP Endian that sounds like it was a mistake. Little Endian systems have taken over the world of laptops and PCs with popularity of Intel chips. Macintosh used to have PPC Big Endian chips but that was deprecate in favour for Intel chips that are Little Endian.
+There's also PDP Endianness that sounds like it was a mistake. Little Endian systems have taken over the world of laptops and PCs with popularity of Intel chips. Macintosh used to have PPC Big Endian chips but that was deprecate in favour for Intel chips that are Little Endian.
 
-Let's look how a 32-bit/4-byte numbers are represented in various Endian systems:
+Let's look how 32-bit/4-byte numbers are represented in various Endian systems:
 
 ```
 int32_t num   = 1;
