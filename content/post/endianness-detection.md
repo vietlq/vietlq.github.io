@@ -190,8 +190,8 @@ The following code was adapted from http://esr.ibiblio.org/?p=5095 :
 
 ```
 enum endian_t {
-    OS_LITTLE_ENDIAN   = 0x00000001,
-    OS_BIG_ENDIAN      = 0x01000000,
+    OS_BIG_ENDIAN      = 0x00000001,
+    OS_LITTLE_ENDIAN   = 0x01000000,
     OS_PDP_ENDIAN      = 0x00010000,
     OS_UNKNOWN_ENDIAN  = 0xFFFFFFFF
 };
