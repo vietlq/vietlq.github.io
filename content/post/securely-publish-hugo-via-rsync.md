@@ -213,6 +213,10 @@ $ sudo chage -l publisher1
 # Change expiration date to Jan 01, 2019
 $ sudo usermod -e 2019-01-01 publisher1
 
+# This will yield the same effect
+$ sudo chage -E 2019-01-01 publisher1
+
+# You will need to set password expiry manually & interactively
 # Change expiration configuration interactively
 $ sudo chage publisher1
 ```
