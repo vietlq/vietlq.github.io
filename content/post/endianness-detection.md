@@ -91,9 +91,9 @@ bool isBigEndianUnion()
 
 Those functions work as expected and still backward compatible with C++03. However, be mindful that you have to cache their values for greater efficiency. Don't call them repeatedly.
 
-## Compile-time Endianness with a Twist
+## Slightly Better Run-time Endianness Detection
 
-A C++ developer worth his/her salt can see an optimisation we can perform and force compile-time evaluation by using static const member data:
+A C++ developer worth his/her salt can see an optimisation we can perform and force one-off evaluation by using static const member data:
 
 ```
 struct EndianUtil
