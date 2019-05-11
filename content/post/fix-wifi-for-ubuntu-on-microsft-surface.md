@@ -7,3 +7,16 @@ tags = ["tips", "dev", "ubuntu", "elementaryos", "tinkering", "wifi"]
 categories = []
 thumbnail = ""
 +++
+
+Source: https://www.scivision.dev/ubuntu-wifi-on-but-no-connect/
+
+```
+/etc/NetworkManager/NetworkManager.conf
+[device]
+wifi.scan-rand-mac-address=no
+```
+
+```
+/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+wifi.powersave = 2
+```
