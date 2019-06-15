@@ -19,3 +19,5 @@ I also found Skim & Foxit Reader as recommended tools:
 https://skim-app.sourceforge.io/
 
 https://www.foxitsoftware.com/pdf-reader/
+
+Image source: https://www.pngfly.com/png-rtfhum/
