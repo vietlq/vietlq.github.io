@@ -59,10 +59,9 @@ WantedBy=hybrid-sleep.target
 sudo systemctl start wifi-resume.service
 ```
 
-[fix-wifi-for-ubuntu-on-microsft-surface](fix-wifi-for-ubuntu-on-microsft-surface)
-
-References:
+## References
 
 * https://www.scivision.dev/ubuntu-wifi-on-but-no-connect/
 * https://askubuntu.com/questions/761180/wifi-doesnt-work-after-suspend-after-16-04-upgrade
 * https://www.kisspng.com/png-royalty-free-computer-icons-clip-art-logo-wifi-5429105/download-png.html
+* Related: If you want to type Vietnamese, Russian on Ubuntu, also [read this article]({{< relref "taming-elementary-os.md" >}})

@@ -77,7 +77,7 @@ v0.0.1 2018-05-28 London
 - Test release.
 ```
 
-You can have a look at a productive quality changes log file: https://github.com/dbuenzli/topkg/blob/master/CHANGES.md
+You can have a look at a production quality change-log file: https://github.com/dbuenzli/topkg/blob/master/CHANGES.md
 
 ## Add a Tag
 

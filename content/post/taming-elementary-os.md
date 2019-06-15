@@ -56,7 +56,7 @@ sudo apt-get install dconf-tools
     ```
 
   * Follow `System Settings > Language & Region > Keyboard Settings > Input Method Settings > Input Method > Add`
-  * You can *Vietnamese - Unikey* or *Vietnamese - telex (m17n)*. Can choose both
+  * You can choose either or both of *Vietnamese - Unikey* or *Vietnamese - telex (m17n)*
   * Also note the shortcut to switch between input methods. I use `Ctrl-Space` which is the default
 
 Some links: [[1 - outdated]](https://vuquangson.com/install-vietnamese-input-method-ubuntu-18-04-lts-ibus-unikey/), [[2 - for Chinese]](https://medium.com/@danieltanfh95/installing-chinese-and-japanese-input-on-elementary-os-loki-0-4-1-448889cab69).
