@@ -1,6 +1,6 @@
 +++
 draft = false
-tags = ["tips", "dev", "cpp", "compiler", "safety", "security"]
+tags = ["tips", "c++", "dev", "cpp", "compiler", "safety", "security"]
 categories = []
 date = "2018-05-12T18:15:05+01:00"
 title = "Safer C++ By Handling Function Result"

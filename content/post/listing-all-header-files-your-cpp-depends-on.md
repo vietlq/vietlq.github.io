@@ -8,8 +8,7 @@ highlight = true
 tags = ["c++", "dev", "tips", "tools", "tutorial"]
 categories = []
 title = "Listing all header files your cpp depends on"
-thumbnail = ""
-
+thumbnail = "pimages/00044-official-cpp-logo.png"
 +++
 
 I needed to extract certain Boost headers from its huge code base for memory mapped file & shared memory containers. The first idea came to my mind was a simple grep command for `#include` statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:
