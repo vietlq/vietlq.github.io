@@ -17,3 +17,5 @@ I realised planning and making a wishlist would make me more productive and more
 4. C++ mix-ins for fun and profit
 5. Deriving Ethereum keys
 6. Manually sign and verify Ethereum messages
+
+Image source: https://www.pexels.com/photo/person-holding-pen-drawing-on-paper-1483937/
