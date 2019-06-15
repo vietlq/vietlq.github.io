@@ -5,7 +5,7 @@ categories = []
 date = "2018-03-31T21:24:15+01:00"
 title = "P2P Browsing Web With Beaker and Dat"
 description = "P2P Browsing Web With Beaker and Dat"
-thumbnail = "pimages/00025-skin-tone-rabbits-background.jpg"
+thumbnail = "pimages/00040-beaker-logo-1024x1024.png"
 +++
 
 ![Beaker Browser](/pimages/00035-beaker-logo-256.png)
