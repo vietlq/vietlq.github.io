@@ -14,7 +14,7 @@ Unlike developers of most Linux distros, ElementaryOS developers are not shy to 
 
 ## Fix wifi issues for Ubuntu
 
-You can follow the short and sweet guide written in another article: [Fix Wifi for Ubuntu on Microsft Surface]({{< relref "fix-wifi-for-ubuntu-on-microsft-surface.md" >}}).
+You can follow the short and sweet guide written in another article: [Fix Wifi for Ubuntu on Microsoft Surface]({{< relref "fix-wifi-for-ubuntu-on-microsoft-surface.md" >}}).
 
 ## Stop displaying * (asterisks) when typing passwords
 

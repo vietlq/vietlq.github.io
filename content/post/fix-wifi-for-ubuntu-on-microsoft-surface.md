@@ -1,5 +1,5 @@
 +++
-title = "Fix Wifi for Ubuntu on Microsft Surface"
+title = "Fix Wifi for Ubuntu on Microsoft Surface"
 description = "Get stable wifi connection on Ubuntu with 2 steps only"
 date = 2019-05-11T11:02:07+01:00
 draft = false
@@ -10,7 +10,7 @@ thumbnail = "pimages/00036-royalty-free-wifi.png"
 
 ## Random wifi drops
 
-There are some pains using Ubuntu on laptops, especially on Microsft Surface laptop. Wifi settings are not perfect and there are random drops of wifi after 10-15 mins. I did searching and found that one has to do at least 2 things:
+There are some pains using Ubuntu on laptops, especially on Microsoft Surface laptop. Wifi settings are not perfect and there are random drops of wifi after 10-15 mins. I did searching and found that one has to do at least 2 things:
 
 * Prevent MAC address randomisation by default (that reduces security)
 
