@@ -5,7 +5,7 @@ date = "2019-05-11T11:48:06+01:00"
 draft = false
 tags = ["tips", "dev", "ubuntu", "elementaryos", "tinkering", "wifi"]
 categories = []
-thumbnail = ""
+thumbnail = "pimages/00039-elementary-os-community-green.png"
 +++
 
 * https://www.scivision.dev/ubuntu-wifi-on-but-no-connect/
