@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = ["git", "ruby", "blog", "config", "setup"]
 title = "Hello, Octopress"
-thumbnail = "pimages/00001-1280-octopus.jpg"
+thumbnail = "pimages/00001-fractal-octopus.jpg"
 +++
 
 ![Octopress](/pimages/00001-1280-octopus.jpg)
@@ -234,3 +234,5 @@ function myocto
     cd $HOME/projects/octopress
 }
 ```
+
+Image source: https://pixabay.com/illustrations/fractal-art-fractals-3d-3206739/
