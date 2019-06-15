@@ -7,7 +7,7 @@ highlight = true
 scripts = []
 tags = ["go", "hugo", "git", "blog", "config", "setup"]
 Aliases = ["/post/enter-hugo"]
-
+thumbnail = "pimages/00043-hugo-logo.png"
 +++
 
 Yesterday I spent a couple of hours to set up and config Octopress. It was a good hacking experience and [Octopress](http://octopress.org/) architecture and design proved overly complex and inconsistent with Jekyll's simplicity that it built on. There's no simple way to use a Jekyll theme with Octopress. Apart from that, Octopress has not been in good health since 2015, there were few commits and changes, it's literally dying. So today I decided to make a bold move to search for new static site generators.
