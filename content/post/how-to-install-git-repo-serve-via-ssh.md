@@ -3,9 +3,9 @@ categories = []
 date = "2017-06-04T11:41:20+01:00"
 draft = false
 tags = ["git", "ssh", "dev", "tips", "tools", "tutorial"]
-thumbnail = ""
-title = "How To Instal A Git Repo & Serve Via SSH"
-description = "How To Instal A Git Repo & Serve Via SSH"
+title = "How to Install a Git Repo & Serve via SSH"
+description = "How to Install a Git Repo & Serve via SSH"
+thumbnail = "pimages/00045-git-logo.png"
 +++
 
 Love Git but don’t want to pay GitHub to have a private repo? No problem. Here’s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the [Reference 1](http://www.mindfuzz.net/?p=250)):

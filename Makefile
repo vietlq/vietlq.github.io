@@ -1,4 +1,4 @@
-.PHONY: help all static deploy_github
+.PHONY: help all static deploy_github force_regen
 
 help:
 	@echo "help             Show this help"
@@ -6,10 +6,14 @@ help:
 	@echo "deploy_github    Generate static pages and deploy to github.io"
 	@echo "static           Generate static pages"
 	@echo "site             Generate static pages and rsync to a server"
+	@echo "force_regen      Hack: Force Hugo to regenerate post files."
 
 all: deploy_github
 
-deploy_github:
+force_regen:
+	find . -name '*.md' -exec touch {} \;
+
+deploy_github: force_regen
 	./deploy_github.sh
 
 static:
