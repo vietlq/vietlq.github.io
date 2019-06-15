@@ -7,7 +7,6 @@ tags = ["dev", "ssh", "rsync", "hugo", "ubuntu"]
 thumbnail = "pimages/00023-publish-edvinas-bruzas-114174.jpg"
 title = "Securely Publish Hugo via rsync"
 description = "Securely Publish Hugo via rsync"
-
 +++
 
 ## Steps
