@@ -1,14 +1,31 @@
-.PHONY: all static deploy
+.PHONY: help all static deploy_github
 
-all: static site deploy
+help:
+	@echo "help             Show this help"
+	@echo "all              Do all (deploy_github)"
+	@echo "deploy_github    Generate static pages and deploy to github.io"
+	@echo "static           Generate static pages"
+	@echo "site             Generate static pages and rsync to a server"
+
+all: deploy_github
+
+deploy_github:
+	(rm -rf _deploy && \
+	make static && \
+	cd _deploy && \
+	export CST_GIT_REMOTE=$(git remote -v | grep '^origin\b' | awk '{print $2}' | sort -u) && \
+	echo ${CST_GIT_REMOTE} && \
+	git init . && \
+	git remote add publish ${CST_GIT_REMOTE} && \
+	git add . && \
+	git commit -a -m"generated at $(date +%Y%m%dT%H%M%S)" && \
+	git push -u publish master)
 
 static:
 	rm -rf _deploy/*
 	hugo -d _deploy
 
-timestamp := $(shell /bin/date "+%FT%T%z")
-deploy:
-	cd _deploy && git add . && git commit -a -m "Committed at ${timestamp}" && git push
+timestamp:=$(shell /bin/date "+%FT%T%z")
 
 site:
 	rm -rf _dsite/* _dsite/.DS_Store
