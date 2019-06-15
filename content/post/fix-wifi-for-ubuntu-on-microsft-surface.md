@@ -59,6 +59,8 @@ WantedBy=hybrid-sleep.target
 sudo systemctl start wifi-resume.service
 ```
 
+[fix-wifi-for-ubuntu-on-microsft-surface](fix-wifi-for-ubuntu-on-microsft-surface)
+
 References:
 
 * https://www.scivision.dev/ubuntu-wifi-on-but-no-connect/

@@ -5,7 +5,7 @@ categories = []
 date = "2018-05-28T15:41:55+01:00"
 title = "OCaml Packaging With Topkg and OPAM"
 description = "A short guide to packaging OCaml libraries with Topkg and OPAM."
-thumbnail = ""
+thumbnail = "pimages/00038-ocaml-logo.png"
 +++
 
 ## Dependencies
