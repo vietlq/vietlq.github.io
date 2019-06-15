@@ -1,11 +1,11 @@
 +++
 draft = false
-thumbnail = ""
 tags = ["dev", "c++", "tips", "sparc", "x86", "endian"]
 categories = []
 date = "2018-06-17T08:34:57+01:00"
 title = "Endianness Detection the Hard Way"
 description = "Learn how to detect Big/Little Endian architectures at run time and compile time, the hard way."
+thumbnail = "pimages/00041-balanced-eggs.jpg"
 +++
 
 Recently I have had a project that involves serialisation (again!). I have written countless serialisers and deserialisers in 8 years of professional experience. As it goes with binary serialisation, you need to worry about Endianness of your machine because you want your code to be portable across multiple architectures. Text serialisations to JSON or mere CSV exempt you from all that headache, but they are too verbose and slow. In this post I will walk you through tricks to detect Endianness.
@@ -264,3 +264,5 @@ int main()
 ## Closing & Next Post
 
 From the start to the end we didn't discuss how can we test on Big Endian systems. Who said testing was easy, especially when you don't run AIX or Solaris at home? So now code can be only tested on Intel chips. I will detail the steps to test on Big Endian systems (for FREE!) in the next post. Stay tuned!
+
+Image source: [Balanced eggs from Wikipedia](https://en.wikipedia.org/wiki/Egg_balancing#/media/File:Balanced_eggs.jpg)
