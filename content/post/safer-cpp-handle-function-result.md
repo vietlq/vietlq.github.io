@@ -1,11 +1,11 @@
 +++
 draft = false
-thumbnail = ""
 tags = ["tips", "dev", "cpp", "compiler", "safety", "security"]
 categories = []
 date = "2018-05-12T18:15:05+01:00"
 title = "Safer C++ By Handling Function Result"
 description = "Learn how to force C++ developers to handle function result for safety using function attributes and compiler flags"
+thumbnail = "pimages/00042-cpp-fruity.png"
 +++
 
 Despite best efforts to train, educate, warn developers to always capture and handle function results, one still can manage to forget and get burned in the process. Let's say you have this piece of code that deals with critical process:
@@ -64,3 +64,5 @@ int use_critical_func()
 ```
 
 Unlike OCaml where you have to explicitly ignore function result, by default C/C++ just ignore function results, opening a can of worms. You will have to make conscious effort to detect the cases like above. However, if you work in financial industry where every single line of code carries weight and affects clients' PnL, you will thank me and keep using this feature from now on.
+
+Image source: https://www.pngfly.com/png-s148bc/
