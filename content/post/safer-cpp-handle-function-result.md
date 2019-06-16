@@ -1,12 +1,14 @@
 +++
 draft = false
-tags = ["tips", "c++", "dev", "cpp", "compiler", "safety", "security"]
+tags = ["tips", "c++", "dev", "c++17", "compiler", "safety", "security"]
 categories = []
 date = "2018-05-12T18:15:05+01:00"
 title = "Safer C++ By Handling Function Result"
 description = "Learn how to force C++ developers to handle function result for safety using function attributes and compiler flags"
 thumbnail = "pimages/00042-cpp-fruity.png"
 +++
+
+## Overview
 
 Despite best efforts to train, educate, warn developers to always capture and handle function results, one still can manage to forget and get burned in the process. Let's say you have this piece of code that deals with critical process:
 
@@ -28,7 +30,9 @@ int use_critical_func()
 }
 ```
 
-The values returned from `critical_func()` could mean anything: Cannot connect to a service, balance is empty, rocket is faulty, ... Failure to capture and act based on those return values could result in any undefined/undesired behaviour: Memory leak, crash, silent failures, ...
+The values returned from `critical_func()` could mean anything: Cannot connect to a service, balance is empty, rocket is faulty, ... Failure to capture and act based on those return values could result in any undefined/undesired behaviour: Memory leak, crash, silent failures, ... Let's see how we can enforce developers to use return value from mission critical functions.
+
+## Life before C++17
 
 Unfortunately most C/C++ compilers have no way to detect the issue. Not all is lost. I have some good news! People who use GCC/Clang are blessed because they have access to function flag `__attribute__((warn_unused_result))` and compiler flag `-Wunused-result`. When combined together, these 2 flags will detect the cases when the annotated function has its result discarded:
 
@@ -62,6 +66,43 @@ int use_critical_func()
     return 0;
 }
 ```
+
+## Life since C++17
+
+C++17 has a new standard feature to enforce safety: The `[[nodiscard]]` attribute.
+
+```
+[[nodiscard]] int critical_func()
+{
+    return 1234;
+}
+
+template<typename ... Args>
+void ignore(Args && ...)
+{
+}
+
+int use_critical_func()
+{
+    // This will cause the warning:
+    // [x86-64 gcc 7.4 #1] error:
+    // ignoring return value of 'int critical_func()',
+    // declared with attribute nodiscard [-Werror=unused-result]
+    //critical_func();
+
+    // This will pass
+    ignore(critical_func());
+
+    return 0;
+}
+```
+
+If you are lucky enough to use C++17, don't forget this gem `[[nodiscard]]` to improve safety of your libraries. You can look at some example usages:
+
+* https://en.cppreference.com/w/cpp/language/attributes/nodiscard
+* [C++17 attributes - maybe_unused, fallthrough and nodiscard](https://blog.tartanllama.xyz/c++17-attributes/)
+
+## Conclusion
 
 Unlike OCaml where you have to explicitly ignore function result, by default C/C++ just ignore function results, opening a can of worms. You will have to make conscious effort to detect the cases like above. However, if you work in financial industry where every single line of code carries weight and affects clients' PnL, you will thank me and keep using this feature from now on.
 
