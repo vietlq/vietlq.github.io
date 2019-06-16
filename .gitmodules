@@ -20,7 +20,7 @@
     branch = master
 [submodule "themes/hugo_theme_robust"]
     path = themes/hugo_theme_robust
-    url = https://github.com/dim0627/hugo_theme_robust.git
+    url = https://github.com/vietlq/hugo_theme_robust_vietlq.git
     branch = master
 [submodule "themes/hugo_theme_solit"]
     path = themes/hugo_theme_solit
