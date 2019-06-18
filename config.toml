@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Viet's Blog"
 #theme = "hugo-geo"
 canonifyURLs = false
-theme = "hugo_theme_robust"
+theme = "hugo-theme-robust-vietlq"
 googleAnalytics = "UA-1440926-3"
 
 [permalinks]

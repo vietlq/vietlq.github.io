@@ -6,9 +6,13 @@ help:
 	@echo "deploy_github    Generate static pages and deploy to github.io"
 	@echo "static           Generate static pages"
 	@echo "site             Generate static pages and rsync to a server"
+	@echo "theme            Clone theme"
 	@echo "force_regen      Hack: Force Hugo to regenerate post files."
 
 all: deploy_github
+
+theme:
+	git clone git@github.com:vietlq/hugo-theme-robust-vietlq.git themes/hugo-theme-robust-vietlq
 
 force_regen:
 	find . -name '*.md' -exec touch {} \;
