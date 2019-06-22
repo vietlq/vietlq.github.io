@@ -47,7 +47,7 @@ int ntoh(int n) {
 
 So we know that this works on Big Endian machines. But will it work on Little Endian machines? The input number has different layout compared to Little Endian host order. However, when we perform the casting to `const char *` on Little Endian machines, we essentially force byte swap operation. Therefore, the reconstruction will work as expected too.
 
-To see how efficient is the code, I decided to look at the [compiler explorer website](https://godbolt.org). The code generated for x86-64 using Clang 5.0 from https://godbolt.org is quite short:
+To see how concise is the assembly code, I decided to look at the [compiler explorer website](https://godbolt.org). The code generated for x86-64 using Clang 5.0 from https://godbolt.org is quite short:
 
 ```asm
 ntoh(int): # @ntoh(int)
