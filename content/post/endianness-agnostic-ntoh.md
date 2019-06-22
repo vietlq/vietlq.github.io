@@ -14,13 +14,13 @@ From the [Endianness detection blog entry]({{< relref "endianness-detection.md" 
 Let's start with `int ntoh(int)`. We know that Big Endian and Little Endian machines have different memory layout for the same integer and floating point values. Let's say our integer of value `0x12345678` is allocated at the address `0xaabbcc00`. Now we have 2 different memory layouts:
 
 ```
-Big Endian layout (the least significant bytes at has the highest address):
+Big Endian layout (the LEAST significant byte has the highest address):
 0xaabbcc00 0x12
 0xaabbcc01 0x34
 0xaabbcc02 0x56
 0xaabbcc03 0x78
 
-Little Endian layout (the most significant bytes at has the highest address):
+Little Endian layout (the MOST significant byte has the highest address):
 0xaabbcc00 0x78
 0xaabbcc01 0x56
 0xaabbcc02 0x34
