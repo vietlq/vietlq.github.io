@@ -85,7 +85,7 @@ int byteswap(int n) {
 }
 ```
 
-The assembly code for x86-64 using Clang 5.0 generated is also succint:
+The assembly code for x86-64 using Clang 5.0 generated is also succinct:
 
 ```
 byteswap(int): # @byteswap(int)
