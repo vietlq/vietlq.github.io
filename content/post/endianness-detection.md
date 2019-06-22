@@ -263,6 +263,6 @@ int main()
 
 ## Closing & Next Post
 
-From the start to the end we didn't discuss how can we test on Big Endian systems. Who said testing was easy, especially when you don't run AIX or Solaris at home? So now code can be only tested on Intel chips. I will detail the steps to test on Big Endian systems (for FREE!) in the next post. Stay tuned!
+From the start to the end we didn't discuss how can we test on Big Endian systems. Who said testing was easy, especially when you don't run AIX or Solaris at home? So now code can be only tested on Intel chips. I will detail the steps to test on Big Endian systems (for FREE!) in another post. Stay tuned!
 
 Image source: [Balanced eggs from Wikipedia](https://en.wikipedia.org/wiki/Egg_balancing#/media/File:Balanced_eggs.jpg)
