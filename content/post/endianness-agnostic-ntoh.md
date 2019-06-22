@@ -9,7 +9,9 @@ description = "Writing Endianness agnostic ntoh/hton functions"
 thumbnail = ""
 +++
 
-From the [Endianness detection blog entry]({{< relref "endianness-detection.md" >}}), we have learned how to do that using predefined macros across different architectures. Our next task is to write `ntoh` (network to host) and `hton` (host to network) functions to convert integers and floating point values between network and host formats. Here's a catch: Do not use conditionals - basically, do not use any of the keywords `if/else/for/while`. Let's start with `int ntoh(int)`. We know that Big Endian and Little Endian machines have different memory layout for the same integer and floating point values. Let's say our integer of value `0x12345678` is allocated at the address `0xaabbcc00`. Now we have 2 different memory layouts:
+From the [Endianness detection blog entry]({{< relref "endianness-detection.md" >}}), we have learned how to do that using predefined macros across different architectures. Our next task is to write `ntoh` (network to host) and `hton` (host to network) functions to convert integers and floating point values between network and host formats. Here's a catch: Do not use conditionals - basically, do not use any of the keywords `if/else/for/while`. To make it even harder: Do not include any headers and also do not use `#if/#else/#endif` preprocessors.
+
+Let's start with `int ntoh(int)`. We know that Big Endian and Little Endian machines have different memory layout for the same integer and floating point values. Let's say our integer of value `0x12345678` is allocated at the address `0xaabbcc00`. Now we have 2 different memory layouts:
 
 ```
 Big Endian layout (the least signinificant bytes at has the highest address):
@@ -109,4 +111,4 @@ byteswap(int): # @byteswap(int)
   ret
 ```
 
-I'll leave to the readers to write template-tised version of the above functions for the remaining integral and floating point types.
+I'll leave to the readers to write function template version of the above functions for the remaining integral and floating point types. You could repeat the same steps and avoid including any header or using any of `#if/#else/#endif` preprocessors.
