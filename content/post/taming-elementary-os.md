@@ -16,6 +16,17 @@ Unlike developers of most Linux distros, ElementaryOS developers are not shy to 
 
 You can follow the short and sweet guide written in another article: [Fix Wifi for Ubuntu on Microsoft Surface]({{< relref "fix-wifi-for-ubuntu-on-microsoft-surface.md" >}}).
 
+## Stop messing up with Windows time
+
+When Ubuntu is dual-booting with Windows, it's guaranteed that Ubuntu will mess with Windows time because Ubuntu uses RTC with UTC time. To fix this it's recommended to change Ubuntu to use RTC with local time zone. You just need to run 2 lines of commands:
+
+```
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+```
+
+There's also another way but not recommended: Change Windows Registry to force Windows to use UTC, thus having problems with daylight saving time. For more details, see: https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
+
 ## Stop displaying * (asterisks) when typing passwords
 
 I'm a power user and a security-minded one. I dislike when people can see how many characters my passwords have. You can follow [the link and disable showing](https://elementaryos.stackexchange.com/questions/10354/how-to-disable-terminal-feedback-when-writing-password-for-sudo) `*` asterisks when typing password on `sudo`:
@@ -28,17 +39,6 @@ sudo mv /etc/sudoers.d/pwfeedback /etc/sudoers.d/pwfeedback.disabled
 ```
 sudo mv /etc/sudoers.d/pwfeedback.disabled /etc/sudoers.d/pwfeedback
 ```
-
-## Stop messing up with Windows time
-
-When Ubuntu is dual-booting with Windows, it's guaranteed that Ubuntu will mess with Windows time because Ubuntu uses RTC with UTC time. To fix this it's recommended to change Ubuntu to use RTC with local time zone. You just need to run 2 lines of commands:
-
-```
-timedatectl set-local-rtc 1 --adjust-system-clock
-timedatectl
-```
-
-There's also another way but not recommended: Change Windows Registry to force Windows to use UTC, thus having problems with daylight saving time. For more details, see: https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
 
 ## Disable natural copy (Ctrl-C) and paste (Ctrl-V) in Terminal
 
