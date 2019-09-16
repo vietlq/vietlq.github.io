@@ -11,6 +11,14 @@ thumbnail = ""
 
 From the [Endianness detection blog entry]({{< relref "endianness-detection.md" >}}), we have learned how to do that using predefined macros across different architectures. Our next task is to write `ntoh` (network to host) and `hton` (host to network) functions to convert integers and floating point values between network and host formats. Here's a catch: Do not use conditionals - basically, do not use any of the keywords `if/else/for/while`. To make it even harder: Do not include any headers and also do not use `#if/#else/#endif` pre-processors.
 
+Here's the data flow:
+
+```
+1. Raw byte string of integers in network (Big Endian) format
+2. Load 2/4/8 raw bytes and treat them as 16/32/64-bit numbers
+3. Transform those numbers into host format (either Big Endian or Little Endian)
+```
+
 Let's start with `int ntoh(int)`. We know that Big Endian and Little Endian machines have different memory layout for the same integer and floating point values. Let's say our integer of value `0x12345678` is allocated at the address `0xaabbcc00`. Now we have 2 different memory layouts:
 
 ```
