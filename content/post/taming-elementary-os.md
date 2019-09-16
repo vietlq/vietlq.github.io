@@ -29,6 +29,17 @@ sudo mv /etc/sudoers.d/pwfeedback /etc/sudoers.d/pwfeedback.disabled
 sudo mv /etc/sudoers.d/pwfeedback.disabled /etc/sudoers.d/pwfeedback
 ```
 
+## Stop messing up with Windows time
+
+When Ubuntu is dual-booting with Windows, it's guaranteed that Ubuntu will mess with Windows time because Ubuntu uses RTC with UTC time. To fix this it's recommended to change Ubuntu to use RTC with local time zone. You just need to run 2 lines of commands:
+
+```
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+```
+
+There's also another way but not recommended: Change Windows Registry to force Windows to use UTC, thus having problems with daylight saving time. For more details, see: https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
+
 ## Disable natural copy (Ctrl-C) and paste (Ctrl-V) in Terminal
 
 This is one of the feature that makes mad and sad at the same time. I love other key combination: `Ctrl-Ins` for copy and `Shift-Ins` for paste. You can follow [this link to use proper Linux](https://elementaryos.stackexchange.com/questions/2059/how-can-i-disable-natural-copy-paste-in-terminal
