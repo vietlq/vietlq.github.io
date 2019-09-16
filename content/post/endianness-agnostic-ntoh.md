@@ -16,7 +16,7 @@ Here's the data flow:
 ```
 1. Raw byte string of integers in network (Big Endian) format
 2. Load 2/4/8 raw bytes and treat them as 16/32/64-bit numbers
-3. Transform those numbers into host format (either Big Endian or Little Endian)
+3. Transform (implement ntoh) those numbers into host format (either Big Endian or Little Endian)
 ```
 
 Let's start with `int ntoh(int)`. We know that Big Endian and Little Endian machines have different memory layout for the same integer and floating point values. Let's say our integer of value `0x12345678` is allocated at the address `0xaabbcc00`. Now we have 2 different memory layouts:
