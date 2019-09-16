@@ -1,10 +1,15 @@
-Currently using the theme hugo-geo with customisation in the branch origin/add-fb-twitter-open-graph
+Currently using the theme `alexurquhart/hugo-geo` with customisation at `git@github.com:vietlq/hugo-theme-robust-vietlq.git`
+
 ```
 $ git remote -v
-origin  git@github.com:vietlq/hugo-geo.git (fetch)
-origin  git@github.com:vietlq/hugo-geo.git (push)
+origin  git@github.com:vietlq/hugo-theme-robust-vietlq.git (fetch)
+origin  git@github.com:vietlq/hugo-theme-robust-vietlq.git (push)
 upstream        https://github.com/alexurquhart/hugo-geo.git (fetch)
 upstream        https://github.com/alexurquhart/hugo-geo.git (push)
+```
 
-add-fb-twitter-open-graph
+You are recommended to run clone and (re)generate the site:
+
+```
+git clone git@github.com:vietlq/hugo-theme-robust-vietlq.git
 ```
