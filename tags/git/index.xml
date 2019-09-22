@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/git/</link>
+    <description>Recent content in Git on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Jun 2017 11:41:20 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Install a Git Repo &amp; Serve via SSH</title>
+      <link>https://vietlq.github.io/2017/06/04/how-to-install-a-git-repo--serve-via-ssh/</link>
+      <pubDate>Sun, 04 Jun 2017 11:41:20 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/06/04/how-to-install-a-git-repo--serve-via-ssh/</guid>
+      <description>Love Git but don’t want to pay GitHub to have a private repo? No problem. Here’s the solution. I was looking for a way to create a repo and serve it on my server via ssh. Git made it really simple and we can do in 3 steps (copied from the Reference 1):
+Steps 1. Create a repo # On the server side mkdir ~/repos/ cd ~/repos/ GIT_DIR=project.git git init cd project.</description>
+    </item>
+    
+    <item>
+      <title>Got Locked Out From Gitolite</title>
+      <link>https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/</link>
+      <pubDate>Mon, 01 May 2017 17:49:45 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/</guid>
+      <description>A couple of years ago I installed gitolite to self-host Git and access it via SSH. All was well until recently I discovered a problem: I could not access some repositories:
+$ git clone git@simpleit.us:apache2-config.git Cloning into &#39;apache2-config&#39;... R access for apache2-config DENIED to gitadmin (Or there may be no repository at the given path. Did you spell it correctly?) fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.</description>
+    </item>
+    
+    <item>
+      <title>Enter, Hugo</title>
+      <link>https://vietlq.github.io/2017/04/30/enter-hugo/</link>
+      <pubDate>Sun, 30 Apr 2017 08:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/enter-hugo/</guid>
+      <description>Yesterday I spent a couple of hours to set up and config Octopress. It was a good hacking experience and Octopress architecture and design proved overly complex and inconsistent with Jekyll&amp;rsquo;s simplicity that it built on. There&amp;rsquo;s no simple way to use a Jekyll theme with Octopress. Apart from that, Octopress has not been in good health since 2015, there were few commits and changes, it&amp;rsquo;s literally dying. So today I decided to make a bold move to search for new static site generators.</description>
+    </item>
+    
+    <item>
+      <title>Hello, Octopress</title>
+      <link>https://vietlq.github.io/2017/04/29/hello-octopress/</link>
+      <pubDate>Sat, 29 Apr 2017 08:55:36 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/29/hello-octopress/</guid>
+      <description>The Story I have been looking for ways to make static blogging possible. The danger of having WordPress and its insecure plugins is a no-no for me. A couple of years ago I came across Jekyll and the amount of Ruby dependencies and steps to accomplish a single task was disturbing and it wasn&amp;rsquo;t a pleasant start. So I sticked with WordPress while still looking for alternatives.
+Octopress appeared in searches and I gave it a try.</description>
+    </item>
+    
+  </channel>
+</rss>

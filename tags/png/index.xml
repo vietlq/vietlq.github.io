@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Png on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/png/</link>
+    <description>Recent content in Png on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2017 11:05:17 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/png/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PySmile: Transparency Preservation</title>
+      <link>https://vietlq.github.io/2017/05/01/pysmile-transparency-preservation/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/pysmile-transparency-preservation/</guid>
+      <description>I have been writing PySmile - a tool for batch processing (resize, convert) images. Resizing by ratio, to fixed width, fixed height was easy-peasy. So was conversion from non-transparent formats to any format (from JPG, BMP to JPG, BMP, PDF, PNG, GIF). However, there was a challenge converting transparent PNG to other formats: JPG, BMP, GIF, PDF. Have a look at the output:
+There are 2 problems with the output:</description>
+    </item>
+    
+    <item>
+      <title>PySmile: Handy Image Processing</title>
+      <link>https://vietlq.github.io/2017/05/01/pysmile-handy-image-processing/</link>
+      <pubDate>Mon, 01 May 2017 09:41:04 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/pysmile-handy-image-processing/</guid>
+      <description>If you are an active blogger or creating lots marketing material, you probably use a huge number of images and photos to keep your audience engaged. If you share on Facebook and Twitter, you may want to have suitable thumbnails. It&amp;rsquo;s a hell lot of work to have so many images and their derivatives. Some common tasks:
+ Create a derivative image for Facebook post of size 281x394, 470x235, 470x246, &amp;hellip; Generate an image for Twitter post of size 600x335, 800x320, &amp;hellip; Create round, square thumbnails, &amp;hellip; Generate images for Facebook Open Graph and Twitter Card  Without simple and effective tools, you won&amp;rsquo;t be able to accomplish those tasks efficiently.</description>
+    </item>
+    
+  </channel>
+</rss>

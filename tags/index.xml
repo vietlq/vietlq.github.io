@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/</link>
+    <description>Recent content in Tags on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Mar 2018 21:24:15 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Beaker</title>
+      <link>https://vietlq.github.io/tags/beaker/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/beaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://vietlq.github.io/tags/blog/</link>
+      <pubDate>Mon, 01 May 2017 13:03:01 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://vietlq.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;17</title>
+      <link>https://vietlq.github.io/tags/c&#43;&#43;17/</link>
+      <pubDate>Sat, 12 May 2018 18:15:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/c&#43;&#43;17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compiler</title>
+      <link>https://vietlq.github.io/tags/compiler/</link>
+      <pubDate>Sat, 12 May 2018 18:15:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/compiler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Config</title>
+      <link>https://vietlq.github.io/tags/config/</link>
+      <pubDate>Mon, 01 May 2017 17:49:45 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>https://vietlq.github.io/tags/crypto/</link>
+      <pubDate>Mon, 01 May 2017 15:18:29 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>D16n</title>
+      <link>https://vietlq.github.io/tags/d16n/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/d16n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dat</title>
+      <link>https://vietlq.github.io/tags/dat/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/dat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://vietlq.github.io/tags/debian/</link>
+      <pubDate>Mon, 01 May 2017 15:18:29 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decentralisation</title>
+      <link>https://vietlq.github.io/tags/decentralisation/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/decentralisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev</title>
+      <link>https://vietlq.github.io/tags/dev/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elementaryos</title>
+      <link>https://vietlq.github.io/tags/elementaryos/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/elementaryos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Endian</title>
+      <link>https://vietlq.github.io/tags/endian/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/endian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Entropy</title>
+      <link>https://vietlq.github.io/tags/entropy/</link>
+      <pubDate>Mon, 01 May 2017 15:18:29 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/entropy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fb</title>
+      <link>https://vietlq.github.io/tags/fb/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/fb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gh Pages</title>
+      <link>https://vietlq.github.io/tags/gh-pages/</link>
+      <pubDate>Mon, 01 May 2017 13:03:01 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/gh-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gif</title>
+      <link>https://vietlq.github.io/tags/gif/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/gif/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://vietlq.github.io/tags/git/</link>
+      <pubDate>Sun, 04 Jun 2017 11:41:20 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitadmin</title>
+      <link>https://vietlq.github.io/tags/gitadmin/</link>
+      <pubDate>Mon, 01 May 2017 17:49:45 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/gitadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitolite</title>
+      <link>https://vietlq.github.io/tags/gitolite/</link>
+      <pubDate>Mon, 01 May 2017 17:49:45 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/gitolite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://vietlq.github.io/tags/go/</link>
+      <pubDate>Sun, 04 Jun 2017 20:55:33 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grub</title>
+      <link>https://vietlq.github.io/tags/grub/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/grub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide</title>
+      <link>https://vietlq.github.io/tags/guide/</link>
+      <pubDate>Mon, 01 May 2017 15:18:29 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Https</title>
+      <link>https://vietlq.github.io/tags/https/</link>
+      <pubDate>Mon, 01 May 2017 13:03:01 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://vietlq.github.io/tags/hugo/</link>
+      <pubDate>Sun, 04 Jun 2017 18:19:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image</title>
+      <link>https://vietlq.github.io/tags/image/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Processing</title>
+      <link>https://vietlq.github.io/tags/image-processing/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/image-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://vietlq.github.io/tags/linux/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta</title>
+      <link>https://vietlq.github.io/tags/meta/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mq</title>
+      <link>https://vietlq.github.io/tags/mq/</link>
+      <pubDate>Sun, 04 Jun 2017 21:07:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/mq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ocaml</title>
+      <link>https://vietlq.github.io/tags/ocaml/</link>
+      <pubDate>Mon, 28 May 2018 15:41:55 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/ocaml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opam</title>
+      <link>https://vietlq.github.io/tags/opam/</link>
+      <pubDate>Mon, 28 May 2018 15:41:55 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/opam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opengraph</title>
+      <link>https://vietlq.github.io/tags/opengraph/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/opengraph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>P2p</title>
+      <link>https://vietlq.github.io/tags/p2p/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/p2p/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Packaging</title>
+      <link>https://vietlq.github.io/tags/packaging/</link>
+      <pubDate>Mon, 28 May 2018 15:41:55 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/packaging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pillow</title>
+      <link>https://vietlq.github.io/tags/pillow/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/pillow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Png</title>
+      <link>https://vietlq.github.io/tags/png/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/png/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://vietlq.github.io/tags/productivity/</link>
+      <pubDate>Fri, 30 Mar 2018 18:33:42 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pysmile</title>
+      <link>https://vietlq.github.io/tags/pysmile/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/pysmile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://vietlq.github.io/tags/python/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rabbitmq</title>
+      <link>https://vietlq.github.io/tags/rabbitmq/</link>
+      <pubDate>Sun, 04 Jun 2017 21:07:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/rabbitmq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rss</title>
+      <link>https://vietlq.github.io/tags/rss/</link>
+      <pubDate>Sun, 30 Apr 2017 11:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/rss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rsync</title>
+      <link>https://vietlq.github.io/tags/rsync/</link>
+      <pubDate>Sun, 04 Jun 2017 18:19:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/rsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://vietlq.github.io/tags/ruby/</link>
+      <pubDate>Sat, 29 Apr 2017 08:55:36 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Safety</title>
+      <link>https://vietlq.github.io/tags/safety/</link>
+      <pubDate>Sat, 12 May 2018 18:15:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/safety/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Secure</title>
+      <link>https://vietlq.github.io/tags/secure/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/secure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://vietlq.github.io/tags/security/</link>
+      <pubDate>Sat, 12 May 2018 18:15:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>https://vietlq.github.io/tags/seo/</link>
+      <pubDate>Sun, 30 Apr 2017 11:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>https://vietlq.github.io/tags/setup/</link>
+      <pubDate>Sun, 30 Apr 2017 08:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sitemap</title>
+      <link>https://vietlq.github.io/tags/sitemap/</link>
+      <pubDate>Sun, 30 Apr 2017 11:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/sitemap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Media</title>
+      <link>https://vietlq.github.io/tags/social-media/</link>
+      <pubDate>Mon, 01 May 2017 09:41:04 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/social-media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sparc</title>
+      <link>https://vietlq.github.io/tags/sparc/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/sparc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>https://vietlq.github.io/tags/ssh/</link>
+      <pubDate>Sun, 04 Jun 2017 18:19:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://vietlq.github.io/tags/theme/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tinkering</title>
+      <link>https://vietlq.github.io/tags/tinkering/</link>
+      <pubDate>Sat, 11 May 2019 11:48:06 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/tinkering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://vietlq.github.io/tags/tips/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://vietlq.github.io/tags/tools/</link>
+      <pubDate>Sun, 04 Jun 2017 11:41:20 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Topkg</title>
+      <link>https://vietlq.github.io/tags/topkg/</link>
+      <pubDate>Mon, 28 May 2018 15:41:55 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/topkg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transparency</title>
+      <link>https://vietlq.github.io/tags/transparency/</link>
+      <pubDate>Mon, 01 May 2017 11:05:17 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/transparency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://vietlq.github.io/tags/tutorial/</link>
+      <pubDate>Sun, 04 Jun 2017 11:41:20 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>https://vietlq.github.io/tags/twitter/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://vietlq.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upcoming</title>
+      <link>https://vietlq.github.io/tags/upcoming/</link>
+      <pubDate>Sat, 15 Jun 2019 23:16:08 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/upcoming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://vietlq.github.io/tags/web/</link>
+      <pubDate>Sat, 31 Mar 2018 21:24:15 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wifi</title>
+      <link>https://vietlq.github.io/tags/wifi/</link>
+      <pubDate>Sat, 11 May 2019 11:48:06 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/wifi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>X86</title>
+      <link>https://vietlq.github.io/tags/x86/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/tags/x86/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

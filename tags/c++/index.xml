@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jun 2019 14:59:34 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Endianness Agnostic ntoh</title>
+      <link>https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/</guid>
+      <description>From the Endianness detection blog entry, we have learned how to do that using predefined macros across different architectures. Our next task is to write ntoh (network to host) and hton (host to network) functions to convert integers and floating point values between network and host formats. Here&amp;rsquo;s a catch: Do not use conditionals - basically, do not use any of the keywords if/else/for/while. To make it even harder: Do not include any headers and also do not use #if/#else/#endif pre-processors.</description>
+    </item>
+    
+    <item>
+      <title>Endianness Detection the Hard Way</title>
+      <link>https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/</link>
+      <pubDate>Sun, 17 Jun 2018 08:34:57 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/</guid>
+      <description>Recently I have had a project that involves serialisation (again!). I have written countless serialisers and deserialisers in 8 years of professional experience. As it goes with binary serialisation, you need to worry about Endianness of your machine because you want your code to be portable across multiple architectures. Text serialisations to JSON or mere CSV exempt you from all that headache, but they are too verbose and slow. In this post I will walk you through tricks to detect Endianness.</description>
+    </item>
+    
+    <item>
+      <title>Safer C&#43;&#43; By Handling Function Result</title>
+      <link>https://vietlq.github.io/2018/05/12/safer-c---by-handling-function-result/</link>
+      <pubDate>Sat, 12 May 2018 18:15:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2018/05/12/safer-c---by-handling-function-result/</guid>
+      <description>Overview Despite best efforts to train, educate, warn developers to always capture and handle function results, one still can manage to forget and get burned in the process. Let&amp;rsquo;s say you have this piece of code that deals with critical process:
+int critical_func() { return 1234; }  It&amp;rsquo;s far too common for folks to use critical_func() in this manner:
+int use_critical_func() { critical_func(); return 0; }  The values returned from critical_func() could mean anything: Cannot connect to a service, balance is empty, rocket is faulty, &amp;hellip; Failure to capture and act based on those return values could result in any undefined/undesired behaviour: Memory leak, crash, silent failures, &amp;hellip; Let&amp;rsquo;s see how we can enforce developers to use return value from mission critical functions.</description>
+    </item>
+    
+    <item>
+      <title>Listing all header files your cpp depends on</title>
+      <link>https://vietlq.github.io/2017/06/03/listing-all-header-files-your-cpp-depends-on/</link>
+      <pubDate>Sat, 03 Jun 2017 18:04:22 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/06/03/listing-all-header-files-your-cpp-depends-on/</guid>
+      <description>I needed to extract certain Boost headers from its huge code base for memory mapped file &amp;amp; shared memory containers. The first idea came to my mind was a simple grep command for #include statements and then parse the paths. This is simple but not so useful for the cases when headers are conditionally included. For example:
+#ifndef NO_STL #include &amp;quot;my_class_no_stl.h&amp;quot; #else #include &amp;quot;my_class_stl.h&amp;quot; #endif  To be honest, grep won’t be able to handle it.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Media on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/social-media/</link>
+    <description>Recent content in Social Media on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2017 09:41:04 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/social-media/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PySmile: Handy Image Processing</title>
+      <link>https://vietlq.github.io/2017/05/01/pysmile-handy-image-processing/</link>
+      <pubDate>Mon, 01 May 2017 09:41:04 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/pysmile-handy-image-processing/</guid>
+      <description>If you are an active blogger or creating lots marketing material, you probably use a huge number of images and photos to keep your audience engaged. If you share on Facebook and Twitter, you may want to have suitable thumbnails. It&amp;rsquo;s a hell lot of work to have so many images and their derivatives. Some common tasks:
+ Create a derivative image for Facebook post of size 281x394, 470x235, 470x246, &amp;hellip; Generate an image for Twitter post of size 600x335, 800x320, &amp;hellip; Create round, square thumbnails, &amp;hellip; Generate images for Facebook Open Graph and Twitter Card  Without simple and effective tools, you won&amp;rsquo;t be able to accomplish those tasks efficiently.</description>
+    </item>
+    
+    <item>
+      <title>Access Hugo Page Variables</title>
+      <link>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</guid>
+      <description>Challenge Earlier today I had difficulty integrating with Facebook Open Graph and called their Open Graph Debugger for help. I also used Twitter Card Validator to verify if the page can be rendered as a Twitter card. There were still missing pieces from meta data. The complete Open Graph and Twitter card meta data would look like this:
+&amp;lt;!-- Provide absolute URLs --&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;Page Title for Search Engines Results | Website Name&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Page Description for Search Engine Results&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;Page Title for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;Page Description for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:image&amp;quot; content=&amp;quot;https://www.</description>
+    </item>
+    
+    <item>
+      <title>Facebook Open Graph Debugger &amp; Twitter Cards Validator</title>
+      <link>https://vietlq.github.io/2017/04/30/facebook-open-graph-debugger--twitter-cards-validator/</link>
+      <pubDate>Sun, 30 Apr 2017 13:12:11 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/facebook-open-graph-debugger--twitter-cards-validator/</guid>
+      <description>Blogging engines such as WordPress and Ghost should take care of images and Facebook Open Graph integration for you. Unfortunately, that&amp;rsquo;s not the case with Hugo and Octopress. I did a bit of googling and found that we need to have a meta tag og:image in the header for Facebook to show your image when posting.
+Meta-tags for HTML Header &amp;lt;!-- Provide absolute URLs --&amp;gt; &amp;lt;!-- Sample from https://rickmanelius.com/article/sharing-facebook-how-improve-your-results-customizing-image-title-and-summary-text --&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;Page Title for Search Engines Results | Website Name&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Page Description for Search Engine Results&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;Page Title for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;Page Description for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:image&amp;quot; content=&amp;quot;https://www.</description>
+    </item>
+    
+    <item>
+      <title>Permalinks, Tags, Images, RSS, Sitemap</title>
+      <link>https://vietlq.github.io/2017/04/30/permalinks-tags-images-rss-sitemap/</link>
+      <pubDate>Sun, 30 Apr 2017 11:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/permalinks-tags-images-rss-sitemap/</guid>
+      <description>From the previous post, you already know how to use a Hugo theme, write a new entry. Now you want to add tags, permalinks and images for better reading experience.
+Add Permalinks &amp;amp; Tags By default Hugo does not give you tags, categories and permalinks. This can be quickly remedied by updating your config.toml file:
+baseURL = &amp;quot;http://vietlq.github.io/&amp;quot; languageCode = &amp;quot;en-us&amp;quot; title = &amp;quot;Viet&#39;s Blog&amp;quot; theme = &amp;quot;hugo-geo&amp;quot; [permalinks] post = &amp;quot;/:year/:month/:day/:title/&amp;quot; [taxonomies] category = &amp;quot;categories&amp;quot; tag = &amp;quot;tags&amp;quot; [params] # To satisfy hugo-geo theme header = &amp;quot;Viet&#39;s Blog&amp;quot; Author = &amp;quot;Viet Le&amp;quot;  Now add tags = [&amp;quot;go&amp;quot;, &amp;quot;hugo&amp;quot;, &amp;quot;git&amp;quot;, &amp;quot;blog&amp;quot;, &amp;quot;config&amp;quot;, &amp;quot;setup&amp;quot;] to front matter of your entry.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+<link rel="apple-touch-icon" href="https://vietlq.github.io/images/logo.png">
+
+
+<link rel="canonical" href="https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/">
+
+
+<meta property="og:title" content="Viet&#39;s Blog">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/">
+<meta property="og:image" content="https://vietlq.github.io/images/default.png">
+<meta property="og:site_name" content="Viet&#39;s Blog">
+<meta property="og:description" content="Food, photos and code">
+<meta property="og:locale" content="ja_JP">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="Viet&#39;s Blog">
+<meta name="twitter:url" content="https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/">
+<meta name="twitter:title" content="Viet&#39;s Blog">
+<meta name="twitter:description" content="Food, photos and code">
+<meta name="twitter:image" content="https://vietlq.github.io/images/default.png">
+<meta name="twitter:creator" content="Viet Le">
+
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Got Locked Out From Gitolite - Viet&#39;s Blog</title>
+    
+
+<meta name="description" content="Software Went Rogue: Got Locked Out From Gitolite">
+
+<meta property="og:title" content="Got Locked Out From Gitolite - Viet&#39;s Blog">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/">
+<meta property="og:image" content="https://vietlq.github.io/pimages/00022-locked-out-burning.jpg">
+<meta property="og:site_name" content="Viet&#39;s Blog">
+<meta property="og:description" content="Software Went Rogue: Got Locked Out From Gitolite">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="Viet&#39;s Blog">
+<meta name="twitter:url" content="https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/">
+<meta name="twitter:title" content="Got Locked Out From Gitolite - Viet&#39;s Blog">
+<meta name="twitter:description" content="Software Went Rogue: Got Locked Out From Gitolite">
+<meta name="twitter:image" content="https://vietlq.github.io/pimages/00022-locked-out-burning.jpg">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https://vietlq.github.io/"
+    },
+    "headline": "Got Locked Out From Gitolite - Viet&#39;s Blog",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://vietlq.github.io/pimages/00022-locked-out-burning.jpg",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2017-05-01T17:49:45JST",
+    "dateModified": "2017-05-01T17:49:45JST",
+    "author": {
+      "@type": "Person",
+      "name": "Viet&#39;s Blog"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Viet&#39;s Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vietlq.github.io/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "Software Went Rogue: Got Locked Out From Gitolite"
+  }
+</script>
+
+
+    <style>
+      html { font-size: 18px; background-color: rgba(236,239,241,.5);}@media (max-width: 768px) { html { font-size: 15px; }}body { color: #333; font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-feature-settings : "palt"; font-size: inherit; line-height: 1rem; margin: 0; padding: 0;}h1, h2, h3, h4, h5 ,h6 { font-size: 1rem; font-weight: 700; line-height: 1rem; margin: 0;}hr { border: 0; border-top: 1px dashed #cfd8dc; margin: 1rem 0;}p { margin: 0; line-height: 1rem;}a { color: #2196f3; text-decoration: none; transition-duration: .3s;}ul, ol { margin: 0; padding: 0;}table { border-collapse: collapse;}th, td { font-size: .8rem; padding: .5rem;}tr { border-bottom: 1px dashed #ddd;}/* Layouts */main,aside { display: block;}main { padding: 1rem 0 3rem 0; }aside.h { padding: 3rem 0; }main.f,aside.f { background-color: #333; border-top: 2px dashed #fff; border-bottom: 2px dashed #fff;}.l-container { position: relative; max-width: 68rem; margin: 0 auto; padding: 0 1rem;}.l-container.thin { max-width: 44rem;}.l-header { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); padding: 1rem 0; text-align: center;}.l-footer { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); font-size: .6rem; font-weight: 700; padding: 1rem 0;}@media (max-width: 768px) { .l-sidebar { margin-top: 4rem; }}.mrow { margin: 0 -1rem; overflow: hidden;}.mcol { box-sizing: border-box; float: left; padding: 0 1rem;}.c6 { width: 50%; }.c4 { width: 33.26323833%; }.c8 { width: 66.66666%; }@media (max-width: 768px) { .mcol { width: 100%; float: none; }}.logo a { font-size: 1.4rem; line-height: 1.5rem; font-weight: 700; color: #333;}.articles { margin: -1rem 0; margin-bottom: 1rem;}.articles.sm { margin: -.5rem 0; margin-bottom: 0;}article { border-radius: 4px; overflow: hidden;}article.li { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); height: 20rem; overflow: hidden; margin: 1rem 0;}article.li > a { display: block; color: #333;}article.li .inner { padding: 1rem;}article.li .thumb { height: 8rem;}article.li .title { color: #333; font-size: 1.2rem; line-height: 1.5rem; margin-bottom: .5rem;}article.li .summary { font-size: .8rem; height: 6rem; overflow: hidden; margin-top: 1rem;}article.lism { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin: .5rem 0;}article.lism::after { content: ''; display: block; clear: both;}article.lism > a { display: block; color: #333;}article.lism .inner { display: table-cell; vertical-align: middle; height: 5rem; padding-left: .5rem;}article.lism .thumb { width: 5rem; height: 5rem; float: left;}article.lism .title { font-weight: 700; line-height: 1.25rem; margin-bottom: .25rem;}article.sn { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin-bottom: 1rem;}article.sn .thumb { height: 20rem;}@media (max-width: 768px) { article.sn .thumb { height: 10rem; }}article.sn > .article-header,article.sn > .article-body,article.sn .article-footer { padding: 2rem;}article.sn > .article-body { padding: 0 2rem;}@media (max-width: 768px) { article.sn > .article-header, article.sn > .article-body, article.sn .article-footer { padding: 1rem; } article.sn > .article-body { padding: 0 1rem; }}article.sn > .article-header .title { font-size: 1.8rem; line-height: 2rem; margin-bottom: .5rem;}@media (max-width: 768px) { article.sn > .article-header .title { font-size: 1.4rem; line-height: 1.5rem; }}article.sn > .article-header .facts { margin-bottom: 1rem;}article.sn > .article-body { margin-bottom: 1.5rem; overflow-wrap: break-word; /* word-break: break-word; */}article.sn > .article-body h2 { border-bottom: .25rem solid #333; font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; padding: .5rem 0;}article.sn > .article-body h3 { border-left: .5rem solid #333; line-height: 1.5rem; margin: 1.5rem 0; padding: .125rem .5rem;}article.sn > .article-body ul,article.sn > .article-body ol { margin: 1.5rem 0; padding-left: 1.5rem;}article.sn > .article-body li { padding-bottom: .5rem; line-height: 1.5rem;}article.sn > .article-body li:last-child { padding-bottom: 0;}article.sn > .article-body p { margin: 1rem 0; line-height: 1.5rem;}article.sn > .article-body strong,article.sn > .article-body em { font-style: normal; font-weight: 700;}article.sn > .article-body strong { box-shadow: 0 -.5rem 0 0 #ffc107 inset;}article.sn > .article-body em { color: #8bc34a;}article.sn > .article-body code,article.sn > .article-body pre { font-family: Menlo, Consolas, monospace; font-size: .7rem;}article.sn > .article-body pre { background-color: #333; color: #fff; line-height: 1rem; margin: 1.5rem -2rem; overflow: auto;}@media (max-width: 768px) { article.sn > .article-body pre { margin: 1.5rem -1rem; }}article.sn > .article-body pre > code { display: block; padding: 1rem 2rem;}@media (max-width: 768px) { article.sn > .article-body pre > code { padding: 1rem; }}article.sn > .article-body p code { background-color: #eceff1; color: #333; border-radius: 4px; margin: 0 .25rem; padding: .375rem; white-space: nowrap;}article.sn > .article-body blockquote { position: relative; border-left: .25rem solid #333; font-size: .8rem; padding: .125rem 1rem; margin: 1.5rem 0;}@media (max-width: 768px) { article.sn > .article-body blockquote { font-size: 1rem; }}article.sn > .article-body blockquote p { margin: .5rem 0; line-height: 1rem;}article.sn > .article-body figure { margin: 1.5rem 0;}article.sn > .article-body figure img,article.sn > .article-body figure amp-img { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%;}article.sn > .article-body figcaption { color: #cfd8dc; font-size: .8rem; font-weight: 700; margin-top: .5rem;}.facts li { display: inline; font-size: .8rem; margin-right: 1rem;}.facts i { color: #cfd8dc; margin-right: .5em;}.facts.sm li { font-size: .7rem;}.sections.sidebar { margin: -1rem 0;}.sections.footer { margin: -1rem 0;}section.sidebar { margin: 2rem 0;}section.sidebar > header { font-size: .8rem; font-weight: 700; letter-spacing: 4px; text-align: center; margin: 1.5rem 0;}section.footer { margin: 1rem 0;}section.footer > header { font-size: .8rem; margin: .5rem 0;}section.footer > header::before { content: "- ";}section.footer > header a { font-weight: 700; color: #333; text-decoration: underline;}.terms { margin: -.25rem;}.terms li { display: inline-block;}.terms a { display: block; float: left; background-color: #333; border-radius: 4px; color: #fff; font-size: .7rem; margin: .25rem; padding: 0 .75rem; line-height: 1.75rem;}.paging { text-align: center; padding: 1rem 0;}.paging a { display: inline-block; background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); border-radius: 4px; color: #333; padding: 0 1rem; line-height: 3rem;}.page-title { text-align: center; margin: 1rem 0;}.page-title::after { content: ''; display: block; border-bottom: .25rem solid #333; width: 3rem; margin: 1.5rem auto;}.page-title > .title { font-size: 1.2rem; line-height: 1.5rem;}/* Parts:breadcrumb */.crumb ol { text-overflow: ellipsis; color: #cfd8dc; white-space: nowrap; overflow: hidden;}.crumb li { display: inline; font-size: .8rem;}.crumb li::after { content: '›'; margin: 0 .25rem 0 .5rem;}.crumb li:last-child::after { content: '';}.crumb a { color: #cfd8dc;}.crumb i { margin-right: .5em;}.share { padding: 0;}.share a { display: inline-block; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); min-width: 1rem; height: 2rem; border-radius: 4px; color: #333; font-size: .8rem; font-weight: 700; line-height: 2rem; text-align: center; padding: 0 .5rem;}.adj article.lism { margin-bottom: 1rem;}.adj header { font-weight: 700; font-size: .8rem;}.toc { padding: 0 2rem;}@media (max-width: 768px) { .toc { padding: 0 1rem; }}.toc { margin: 1rem 0;}.toc nav>ul { background-color: #eceff1; border-radius: 4px; display: inline-block; font-size: .8rem; padding: .5rem 1rem; word-break: break-all; list-style: none;}.toc ul { padding: 0;}.toc ul ul { padding-left: 1rem;}.toc ul ul ul { padding-left: 1rem;}.toc li { color: #90a4ae;}.toc ul ul>li { font-weight: 700; margin: .5rem 0; list-style-type: decimal;}.toc ul ul ul>li { list-style-type: disc; font-weight: 500;}.thumb { background-image: url(https://vietlq.github.io/images/default.jpg); background-size: cover;}.thumb-6688cf1da78325007579e18e5f8fb872 { background-image: url(https://vietlq.github.io/pimages/00047-upcoming-posts.jpg);}.thumb-08a01e23b8f39d5d89ea67e646a32443 { background-image: url(https://vietlq.github.io/pimages/00039-elementary-os-community-green.png);}.thumb-933c7e05abc3b7773c11c19fa2a4b105 { background-image: url(https://vietlq.github.io/pimages/00036-royalty-free-wifi.png);}.thumb-cd462847172b64fc8e784dd6d7c84e29 { background-image: url(https://vietlq.github.io/pimages/00041-balanced-eggs.jpg);}.thumb-b9d386462469b148d2c82decdcf9b242 { background-image: url(https://vietlq.github.io/pimages/00038-ocaml-logo.png);}.thumb-7a923337f985bba22c2348d8fade9b75 { background-image: url(https://vietlq.github.io/pimages/00042-cpp-fruity.png);}.thumb-dc5943546eb2260de597a3a8e3e8acac { background-image: url(https://vietlq.github.io/pimages/00040-beaker-logo-1024x1024.png);}.thumb-c734a97d54ec9a2a4f43490f63cb41e8 { background-image: url(https://vietlq.github.io/pimages/00037-royalty-free-pdf.png);}.thumb-f1045f342029063b7611e6f3669e9c1b { background-image: url(https://vietlq.github.io/pimages/00025-skin-tone-rabbits-background.jpg);}.thumb-e57006c8d9d720bfd79806a759a46010 { background-image: url(https://vietlq.github.io/pimages/00024-twitter-gopher-banner-small.jpg);}.thumb-54eff4b3b3c33482759013c24d0ef530 { background-image: url(https://vietlq.github.io/pimages/00023-publish-edvinas-bruzas-114174.jpg);}.thumb-5ea2930cd21670197e0eccdaae95fcb7 { background-image: url(https://vietlq.github.io/pimages/00045-git-logo.png);}.thumb-5f4667699f5bc859ec47f276ccb83594 { background-image: url(https://vietlq.github.io/pimages/00044-official-cpp-logo.png);}.thumb-9746ef033b847f5b3e6c3638dfa112d1 { background-image: url(https://vietlq.github.io/pimages/00022-locked-out-burning.jpg);}.thumb-cf11ae4c70036fff98faeca7d0b3c792 { background-image: url(https://vietlq.github.io/pimages/00021-security.jpg);}.thumb-6a033ccd4498873cf58bff1867726511 { background-image: url(https://vietlq.github.io/pimages/00019-secure-settings-pexels-photo-270700.jpeg);}.thumb-dda6790eae93d3f4751226b49cba7db8 { background-image: url(https://vietlq.github.io/pimages/00046-header-best-jpeg-from-transparent-png.jpg);}.thumb-0d090e60f12f755b8fbbf2b1ba731ace { background-image: url(https://vietlq.github.io/pimages/00016-peter-john-maridable-53936.jpg);}.thumb-f2d9649010fd49ebc3bcd6d30b578f5e { background-image: url(https://vietlq.github.io/pimages/00005-good-twitter-card-validator.jpg);}.thumb-e2384794d110b02b082a8858a20f3d69 { background-image: url(https://vietlq.github.io/pimages/00004-twitter-card-validator.jpg);}.thumb-e00c9acafa97802bd05675d9310cfe8d { background-image: url(https://vietlq.github.io/pimages/00002-travel-mountain-top.jpg);}.thumb-c46cc96ae558d82290116edfa3c913d7 { background-image: url(https://vietlq.github.io/pimages/00043-hugo-logo.png);}.thumb-65593cfbaf57e931a916c5175912c227 { background-image: url(https://vietlq.github.io/pimages/00001-fractal-octopus.jpg);}
+      
+      
+    </style>
+  </head>
+
+  <body>
+    
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1440926-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+          <a href="https://vietlq.github.io/">Viet&#39;s Blog</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        
+<div class="mrow">
+  <div class="mcol c8">
+
+    <article class="sn">
+
+  <div class="thumb thumb-9746ef033b847f5b3e6c3638dfa112d1"></div>
+
+  <header class="article-header">
+    <h1 class="title">Got Locked Out From Gitolite</h1>
+
+    <ul class="facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-05-01T17:49:45JST">May 1, 2017</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://vietlq.github.io/post/">POST</a></li>
+      
+    </ul>
+
+    <aside class="share">
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&title=Got%20Locked%20Out%20From%20Gitolite" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&text=Got%20Locked%20Out%20From%20Gitolite&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&t=Got%20Locked%20Out%20From%20Gitolite" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  <a href="http://getpocket.com/edit?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&title=Got%20Locked%20Out%20From%20Gitolite" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="http://line.me/R/msg/text/?Got%20Locked%20Out%20From%20Gitolite https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
+</aside>
+
+  </header>
+
+  
+
+  <div class="article-body"><p>A couple of years ago I installed <code>gitolite</code> to self-host Git and access it via SSH. All was well until recently I discovered a problem: I could not access some repositories:</p>
+
+<pre><code>$ git clone git@simpleit.us:apache2-config.git
+Cloning into 'apache2-config'...
+R access for apache2-config DENIED to gitadmin
+(Or there may be no repository at the given path. Did you spell it correctly?)
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+
+<p>It used to work fine. Wait! Why do I see the message, if I have totally different user name:</p>
+
+<pre><code>R access for apache2-config DENIED to gitadmin
+</code></pre>
+
+<p>This was the clue. I checked the config file for <code>gitolite</code>:</p>
+
+<pre><code>repo    gitolite-admin
+        RW+     =   gitadmin
+        RW+     =   aaa
+
+repo    vietstartupjobs
+        RW+     =   bbb
+        R       =   ccc
+
+repo    apache2-config
+        RW+     =   ddd
+</code></pre>
+
+<p>Clearly it supposed to be like this. All I need is access to <code>apache2-config</code> using my username. There has been some change to <code>gitolite</code> that went under my radar. So I <code>sudo su git</code> and edited the file <code>~/.gitolite/conf/gitolite.conf</code> to add virtual ID <code>gitadmin</code> to the repositories that I need to access:</p>
+
+<pre><code>repo    gitolite-admin
+        RW+     =   gitadmin
+        RW+     =   aaa
+
+repo    vietstartupjobs
+        RW+     =   gitadmin
+        RW+     =   bbb
+        R       =   ccc
+
+repo    apache2-config
+        RW+     =   gitadmin
+        RW+     =   ddd
+</code></pre>
+
+<p>That solved my problem. If you want to use <code>gitolite</code> for self-hosting your Git projects privately, checkout these links:</p>
+
+<ul>
+<li><a href="http://gitolite.com/gitolite/quick_install/">Gitolite Quick Install</a></li>
+<li><a href="https://github.com/sitaramc/gitolite">Gitolite Repository</a></li>
+</ul>
+</div>
+
+  <footer class="article-footer">
+
+    <aside class="share">
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&title=Got%20Locked%20Out%20From%20Gitolite" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&text=Got%20Locked%20Out%20From%20Gitolite&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&t=Got%20Locked%20Out%20From%20Gitolite" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  <a href="http://getpocket.com/edit?url=https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f&title=Got%20Locked%20Out%20From%20Gitolite" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="http://line.me/R/msg/text/?Got%20Locked%20Out%20From%20Gitolite https%3a%2f%2fvietlq.github.io%2f2017%2f05%2f01%2fgot-locked-out-from-gitolite%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
+</aside>
+
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="https://vietlq.github.io/"><i class="fa fa-home" aria-hidden="true"></i>TOP</a></li>
+            
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://vietlq.github.io/post/" itemprop="url"><span itemprop="title">POST</span></a></li>
+            
+            <li class="active">Got Locked Out From Gitolite</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://vietlq.github.io/categories/">CATEGORIES</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://vietlq.github.io/tags/">TAGS</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://vietlq.github.io/tags/ssh/">ssh</a></li>
+          
+          <li><a href="https://vietlq.github.io/tags/git/">git</a></li>
+          
+          <li><a href="https://vietlq.github.io/tags/gitolite/">gitolite</a></li>
+          
+          <li><a href="https://vietlq.github.io/tags/security/">security</a></li>
+          
+          <li><a href="https://vietlq.github.io/tags/config/">config</a></li>
+          
+          <li><a href="https://vietlq.github.io/tags/gitadmin/">gitadmin</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+  </footer>
+
+</article>
+
+
+    <div class="adj">
+      <div class="mrow">
+        
+        <div class="mcol c6">
+          <header>Previous Article</header>
+          <article class="lism">
+  <a href="https://vietlq.github.io/2017/05/01/add-extra-entropy-for-ubuntu-and-debian/">
+    <div class="thumb thumb-cf11ae4c70036fff98faeca7d0b3c792"></div>
+
+    <div class="inner">
+      <div class="title">Add Extra Entropy for Ubuntu and Debian</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-05-01T15:18:29JST">May 1, 2017</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+        </div>
+        
+        
+        <div class="mcol c6">
+          <header>Next Article</header>
+          <article class="lism">
+  <a href="https://vietlq.github.io/2017/06/03/listing-all-header-files-your-cpp-depends-on/">
+    <div class="thumb thumb-5f4667699f5bc859ec47f276ccb83594"></div>
+
+    <div class="inner">
+      <div class="title">Listing all header files your cpp depends on</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-06-03T18:04:22JST">Jun 3, 2017</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+        </div>
+        
+      </div>
+    </div>
+
+    
+  </div>
+  <div class="mcol c4">
+    <aside class="l-sidebar">
+
+  <div class="sections sidebar">
+    <section class="sidebar">
+      <header>LATESTS</header>
+      <div>
+        <div class="articles sm">
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2019/09/22/make-grub-font-size-bigger/">
+    <div class="thumb thumb-480e4880232f9da594e8e9377ed359b9"></div>
+
+    <div class="inner">
+      <div class="title">Make Grub Font Size Bigger</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-09-22T18:13:03JST">Sep 22, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/">
+    <div class="thumb thumb-384bc303d513661c0ff4db1e0ba927f4"></div>
+
+    <div class="inner">
+      <div class="title">Endianness Agnostic ntoh</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-06-22T14:59:34JST">Jun 22, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2019/06/15/upcoming-posts/">
+    <div class="thumb thumb-6688cf1da78325007579e18e5f8fb872"></div>
+
+    <div class="inner">
+      <div class="title">Upcoming Posts</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-06-15T23:16:08JST">Jun 15, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2019/05/11/taming-elementary-os/">
+    <div class="thumb thumb-08a01e23b8f39d5d89ea67e646a32443"></div>
+
+    <div class="inner">
+      <div class="title">Taming Elementary OS</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-05-11T11:48:06JST">May 11, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2019/05/11/fix-wifi-for-ubuntu-on-microsoft-surface/">
+    <div class="thumb thumb-933c7e05abc3b7773c11c19fa2a4b105"></div>
+
+    <div class="inner">
+      <div class="title">Fix Wifi for Ubuntu on Microsoft Surface</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-05-11T11:02:07JST">May 11, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/">
+    <div class="thumb thumb-cd462847172b64fc8e784dd6d7c84e29"></div>
+
+    <div class="inner">
+      <div class="title">Endianness Detection the Hard Way</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-17T08:34:57JST">Jun 17, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2018/05/28/ocaml-packaging-with-topkg-and-opam/">
+    <div class="thumb thumb-b9d386462469b148d2c82decdcf9b242"></div>
+
+    <div class="inner">
+      <div class="title">OCaml Packaging With Topkg and OPAM</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-05-28T15:41:55JST">May 28, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2018/05/12/safer-c---by-handling-function-result/">
+    <div class="thumb thumb-7a923337f985bba22c2348d8fade9b75"></div>
+
+    <div class="inner">
+      <div class="title">Safer C&#43;&#43; By Handling Function Result</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-05-12T18:15:05JST">May 12, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2018/03/31/p2p-browsing-web-with-beaker-and-dat/">
+    <div class="thumb thumb-dc5943546eb2260de597a3a8e3e8acac"></div>
+
+    <div class="inner">
+      <div class="title">P2P Browsing Web With Beaker and Dat</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-03-31T21:24:15JST">Mar 31, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+          <article class="lism">
+  <a href="https://vietlq.github.io/2018/03/30/edit-and-annotate-pdf/">
+    <div class="thumb thumb-c734a97d54ec9a2a4f43490f63cb41e8"></div>
+
+    <div class="inner">
+      <div class="title">Edit and Annotate PDF</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-03-30T18:33:42JST">Mar 30, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="sidebar">
+      <header>CATEGORIES</header>
+      <div>
+        <ul class="terms">
+          
+        </ul>
+      </div>
+    </section>
+    
+    <section class="sidebar">
+      <header>TAGS</header>
+      <div>
+        <ul class="terms">
+          <li><a href="https://vietlq.github.io/tags/dev">dev</a></li><li><a href="https://vietlq.github.io/tags/tips">tips</a></li><li><a href="https://vietlq.github.io/tags/ubuntu">ubuntu</a></li><li><a href="https://vietlq.github.io/tags/hugo">hugo</a></li><li><a href="https://vietlq.github.io/tags/blog">blog</a></li><li><a href="https://vietlq.github.io/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="https://vietlq.github.io/tags/config">config</a></li><li><a href="https://vietlq.github.io/tags/git">git</a></li><li><a href="https://vietlq.github.io/tags/security">security</a></li><li><a href="https://vietlq.github.io/tags/social-media">social-media</a></li>
+        </ul>
+      </div>
+    </section>
+    
+  </div>
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><span class="h-logo">&copy; Viet&#39;s Blog</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

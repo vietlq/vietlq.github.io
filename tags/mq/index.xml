@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mq on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/mq/</link>
+    <description>Recent content in Mq on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Jun 2017 21:07:05 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/mq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install RabbitMQ on Ubuntu 16.04 LTS</title>
+      <link>https://vietlq.github.io/2017/06/04/install-rabbitmq-on-ubuntu-16.04-lts/</link>
+      <pubDate>Sun, 04 Jun 2017 21:07:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/06/04/install-rabbitmq-on-ubuntu-16.04-lts/</guid>
+      <description>Enable RabbitMQ application repository:
+echo &amp;quot;deb http://www.rabbitmq.com/debian/ testing main&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list  Add the verification key for the package:
+curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -  Update the sources with our new addition from above:
+apt-get update  And finally, download and install RabbitMQ:
+sudo apt-get install rabbitmq-server  In order to manage the maximum amount of connections upon launch, open up and edit the following configuration file using nano and uncomment the line ulimit:</description>
+    </item>
+    
+  </channel>
+</rss>

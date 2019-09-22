@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wifi on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/wifi/</link>
+    <description>Recent content in Wifi on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2019 11:48:06 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taming Elementary OS</title>
+      <link>https://vietlq.github.io/2019/05/11/taming-elementary-os/</link>
+      <pubDate>Sat, 11 May 2019 11:48:06 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/05/11/taming-elementary-os/</guid>
+      <description>ElementaryOS is a beautiful distro based on Ubuntu. It aims at satisfying Linux users with aesthetics or first time Linux users.
+Unlike developers of most Linux distros, ElementaryOS developers are not shy to suggest you to pay for play: Purchase your copy of ElementaryOS. The default price tag is $20, which I was happy to pay. I really love the distro&amp;rsquo;s sleek UI and an option to install free or buy more software at their AppCenter.</description>
+    </item>
+    
+    <item>
+      <title>Fix Wifi for Ubuntu on Microsoft Surface</title>
+      <link>https://vietlq.github.io/2019/05/11/fix-wifi-for-ubuntu-on-microsoft-surface/</link>
+      <pubDate>Sat, 11 May 2019 11:02:07 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/05/11/fix-wifi-for-ubuntu-on-microsoft-surface/</guid>
+      <description>Random wifi drops There are some pains using Ubuntu on laptops, especially on Microsoft Surface laptop. Wifi settings are not perfect and there are random drops of wifi after 10-15 mins. I did searching and found that one has to do at least 2 things:
+ Prevent MAC address randomisation by default (that reduces security)  /etc/NetworkManager/NetworkManager.conf [device] wifi.scan-rand-mac-address=no   Stop automatic power saving for wifi  /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf wifi.</description>
+    </item>
+    
+  </channel>
+</rss>

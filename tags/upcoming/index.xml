@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Upcoming on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/upcoming/</link>
+    <description>Recent content in Upcoming on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2019 23:16:08 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/upcoming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Upcoming Posts</title>
+      <link>https://vietlq.github.io/2019/06/15/upcoming-posts/</link>
+      <pubDate>Sat, 15 Jun 2019 23:16:08 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/06/15/upcoming-posts/</guid>
+      <description>I realised planning and making a wishlist would make me more productive and more focused. Hence, I decided to schedule time to write the following topics (not in any particular order):
+ How to decode Ethereum UTC JSON files to extract private key Using SFINAE to check if a C++ class/structure implement a method Working with Hugo quirks and creating semi-automated posting C++ mix-ins for fun and profit Deriving Ethereum keys Manually sign and verify Ethereum messages Writing a JSON parser in OCaml Implementing a simple version of std::tuple  Image source: https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

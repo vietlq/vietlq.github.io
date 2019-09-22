@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/theme/</link>
+    <description>Recent content in Theme on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 17:15:58 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access Hugo Page Variables</title>
+      <link>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</guid>
+      <description>Challenge Earlier today I had difficulty integrating with Facebook Open Graph and called their Open Graph Debugger for help. I also used Twitter Card Validator to verify if the page can be rendered as a Twitter card. There were still missing pieces from meta data. The complete Open Graph and Twitter card meta data would look like this:
+&amp;lt;!-- Provide absolute URLs --&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;Page Title for Search Engines Results | Website Name&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Page Description for Search Engine Results&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;Page Title for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;Page Description for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:image&amp;quot; content=&amp;quot;https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entropy on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/entropy/</link>
+    <description>Recent content in Entropy on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2017 15:18:29 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/entropy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add Extra Entropy for Ubuntu and Debian</title>
+      <link>https://vietlq.github.io/2017/05/01/add-extra-entropy-for-ubuntu-and-debian/</link>
+      <pubDate>Mon, 01 May 2017 15:18:29 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/add-extra-entropy-for-ubuntu-and-debian/</guid>
+      <description>Recently I ran gpg --gen-key and had problems with lack of randomness (entropy). If you are running a virtual server and have little traffic coming your way, you will not have enough entropy for security/cryptographic applications.
+To address this problem, you could use rng-tools and Haveged packages. This tutorial will show how to add more entropy for Ubuntu/Debian. You can do the same for other Linux distros.
+Guide rng-tools Install rng-tools:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rss on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/rss/</link>
+    <description>Recent content in Rss on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 11:52:14 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Permalinks, Tags, Images, RSS, Sitemap</title>
+      <link>https://vietlq.github.io/2017/04/30/permalinks-tags-images-rss-sitemap/</link>
+      <pubDate>Sun, 30 Apr 2017 11:52:14 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/permalinks-tags-images-rss-sitemap/</guid>
+      <description>From the previous post, you already know how to use a Hugo theme, write a new entry. Now you want to add tags, permalinks and images for better reading experience.
+Add Permalinks &amp;amp; Tags By default Hugo does not give you tags, categories and permalinks. This can be quickly remedied by updating your config.toml file:
+baseURL = &amp;quot;http://vietlq.github.io/&amp;quot; languageCode = &amp;quot;en-us&amp;quot; title = &amp;quot;Viet&#39;s Blog&amp;quot; theme = &amp;quot;hugo-geo&amp;quot; [permalinks] post = &amp;quot;/:year/:month/:day/:title/&amp;quot; [taxonomies] category = &amp;quot;categories&amp;quot; tag = &amp;quot;tags&amp;quot; [params] # To satisfy hugo-geo theme header = &amp;quot;Viet&#39;s Blog&amp;quot; Author = &amp;quot;Viet Le&amp;quot;  Now add tags = [&amp;quot;go&amp;quot;, &amp;quot;hugo&amp;quot;, &amp;quot;git&amp;quot;, &amp;quot;blog&amp;quot;, &amp;quot;config&amp;quot;, &amp;quot;setup&amp;quot;] to front matter of your entry.</description>
+    </item>
+    
+  </channel>
+</rss>

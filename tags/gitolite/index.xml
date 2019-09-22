@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitolite on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/gitolite/</link>
+    <description>Recent content in Gitolite on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2017 17:49:45 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/gitolite/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Got Locked Out From Gitolite</title>
+      <link>https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/</link>
+      <pubDate>Mon, 01 May 2017 17:49:45 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/</guid>
+      <description>A couple of years ago I installed gitolite to self-host Git and access it via SSH. All was well until recently I discovered a problem: I could not access some repositories:
+$ git clone git@simpleit.us:apache2-config.git Cloning into &#39;apache2-config&#39;... R access for apache2-config DENIED to gitadmin (Or there may be no repository at the given path. Did you spell it correctly?) fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.</description>
+    </item>
+    
+  </channel>
+</rss>

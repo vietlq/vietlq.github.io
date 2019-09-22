@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rsync on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/rsync/</link>
+    <description>Recent content in Rsync on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Jun 2017 18:19:05 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/rsync/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Securely Publish Hugo via rsync</title>
+      <link>https://vietlq.github.io/2017/06/04/securely-publish-hugo-via-rsync/</link>
+      <pubDate>Sun, 04 Jun 2017 18:19:05 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/06/04/securely-publish-hugo-via-rsync/</guid>
+      <description>Steps 1. Install rssh Install rssh to limit shell activity for users using the shell rssh:
+sudo apt-get install rssh  Now edit the config file /etc/rssh.conf to allow scp and rsync:
+allowscp allowrsync #allowsftp #allowcvs #allowrdist #allowsvnserve  NOTE: Since you are going through SSH, you don&amp;rsquo;t need to enable firewall rule for rsync.
+# DO NOT RUN this: sudo ufw allow rsync # You can safely run this: $ sudo ufw delete allow rsync  2.</description>
+    </item>
+    
+  </channel>
+</rss>

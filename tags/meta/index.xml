@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/meta/</link>
+    <description>Recent content in Meta on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 17:15:58 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access Hugo Page Variables</title>
+      <link>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</link>
+      <pubDate>Sun, 30 Apr 2017 17:15:58 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</guid>
+      <description>Challenge Earlier today I had difficulty integrating with Facebook Open Graph and called their Open Graph Debugger for help. I also used Twitter Card Validator to verify if the page can be rendered as a Twitter card. There were still missing pieces from meta data. The complete Open Graph and Twitter card meta data would look like this:
+&amp;lt;!-- Provide absolute URLs --&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;Page Title for Search Engines Results | Website Name&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Page Description for Search Engine Results&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;Page Title for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;Page Description for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:image&amp;quot; content=&amp;quot;https://www.</description>
+    </item>
+    
+    <item>
+      <title>Facebook Open Graph Debugger &amp; Twitter Cards Validator</title>
+      <link>https://vietlq.github.io/2017/04/30/facebook-open-graph-debugger--twitter-cards-validator/</link>
+      <pubDate>Sun, 30 Apr 2017 13:12:11 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2017/04/30/facebook-open-graph-debugger--twitter-cards-validator/</guid>
+      <description>Blogging engines such as WordPress and Ghost should take care of images and Facebook Open Graph integration for you. Unfortunately, that&amp;rsquo;s not the case with Hugo and Octopress. I did a bit of googling and found that we need to have a meta tag og:image in the header for Facebook to show your image when posting.
+Meta-tags for HTML Header &amp;lt;!-- Provide absolute URLs --&amp;gt; &amp;lt;!-- Sample from https://rickmanelius.com/article/sharing-facebook-how-improve-your-results-customizing-image-title-and-summary-text --&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;Page Title for Search Engines Results | Website Name&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Page Description for Search Engine Results&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;Page Title for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;Page Description for Facebook&amp;quot; /&amp;gt; &amp;lt;meta property=&amp;quot;og:image&amp;quot; content=&amp;quot;https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

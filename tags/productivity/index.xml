@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Productivity on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/productivity/</link>
+    <description>Recent content in Productivity on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Mar 2018 18:33:42 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Edit and Annotate PDF</title>
+      <link>https://vietlq.github.io/2018/03/30/edit-and-annotate-pdf/</link>
+      <pubDate>Fri, 30 Mar 2018 18:33:42 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2018/03/30/edit-and-annotate-pdf/</guid>
+      <description>I was looking for a tool to edit/annotate PDF files so I could complete a form and put my signature in the PDF file. Looks like Adobe has some expensive tool to accomplish that. Luckily for macOS one can use Preview to annonate and embed signatures in PDF files. It&amp;rsquo;s all free but you will need Apple Trackpad for signing. Follow the guides below:
+https://www.macworld.co.uk/how-to/mac-software/how-edit-pdfs-on-mac-for-free-3659723/
+https://pdf.iskysoft.com/pdf-editor/free-pdf-editor-mac.html
+I also found Skim &amp;amp; Foxit Reader as recommended tools:</description>
+    </item>
+    
+  </channel>
+</rss>

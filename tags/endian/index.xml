@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Endian on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/endian/</link>
+    <description>Recent content in Endian on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jun 2019 14:59:34 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/endian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Endianness Agnostic ntoh</title>
+      <link>https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/</link>
+      <pubDate>Sat, 22 Jun 2019 14:59:34 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/</guid>
+      <description>From the Endianness detection blog entry, we have learned how to do that using predefined macros across different architectures. Our next task is to write ntoh (network to host) and hton (host to network) functions to convert integers and floating point values between network and host formats. Here&amp;rsquo;s a catch: Do not use conditionals - basically, do not use any of the keywords if/else/for/while. To make it even harder: Do not include any headers and also do not use #if/#else/#endif pre-processors.</description>
+    </item>
+    
+    <item>
+      <title>Endianness Detection the Hard Way</title>
+      <link>https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/</link>
+      <pubDate>Sun, 17 Jun 2018 08:34:57 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/</guid>
+      <description>Recently I have had a project that involves serialisation (again!). I have written countless serialisers and deserialisers in 8 years of professional experience. As it goes with binary serialisation, you need to worry about Endianness of your machine because you want your code to be portable across multiple architectures. Text serialisations to JSON or mere CSV exempt you from all that headache, but they are too verbose and slow. In this post I will walk you through tricks to detect Endianness.</description>
+    </item>
+    
+  </channel>
+</rss>

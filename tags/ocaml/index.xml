@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ocaml on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/ocaml/</link>
+    <description>Recent content in Ocaml on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 May 2018 15:41:55 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/ocaml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OCaml Packaging With Topkg and OPAM</title>
+      <link>https://vietlq.github.io/2018/05/28/ocaml-packaging-with-topkg-and-opam/</link>
+      <pubDate>Mon, 28 May 2018 15:41:55 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2018/05/28/ocaml-packaging-with-topkg-and-opam/</guid>
+      <description>Dependencies First and foremost, you must have OPAM installed. Then you need to install the following packages:
+$ opam install topkg topkg-care topkg-jbuilder  Boilerplate Code Given you have your library tested and ready for publishing, you need to add the files ppx_getenv01.opam and pkg/pkg.ml at the top:
+The OPAM file (ppx_getenv01.opam):
+opam-version: &amp;quot;1.2&amp;quot; name: &amp;quot;ppx_getenv01&amp;quot; maintainer: &amp;quot;Viet Le &amp;lt;XXXX@gmail.com&amp;gt;&amp;quot; authors: &amp;quot;Viet Le &amp;lt;XXXX@gmail.com&amp;gt;&amp;quot; homepage: &amp;quot;https://github.com/vietlq/ppx_getenv01&amp;quot; bug-reports: &amp;quot;https://github.com/vietlq/ppx_getenv01/issues&amp;quot; license: &amp;quot;MIT&amp;quot; dev-repo: &amp;quot;https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

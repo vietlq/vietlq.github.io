@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grub on Viet&#39;s Blog</title>
+    <link>https://vietlq.github.io/tags/grub/</link>
+    <description>Recent content in Grub on Viet&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Sep 2019 18:13:03 +0100</lastBuildDate>
+    
+	<atom:link href="https://vietlq.github.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Make Grub Font Size Bigger</title>
+      <link>https://vietlq.github.io/2019/09/22/make-grub-font-size-bigger/</link>
+      <pubDate>Sun, 22 Sep 2019 18:13:03 +0100</pubDate>
+      
+      <guid>https://vietlq.github.io/2019/09/22/make-grub-font-size-bigger/</guid>
+      <description>By default Ubuntu/ElementaryOS configure their GRUB to use very small fonts. That really hurts my eyes. I decided to play with GRUB and increase the font size. The process is rather straight forward:
+ Generate a GRUB-compatible font with specified size from a TTF (type-type font) Edit high-level GRUB configuration file Regenerate low-level GRUB configurations Restart and enjoy fruit of your labour  I chose a mono-space font with size 36pt: DejaVuSansMono.</description>
+    </item>
+    
+  </channel>
+</rss>

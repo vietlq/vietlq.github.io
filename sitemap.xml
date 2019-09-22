@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://vietlq.github.io/2019/09/22/make-grub-font-size-bigger/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2019/06/22/endianness-agnostic-ntoh/</loc>
+    <lastmod>2019-06-22T14:59:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2019/06/15/upcoming-posts/</loc>
+    <lastmod>2019-06-15T23:16:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2019/05/11/taming-elementary-os/</loc>
+    <lastmod>2019-05-11T11:48:06+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2019/05/11/fix-wifi-for-ubuntu-on-microsoft-surface/</loc>
+    <lastmod>2019-05-11T11:02:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2018/06/17/endianness-detection-the-hard-way/</loc>
+    <lastmod>2018-06-17T08:34:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2018/05/28/ocaml-packaging-with-topkg-and-opam/</loc>
+    <lastmod>2018-05-28T15:41:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2018/05/12/safer-c---by-handling-function-result/</loc>
+    <lastmod>2018-05-12T18:15:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2018/03/31/p2p-browsing-web-with-beaker-and-dat/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2018/03/30/edit-and-annotate-pdf/</loc>
+    <lastmod>2018-03-30T18:33:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/06/04/install-rabbitmq-on-ubuntu-16.04-lts/</loc>
+    <lastmod>2017-06-04T21:07:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/06/04/install-golang-on-ubuntu-16.04-lts/</loc>
+    <lastmod>2017-06-04T20:55:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/06/04/securely-publish-hugo-via-rsync/</loc>
+    <lastmod>2017-06-04T18:19:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/06/04/how-to-install-a-git-repo--serve-via-ssh/</loc>
+    <lastmod>2017-06-04T11:41:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/06/03/listing-all-header-files-your-cpp-depends-on/</loc>
+    <lastmod>2017-06-03T18:04:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/05/01/got-locked-out-from-gitolite/</loc>
+    <lastmod>2017-05-01T17:49:45+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/05/01/add-extra-entropy-for-ubuntu-and-debian/</loc>
+    <lastmod>2017-05-01T15:18:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/05/01/secure-github-pages/</loc>
+    <lastmod>2017-05-01T13:03:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/05/01/pysmile-transparency-preservation/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/05/01/pysmile-handy-image-processing/</loc>
+    <lastmod>2017-05-01T09:41:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/04/30/access-hugo-page-variables/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/about/</loc>
+    <lastmod>2017-04-30T14:23:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/04/30/facebook-open-graph-debugger--twitter-cards-validator/</loc>
+    <lastmod>2017-04-30T13:12:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/04/30/permalinks-tags-images-rss-sitemap/</loc>
+    <lastmod>2017-04-30T11:52:14+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/04/30/enter-hugo/</loc>
+    <lastmod>2017-04-30T08:52:14+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/2017/04/29/hello-octopress/</loc>
+    <lastmod>2017-04-29T08:55:36+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/beaker/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/blog/</loc>
+    <lastmod>2017-05-01T13:03:01+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2019-06-22T14:59:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/c&#43;&#43;17/</loc>
+    <lastmod>2018-05-12T18:15:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/compiler/</loc>
+    <lastmod>2018-05-12T18:15:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/config/</loc>
+    <lastmod>2017-05-01T17:49:45+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/crypto/</loc>
+    <lastmod>2017-05-01T15:18:29+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/d16n/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/dat/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/debian/</loc>
+    <lastmod>2017-05-01T15:18:29+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/decentralisation/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/dev/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/elementaryos/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/endian/</loc>
+    <lastmod>2019-06-22T14:59:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/entropy/</loc>
+    <lastmod>2017-05-01T15:18:29+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/fb/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/gh-pages/</loc>
+    <lastmod>2017-05-01T13:03:01+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/gif/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/git/</loc>
+    <lastmod>2017-06-04T11:41:20+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/gitadmin/</loc>
+    <lastmod>2017-05-01T17:49:45+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/gitolite/</loc>
+    <lastmod>2017-05-01T17:49:45+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/go/</loc>
+    <lastmod>2017-06-04T20:55:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/grub/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/guide/</loc>
+    <lastmod>2017-05-01T15:18:29+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/https/</loc>
+    <lastmod>2017-05-01T13:03:01+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/hugo/</loc>
+    <lastmod>2017-06-04T18:19:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/image/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/image-processing/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/linux/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/meta/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/mq/</loc>
+    <lastmod>2017-06-04T21:07:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/ocaml/</loc>
+    <lastmod>2018-05-28T15:41:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/opam/</loc>
+    <lastmod>2018-05-28T15:41:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/opengraph/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/p2p/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/packaging/</loc>
+    <lastmod>2018-05-28T15:41:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/pillow/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/png/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/post/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/productivity/</loc>
+    <lastmod>2018-03-30T18:33:42+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/pysmile/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/python/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/rabbitmq/</loc>
+    <lastmod>2017-06-04T21:07:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/rss/</loc>
+    <lastmod>2017-04-30T11:52:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/rsync/</loc>
+    <lastmod>2017-06-04T18:19:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/ruby/</loc>
+    <lastmod>2017-04-29T08:55:36+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/safety/</loc>
+    <lastmod>2018-05-12T18:15:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/secure/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/security/</loc>
+    <lastmod>2018-05-12T18:15:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/seo/</loc>
+    <lastmod>2017-04-30T11:52:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/setup/</loc>
+    <lastmod>2017-04-30T08:52:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/sitemap/</loc>
+    <lastmod>2017-04-30T11:52:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/social-media/</loc>
+    <lastmod>2017-05-01T09:41:04+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/sparc/</loc>
+    <lastmod>2019-06-22T14:59:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/ssh/</loc>
+    <lastmod>2017-06-04T18:19:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/theme/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/tinkering/</loc>
+    <lastmod>2019-05-11T11:48:06+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/tips/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/tools/</loc>
+    <lastmod>2017-06-04T11:41:20+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/topkg/</loc>
+    <lastmod>2018-05-28T15:41:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/transparency/</loc>
+    <lastmod>2017-05-01T11:05:17+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/tutorial/</loc>
+    <lastmod>2017-06-04T11:41:20+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/twitter/</loc>
+    <lastmod>2017-04-30T17:15:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/ubuntu/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/upcoming/</loc>
+    <lastmod>2019-06-15T23:16:08+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/</loc>
+    <lastmod>2019-09-22T18:13:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/web/</loc>
+    <lastmod>2018-03-31T21:24:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/wifi/</loc>
+    <lastmod>2019-05-11T11:48:06+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vietlq.github.io/tags/x86/</loc>
+    <lastmod>2019-06-22T14:59:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
